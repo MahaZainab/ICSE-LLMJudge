@@ -7,8 +7,8 @@ from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 GENERATOR_MODEL_ID = "meta-llama/Llama-3.2-1B-Instruct"
-INPUT_FILE         = "CodeQA_sampled.json"
-OUTPUT_FILE        = "CodeQA_predictions.json"
+INPUT_FILE         = "../DataPreprocessing/CodeQA_clean_final_v2.json"
+OUTPUT_FILE        = "RQ1_generate_codeqa/llama3.2_1b_instruct_predictions.json"
 SAVE_EVERY         = 25
 MAX_NEW_TOKENS     = 128
 HF_CACHE           = os.getenv("HF_HOME", "")
