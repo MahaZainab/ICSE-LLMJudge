@@ -16,41 +16,55 @@ HF_CACHE           = os.getenv("HF_HOME", "")
 FEW_SHOT_EXAMPLES = [
     {
         "code": (
-            "for i in range(10):\n"
-            "    print(i)\n"
-            "    i = i + 2"
+            "def is_triangle(a, b, c):\n"
+            "    if float(max(a,b,c)) < float(a+b+c) - float(max(a,b,c)):\n"
+            "        print('YES')\n"
+            "    else:\n"
+            "        print('NO')\n"
+            "a = input('Side a: ')\n"
+            "b = input('Side b: ')\n"
+            "c = input('Side c: ')\n"
+            "is_triangle(a, b, c)"
         ),
-        "question": "Why is my loop not skipping by 2?",
+        "question": "Why do I get an error?",
         "answer": (
-            "In a for loop, Python reassigns i automatically on each iteration, "
-            "so setting i = i + 2 inside the loop has no effect. "
-            "Use range(0, 10, 2) instead."
+            "When a value is received as an input, a, b, c are always variables of type String.\n"
+            "Think about what type max() and float() expect — "
+            "you may need to convert the inputs before passing them in."
         ),
     },
     {
         "code": (
-            "def add(a, b):\n"
-            "    return a + b\n"
-            "result = add(3, 4)\n"
-            "print(result)"
+            "from cs1robots import *\n"
+            "create_world()\n"
+            "hubo = Robot(beepers=10)\n"
+            "def hubo.nine():\n"
+            "    for i in range(9):\n"
+            "        hubo.move()"
         ),
-        "question": "Is it okay to call the function before defining it?",
+        "question": "I want to use the for statement, but I keep getting an error. I don't know what's wrong with def.",
         "answer": (
-            "No. In Python you must define the function before calling it. "
-            "Move the function definition above the line where you call it."
+            "Function names cannot contain \".\". "
+            "Try defining it as def nine() and calling it as nine() instead of hubo.nine(). "
+            "Functions like hubo.move() are special — they are already defined inside the Robot class."
         ),
     },
     {
         "code": (
-            "numbers = [1, 2, 3, 4, 5]\n"
-            "total = 0\n"
-            "for n in numbers:\n"
-            "    total += n\n"
-            "print(total)"
+            "s = []\n"
+            "f = open('countries.csv', 'r')\n"
+            "line = f.readline()\n"
+            "for line in f:\n"
+            "    s.append(line.strip())\n"
+            "f.close()\n"
+            "for i in range(len(s)):\n"
+            "    cc = s[i][1:3]"
         ),
-        "question": "What does this code do?",
+        "question": "When moving elements such as country name from a file to a list, the length is different, so it is a little difficult. Can you help me?",
         "answer": (
-            "It calculates the sum of all numbers in the list and prints the result, which is 15."
+            "If you use a function called split(), you can cut a string at any separator you want. "
+            "CSV files are separated by commas, so try splitting on \",\" — "
+            "that way each field becomes its own element and you can access the country name directly by index!"
         ),
     },
 ]
@@ -58,10 +72,15 @@ FEW_SHOT_EXAMPLES = [
 SYSTEM_PROMPT = (
     "You are a teaching assistant (TA) for an introductory Python programming course. "
     "A student has asked you a question about their code. "
-    "Provide a clear, helpful, and concise answer appropriate for a beginner programmer. "
+    "Respond in the style of a human TA during office hours: "
+    "keep answers short and conversational (1–4 sentences), "
+    "explain the concept or point out the issue rather than rewriting the student's code for them, "
+    "and nudge the student toward the fix without handing it to them directly. "
+    "You may confirm when a student's understanding is correct, "
+    "clarify a concept with a brief explanation, "
+    "or hint at what to look for — but avoid providing complete corrected code. "
     "Base your answer only on the provided code and question. "
-    "Do not repeat the question. "
-    "Study the examples carefully to understand the expected answer style and tone."
+    "Do not repeat the question."
 )
 
 def build_user_prompt(examples, code, question):
