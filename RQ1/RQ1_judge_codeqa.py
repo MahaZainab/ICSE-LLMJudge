@@ -10,8 +10,8 @@ import pandas as pd
 from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-JUDGE_MODEL_ID = "Qwen/Qwen2.5-Coder-7B-Instruct"
-INPUT_FILE     = "CodeQA_predictions.json"
+JUDGE_MODEL_ID = "deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct"
+INPUT_FILE     = "RQ1_generate_codeqa/llama3.2_3b_instruct_predictions.json"
 OUTPUT_JSON    = "CodeQA_judged.json"
 OUTPUT_CSV     = "CodeQA_judged.csv"
 OUTPUT_PLOT    = "CodeQA_judged.png"
