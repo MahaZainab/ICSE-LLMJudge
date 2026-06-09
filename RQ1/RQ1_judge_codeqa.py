@@ -233,6 +233,7 @@ for i, item in enumerate(tqdm(dataset, desc="Judging")):
                 top_p=None,
                 pad_token_id=tokenizer.eos_token_id,
                 eos_token_id=tokenizer.eos_token_id,
+                use_cache=False,
             )
         new_tokens = output_ids[0][inputs["input_ids"].shape[1]:]
         response   = tokenizer.decode(new_tokens, skip_special_tokens=True).strip()
