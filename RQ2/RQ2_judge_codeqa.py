@@ -219,7 +219,7 @@ for i, item in enumerate(tqdm(dataset, desc="Judging")):
         return_tensors="pt",
         padding=True,
         truncation=True,
-        max_length=4096,        # Llama 3.2-3B-Instruct practical context cap
+        max_length=4096,       
     ).to(model.device)
 
     try:
