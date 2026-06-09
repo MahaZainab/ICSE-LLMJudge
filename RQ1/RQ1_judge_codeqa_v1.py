@@ -11,12 +11,12 @@ from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 JUDGE_MODEL_ID = "deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct"
-INPUT_FILE     = "CodeQA_predictions.json"
-OUTPUT_JSON    = "CodeQA_judged.json"
-OUTPUT_CSV     = "CodeQA_judged.csv"
-OUTPUT_PLOT    = "CodeQA_judged.png"
+INPUT_FILE     = "RQ1_generate_codeqa/llama3.2_3b_instruct_predictions.json"
+OUTPUT_JSON    = "RQ1_judge_codeqa/llama3.2_3b_instruct_judged.json"
+OUTPUT_CSV     = "RQ1_judge_codeqa/llama3.2_3b_instruct_judged.csv"
+OUTPUT_PLOT    = "RQ1_judge_codeqa/llama3.2_3b_instruct_judged.png"
 SAVE_EVERY     = 25
-MAX_NEW_TOKENS = 128
+MAX_NEW_TOKENS = 256
 HF_CACHE       = os.getenv("HF_HOME", "")
 
 SYSTEM_PROMPT = """You are an expert evaluator assessing the quality of answers to source code comprehension questions.
@@ -99,17 +99,15 @@ def build_user_prompt(code, question, reference, prediction):
         f"Predicted Answer:\n{prediction}"
     )
 
-# FIX 1: overwrite existing records by ID instead of skipping them
 def save_append(path, new_data):
     try:
         with open(path, "r", encoding="utf-8") as f:
             existing = json.load(f)
     except (FileNotFoundError, json.JSONDecodeError):
         existing = []
-    existing_map = {item.get("id"): item for item in existing}
-    for item in new_data:
-        existing_map[item.get("id")] = item   # overwrite, not skip
-    combined = list(existing_map.values())
+    existing_ids = {item.get("id") for item in existing if "id" in item}
+    filtered = [item for item in new_data if item.get("id") not in existing_ids]
+    combined = existing + filtered
     with open(path, "w", encoding="utf-8") as f:
         json.dump(combined, f, indent=2, ensure_ascii=False)
 
@@ -175,7 +173,7 @@ if tokenizer.pad_token is None:
 model = AutoModelForCausalLM.from_pretrained(
     JUDGE_MODEL_ID,
     cache_dir=HF_CACHE,
-    dtype=torch.bfloat16,       # FIX 2: bfloat16 for DeepSeek + avoids torch_dtype warning
+    torch_dtype=torch.bfloat16,
     device_map="auto",
     trust_remote_code=True,
 )
@@ -222,7 +220,7 @@ for i, item in enumerate(tqdm(dataset, desc="Judging")):
         return_tensors="pt",
         padding=True,
         truncation=True,
-        max_length=8192,        # FIX 3: increased for DeepSeek's longer context
+        max_length=8192,
     ).to(model.device)
 
     try:
@@ -231,15 +229,15 @@ for i, item in enumerate(tqdm(dataset, desc="Judging")):
                 **inputs,
                 max_new_tokens=MAX_NEW_TOKENS,
                 do_sample=False,
-                use_cache=False,                    # FIX 4: avoids DynamicCache seen_tokens error
+                temperature=None,
+                top_p=None,
                 pad_token_id=tokenizer.eos_token_id,
                 eos_token_id=tokenizer.eos_token_id,
+                use_cache=False,
             )
         new_tokens = output_ids[0][inputs["input_ids"].shape[1]:]
         response   = tokenizer.decode(new_tokens, skip_special_tokens=True).strip()
         scores     = extract_scores(response)
-        if not scores:
-            print(f"  Warning: no scores parsed at record {i+1}. Raw response: {response[:200]}")
     except Exception as e:
         print(f"  Error at record {i+1}: {e}")
         scores = {}
@@ -252,7 +250,6 @@ for i, item in enumerate(tqdm(dataset, desc="Judging")):
     print(f"[{i+1}/{len(dataset)}] category={category}")
     print(f"  acc={acc} comp={comp} clar={clar} rel={rel}\n")
 
-    # FIX 5: store raw scores in results (JSON) to match csv_records — no more nested {"score": null}
     result = {
         "id":           q_id,
         "dataset":      "codeqa",
@@ -261,10 +258,10 @@ for i, item in enumerate(tqdm(dataset, desc="Judging")):
         "question":     question,
         "answer":       reference,
         "prediction":   prediction,
-        "accuracy":     acc,
-        "completeness": comp,
-        "clarity":      clar,
-        "relevance":    rel,
+        "accuracy":     {"score": acc},
+        "completeness": {"score": comp},
+        "clarity":      {"score": clar},
+        "relevance":    {"score": rel},
     }
     results.append(result)
 
