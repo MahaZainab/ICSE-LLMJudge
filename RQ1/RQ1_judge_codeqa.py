@@ -12,9 +12,9 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 
 JUDGE_MODEL_ID = "deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct"
 INPUT_FILE     = "RQ1_generate_codeqa/llama3.2_3b_instruct_predictions.json"
-OUTPUT_JSON    = "CodeQA_judged.json"
-OUTPUT_CSV     = "CodeQA_judged.csv"
-OUTPUT_PLOT    = "CodeQA_judged.png"
+OUTPUT_JSON    = "RQ1_judge_codeqa/llama3.2_3b_instruct_judged.json"
+OUTPUT_CSV     = "RQ1_judge_codeqa/llama3.2_3b_instruct_judged.csv"
+OUTPUT_PLOT    = "RQ1_judge_codeqa/llama3.2_3b_instruct_judged.png"
 SAVE_EVERY     = 25
 MAX_NEW_TOKENS = 256
 HF_CACHE       = os.getenv("HF_HOME", "")
