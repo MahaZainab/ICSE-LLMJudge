@@ -220,7 +220,7 @@ for i, item in enumerate(tqdm(dataset, desc="Judging")):
         return_tensors="pt",
         padding=True,
         truncation=True,
-        max_length=4096,
+        max_length=8192,
     ).to(model.device)
 
     try:
