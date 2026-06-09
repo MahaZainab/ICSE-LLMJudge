@@ -1,0 +1,221 @@
+[
+    {
+        "id": "q1",
+        "dataset": "codeqa",
+        "category": "What",
+        "code": "def drop protected attrs model class values for attr in model class protected attributes if attr in values del values[attr]",
+        "question": "What did the code remove from values dictionary using the models _ _ protected_attributes _ _ field ?",
+        "answer": "protected attributes",
+        "prediction": "The code removed the specified attributes from the values dictionary.",
+        "accuracy": {
+            "score": 4
+        },
+        "completeness": {
+            "score": 4
+        },
+        "clarity": {
+            "score": 5
+        },
+        "relevance": {
+            "score": 4
+        },
+        "annotator": "rule-based-proxy-v1"
+    },
+    {
+        "id": "q2",
+        "dataset": "codeqa",
+        "category": "What",
+        "code": "def get Ordered Surrounding Loops perimeter Width surrounding Loops insides []ordered Surrounding Loops []for loop Index in xrange len surrounding Loops surrounding Loop surrounding Loops[loop Index]other Loops []for before Index in xrange loop Index other Loops append surrounding Loops[before Index] boundary for after Index in xrange loop Index + 1 len surrounding Loops other Loops append surrounding Loops[after Index] boundary if is Path Entirely Inside Loops other Loops surrounding Loop boundary insides append surrounding Loop else ordered Surrounding Loops append surrounding Loop for outside in ordered Surrounding Loops outside get From Inside Surroundings insides perimeter Width return ordered Surrounding Loops",
+        "question": "What did the code order from surrounding loops ?",
+        "answer": "surrounding loops",
+        "prediction": "in ascending order",
+        "accuracy": {
+            "score": 2
+        },
+        "completeness": {
+            "score": 1
+        },
+        "clarity": {
+            "score": 5
+        },
+        "relevance": {
+            "score": 5
+        },
+        "annotator": "rule-based-proxy-v1"
+    },
+    {
+        "id": "q3",
+        "dataset": "codeqa",
+        "category": "What",
+        "code": "def set coordinator properties coordinator root namespace coordinator name root get 'name' coordinator timezone root get 'timezone' coordinator start oozie to django datetime root get 'start' coordinator end oozie to django datetime root get 'end' coordinator frequency unit coordinator frequency number oozie to hue frequency root get 'frequency'",
+        "question": "What does the code get from coordinator xml set properties on coordinator with attributes from xml etree root ?",
+        "answer": "coordinator properties",
+        "prediction": "name, timezone, start, end, frequency",
+        "accuracy": {
+            "score": 2
+        },
+        "completeness": {
+            "score": 1
+        },
+        "clarity": {
+            "score": 5
+        },
+        "relevance": {
+            "score": 2
+        },
+        "annotator": "rule-based-proxy-v1"
+    },
+    {
+        "id": "q4",
+        "dataset": "codeqa",
+        "category": "What",
+        "code": "def get node attributes G name return {n d[name] for n d in G node items if name in d }",
+        "question": "What does the code get from graph parameters g : networkx graph name : string attribute name returns dictionary of attributes keyed by node ?",
+        "answer": "node attributes",
+        "prediction": "Dictionary of attributes keyed by node.",
+        "accuracy": {
+            "score": 5
+        },
+        "completeness": {
+            "score": 5
+        },
+        "clarity": {
+            "score": 5
+        },
+        "relevance": {
+            "score": 5
+        },
+        "annotator": "rule-based-proxy-v1"
+    },
+    {
+        "id": "q5",
+        "dataset": "codeqa",
+        "category": "What",
+        "code": "def Validate Domain url domain name url split '/' if 'http ' in domain name or 'https ' in domain name domain name domain name[ 2 ]else domain name domain name[ 0 ]www domain name domain name split ' ' final domain ''if www domain name[ 0 ] 'www' final domain ' ' join www domain name[ 1 ] else final domain domain namereturn final domain domain name",
+        "question": "What does this function return removing http:// and https:// returns domain name only with or without www as user provided ?",
+        "answer": "domain name",
+        "prediction": "Answer: the domain name only with or without www as user provided",
+        "accuracy": {
+            "score": 5
+        },
+        "completeness": {
+            "score": 5
+        },
+        "clarity": {
+            "score": 4
+        },
+        "relevance": {
+            "score": 5
+        },
+        "annotator": "rule-based-proxy-v1"
+    },
+    {
+        "id": "q6",
+        "dataset": "codeqa",
+        "category": "What",
+        "code": "def apply provider facts facts provider facts if not provider facts return factscommon vars [ 'hostname' 'ip' 'public hostname' 'public ip' ]for h var ip var in common vars ip value provider facts['network'] get ip var if ip value facts['common'][ip var] ip valuefacts['common'][h var] choose hostname [provider facts['network'] get h var ] facts['common'][h var] facts['provider'] provider factsreturn facts",
+        "question": "What does the code apply to supplied facts dict args : facts : facts dict to update provider_facts : provider facts to apply roles : host roles returns : dict : the merged facts ?",
+        "answer": "provider facts",
+        "prediction": "dict",
+        "accuracy": {
+            "score": 2
+        },
+        "completeness": {
+            "score": 1
+        },
+        "clarity": {
+            "score": 5
+        },
+        "relevance": {
+            "score": 3
+        },
+        "annotator": "rule-based-proxy-v1"
+    },
+    {
+        "id": "q7",
+        "dataset": "codeqa",
+        "category": "What",
+        "code": "def Make Suite From Dict d label None suite Suite label label suite Set Dict d suite Normalize return suite",
+        "question": "What does the code make ?",
+        "answer": "a suite",
+        "prediction": "A test suite",
+        "accuracy": {
+            "score": 5
+        },
+        "completeness": {
+            "score": 5
+        },
+        "clarity": {
+            "score": 5
+        },
+        "relevance": {
+            "score": 2
+        },
+        "annotator": "rule-based-proxy-v1"
+    },
+    {
+        "id": "q8",
+        "dataset": "codeqa",
+        "category": "What",
+        "code": "def set stubs stubs stubs Set vmops V Mware VM Ops 'plug vifs' fake fake plug vifs stubs Set network util 'get network with the name' fake fake get network stubs Set vmware images 'fetch image' fake fake fetch image stubs Set vmware images 'get vmdk size and properties' fake fake get vmdk size and properties stubs Set vmware images 'upload image' fake fake upload image stubs Set driver V Mware API Session ' get vim object' fake get vim object stubs Set driver V Mware API Session ' is vim object' fake is vim object",
+        "question": "What did the code set ?",
+        "answer": "the stubs",
+        "prediction": "network and vmware images",
+        "accuracy": {
+            "score": 2
+        },
+        "completeness": {
+            "score": 1
+        },
+        "clarity": {
+            "score": 5
+        },
+        "relevance": {
+            "score": 2
+        },
+        "annotator": "rule-based-proxy-v1"
+    },
+    {
+        "id": "q9",
+        "dataset": "codeqa",
+        "category": "What",
+        "code": "def set enrollment attributes user id course id attributes data api add or update enrollment attr user id course id attributes",
+        "question": "What did the code set for the enrollment of given user in the course provided ?",
+        "answer": "enrollment attributes",
+        "prediction": "user id course id",
+        "accuracy": {
+            "score": 2
+        },
+        "completeness": {
+            "score": 1
+        },
+        "clarity": {
+            "score": 5
+        },
+        "relevance": {
+            "score": 5
+        },
+        "annotator": "rule-based-proxy-v1"
+    },
+    {
+        "id": "q10",
+        "dataset": "codeqa",
+        "category": "What",
+        "code": "def get error message error try return error args[ 0 ]except Index Error return ''",
+        "question": "What does the code retrieve from error ?",
+        "answer": "error message",
+        "prediction": "error",
+        "accuracy": {
+            "score": 4
+        },
+        "completeness": {
+            "score": 4
+        },
+        "clarity": {
+            "score": 5
+        },
+        "relevance": {
+            "score": 5
+        },
+        "annotator": "rule-based-proxy-v1"
+    }
