@@ -10,11 +10,11 @@ import pandas as pd
 from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-JUDGE_MODEL_ID = "Qwen/Qwen2.5-Coder-7B-Instruct"
-INPUT_FILE     = "CS1QA_predictions.json"
-OUTPUT_JSON    = "CS1QA_judged.json"
-OUTPUT_CSV     = "CS1QA_judged.csv"
-OUTPUT_PLOT    = "CS1QA_judged.png"
+JUDGE_MODEL_ID = "deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct"
+INPUT_FILE     = "RQ1_generate_cs1qa/llama3.2_1b_instruct_predictions.json"
+OUTPUT_JSON    = "RQ1_judge_cs1qa/llama3.2_1b_instruct_judged.json"
+OUTPUT_CSV     = "RQ1_judge_cs1qa/llama3.2_1b_instruct_judged.csv"
+OUTPUT_PLOT    = "RQ1_judge_cs1qa/llama3.2_1b_instruct_judged.png"
 SAVE_EVERY     = 25
 MAX_NEW_TOKENS = 256
 HF_CACHE       = os.getenv("HF_HOME", "")
@@ -175,7 +175,7 @@ if tokenizer.pad_token is None:
 model = AutoModelForCausalLM.from_pretrained(
     JUDGE_MODEL_ID,
     cache_dir=HF_CACHE,
-    torch_dtype=torch.float16,
+    dtype=torch.bfloat16,
     device_map="auto",
     trust_remote_code=True,
 )
@@ -223,7 +223,7 @@ for i, item in enumerate(tqdm(dataset, desc="Judging")):
         return_tensors="pt",
         padding=True,
         truncation=True,
-        max_length=4096,
+        max_length=8192,
     ).to(model.device)
 
     try:
