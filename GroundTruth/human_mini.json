@@ -18,7 +18,8 @@
         },
         "relevance": {
             "score": 4
-        }
+        },
+        "annotator": "rule-based-proxy-v1"
     },
     {
         "id": "q2",
