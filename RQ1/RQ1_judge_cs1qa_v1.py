@@ -106,10 +106,9 @@ def save_append(path, new_data):
             existing = json.load(f)
     except (FileNotFoundError, json.JSONDecodeError):
         existing = []
-    existing_map = {item.get("id"): item for item in existing}
-    for item in new_data:
-        existing_map[item.get("id")] = item   # overwrite, not skip
-    combined = list(existing_map.values())
+    existing_ids = {item.get("id") for item in existing if "id" in item}
+    filtered = [item for item in new_data if item.get("id") not in existing_ids]
+    combined = existing + filtered
     with open(path, "w", encoding="utf-8") as f:
         json.dump(combined, f, indent=2, ensure_ascii=False)
 
@@ -232,15 +231,14 @@ for i, item in enumerate(tqdm(dataset, desc="Judging")):
                 **inputs,
                 max_new_tokens=MAX_NEW_TOKENS,
                 do_sample=False,
-                use_cache=False,
+                temperature=None,
+                top_p=None,
                 pad_token_id=tokenizer.eos_token_id,
                 eos_token_id=tokenizer.eos_token_id,
             )
         new_tokens = output_ids[0][inputs["input_ids"].shape[1]:]
         response   = tokenizer.decode(new_tokens, skip_special_tokens=True).strip()
         scores     = extract_scores(response)
-        if not scores:
-            print(f"  Warning: no scores parsed at record {i+1}. Raw response: {response[:200]}")
     except Exception as e:
         print(f"  Error at record {i+1}: {e}")
         scores = {}
@@ -262,10 +260,10 @@ for i, item in enumerate(tqdm(dataset, desc="Judging")):
         "question":     question,
         "answer":       reference,
         "prediction":   prediction,
-        "accuracy":     acc,
-        "completeness": comp,
-        "clarity":      clar,
-        "relevance":    rel,
+        "accuracy":     {"score": acc},
+        "completeness": {"score": comp},
+        "clarity":      {"score": clar},
+        "relevance":    {"score": rel},
     }
     results.append(result)
 
