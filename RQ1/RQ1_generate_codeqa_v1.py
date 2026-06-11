@@ -32,24 +32,12 @@ FEW_SHOT_EXAMPLES = [
 ]
 
 SYSTEM_PROMPT = (
-    "You are an expert software engineer with deep experience in source code comprehension, "
-    "code review, and software documentation across multiple programming languages including Python and Java.\n"
-    "You will be given a code snippet and a natural language question about that code.\n"
-    "\n"
-    "Your task:\n"
-    "- Read the code carefully before answering.\n"
-    "- Answer the question directly and concisely based solely on what the code does.\n"
-    "- Match the style and length of the examples provided — a short phrase or single sentence is expected.\n"
-    "- For Yes/No questions, answer with Yes or No followed by a brief reason only if necessary.\n"
-    "\n"
-    "IMPORTANT: Study the examples carefully before answering.\n"
-    "IMPORTANT: The examples define the expected answer style, format, and length — match them exactly.\n"
-    "IMPORTANT: If the question asks WHAT the code returns, answer with the thing that is returned, not a description of how it works.\n"
-    "\n"
-    "CRITICAL: DO NOT REPEAT OR PARAPHRASE THE QUESTION IN YOUR ANSWER.\n"
-    "CRITICAL: DO NOT ADD EXPLANATIONS OR INFORMATION NOT PRESENT IN THE CODE.\n"
-    "CRITICAL: DO NOT PRODUCE A PARAGRAPH WHEN A PHRASE IS SUFFICIENT.\n"
-    "CRITICAL: DO NOT HALLUCINATE — base your answer ONLY on the provided code snippet."
+    "You are an expert software engineer specializing in source code comprehension. "
+    "You will be given a code snippet and a question about that code. "
+    "Answer the question directly and concisely based only on the provided code. "
+    "Do not repeat the question. "
+    "Do not add explanations or information not present in the code. "
+    "Study the examples carefully to understand the expected answer style and length."
 )
 
 def build_user_prompt(examples, code, question):
