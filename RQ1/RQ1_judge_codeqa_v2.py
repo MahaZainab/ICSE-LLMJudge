@@ -10,7 +10,7 @@ import pandas as pd
 from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-JUDGE_MODEL_ID = "Qwen/Qwen2.5-Coder-7B-Instruct"
+JUDGE_MODEL_ID = "deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct"
 INPUT_FILE     = "RQ1_generate_codeqa/llama3.2_3b_instruct_predictions.json"
 OUTPUT_JSON    = "RQ1_judge_codeqa/llama3.2_3b_instruct_judged.json"
 OUTPUT_CSV     = "RQ1_judge_codeqa/llama3.2_3b_instruct_judged.csv"
@@ -19,103 +19,71 @@ SAVE_EVERY     = 25
 MAX_NEW_TOKENS = 128
 HF_CACHE       = os.getenv("HF_HOME", "")
 
-SYSTEM_PROMPT = """You are an expert software engineer and code evaluator. Your task is to assess the quality of a predicted answer to a source code comprehension question.
-
-## Dataset Context
-The questions come from CodeQA, a free-form code question-answering benchmark built from real Python and Java code on GitHub. Questions are derived from code comments (docstrings, Javadocs) and cover four categories of code understanding:
-- Functionality: what the code does, returns, creates, or produces
-- Purpose: why the code exists or what problem it solves
-- Property: attributes, parameters, types, conditions, or constraints in the code
-- Workflow: how the code operates step-by-step or how data flows through it
-
-Questions are natural language (e.g., "What does the code return?", "What does the method check?", "How does the code sort the items?") and correct answers are typically concise — often a phrase or short sentence, not a paragraph.
-
-## Your Role
-You are given:
+SYSTEM_PROMPT = """You are an expert evaluator assessing the quality of answers to source code comprehension questions.
+You will receive:
 - A code snippet
 - A question about that code
-- A predicted answer
+- A reference answer (correct answer)
+- A predicted answer (model-generated answer)
 
-You must read and reason over the code yourself to determine what the correct answer is. There is no reference answer provided. Your evaluation must be grounded entirely in your own understanding of the code.
-
-## Critical Rules
-- A short answer is NOT incomplete if it fully addresses the question. CodeQA answers are intentionally concise.
-- Semantic equivalence MUST be treated as correct. "the name", "Name of the user", and "it returns the user's name" can all be correct answers to the same question if the code supports them.
-- Do NOT penalize an answer for phrasing, vocabulary, or style differences from what you would have written.
-- Do NOT penalize an answer for lacking detail that the question did not ask for.
-- Score each dimension INDEPENDENTLY. A clear answer can still be inaccurate. An accurate answer can still be irrelevant if it answers the wrong thing.
-- Do NOT hallucinate facts about the code. If you are uncertain, score conservatively.
-
-## Scoring Dimensions
+Your task is to evaluate the predicted answer against the reference answer using four dimensions.
+For each dimension provide an integer score from 1 to 5.
 
 ### Accuracy
-Read the code carefully and determine what is factually correct. Then judge whether the predicted answer is consistent with what the code actually does.
-  5: Completely correct — the predicted answer is consistent with the code's actual behavior
-  4: Mostly correct — minor factual slip that does not change the core meaning
-  3: Partially correct — captures something true about the code but misses or misstates a key detail
-  2: Mostly incorrect — contains a relevant element but is dominated by factual errors
-  1: Completely wrong — contradicts the code or addresses something entirely different
+Assess whether the predicted answer is factually correct based on the code and consistent with the reference answer.
+Consider semantic equivalence: a predicted answer that conveys the same meaning as the reference but in different words must be treated as correct.
+Do NOT penalize correct answers merely because they are phrased differently from the reference.
+  5: Fully correct — matches the reference answer in meaning and factual content
+  4: Mostly correct — minor inaccuracies that do not affect the core meaning
+  3: Partially correct — some key facts are accurate but important details are wrong or missing
+  2: Mostly incorrect — a few relevant facts but major errors dominate
+  1: Completely incorrect — does not address the reference answer at all
 
 ### Completeness
-Assess whether the predicted answer covers everything the question is specifically asking for, based on what the code contains.
-  5: Fully complete — addresses everything the question asks, at the right level of detail
-  4: Mostly complete — a minor omission that does not significantly affect the answer
-  3: Partially complete — addresses part of the question but misses an important aspect
-  2: Mostly incomplete — only a surface fragment of what is required is present
-  1: Entirely incomplete — fails to address the question in any meaningful way
+Assess whether the predicted answer covers all the important information required by the question.
+A short answer that fully addresses the question scores 5. Do NOT penalize brevity if the question requires a brief answer.
+  5: Fully complete — covers all essential content the question asks for
+  4: Mostly complete — minor omissions that do not affect overall understanding
+  3: Partially complete — covers some key points but misses important content
+  2: Mostly incomplete — only a small fragment of the required content is present
+  1: Entirely incomplete — omits almost all key information
 
 ### Clarity
-Assess how clearly and understandably the predicted answer communicates its point. Score this INDEPENDENTLY of whether the answer is factually correct.
-  5: Perfectly clear — unambiguous and easy to understand
-  4: Mostly clear — minor phrasing awkwardness that does not impede understanding
-  3: Somewhat clear — understandable with effort but awkwardly expressed
-  2: Unclear — confusing or ambiguous to the point of impeding understanding
-  1: Incomprehensible — incoherent, self-contradictory, or unreadable
+Assess how clearly and understandably the predicted answer is expressed.
+Score this dimension INDEPENDENTLY of factual correctness.
+A grammatically correct but factually wrong answer can still score 5 on clarity.
+  5: Perfectly clear and easy to understand
+  4: Mostly clear with minor phrasing issues
+  3: Somewhat clear but awkwardly expressed
+  2: Difficult to understand
+  1: Incomprehensible or incoherent
 
 ### Relevance
-Assess whether the predicted answer directly targets what the question is asking, without drifting off-topic.
-  5: Fully relevant — directly and precisely answers the question asked
-  4: Mostly relevant — minor tangent or extra detail that does not distract from the answer
-  3: Partially relevant — addresses a related but different aspect of the code
-  2: Mostly irrelevant — misses the main point of the question
+Assess whether the predicted answer directly addresses the question without going off-topic.
+  5: Fully on-topic — directly answers what was asked
+  4: Mostly on-topic — minor tangents that do not distract from the answer
+  3: Partially relevant — addresses some aspects but drifts from the main point
+  2: Mostly off-topic — misses the main point of the question
   1: Completely irrelevant — does not address the question at all
 
-## Examples
+Example:
+{
+  "code": "def aggregate_metadata_get_by_host context host key None return IMPL aggregate_metadata_get_by_host context host key",
+  "question": "What does the code get?",
+  "reference_answer": "metadata for all aggregates that host belongs to",
+  "predicted_answer": "host metadata",
+  "evaluation": {
+    "accuracy":     {"score": 2},
+    "completeness": {"score": 2},
+    "clarity":      {"score": 4},
+    "relevance":    {"score": 3}
+  }
+}
 
-Input:
-Code: def get_suite ( self , suite_dict , label = None ) : suite = unittest.TestSuite ( ) for test_name in suite_dict : suite.addTest ( self.get_test ( test_name ) ) return suite
-Question: What does the code return?
-Predicted Answer: a test suite
-
-Output:
-{"accuracy": {"score": 5}, "completeness": {"score": 5}, "clarity": {"score": 5}, "relevance": {"score": 5}}
-
----
-
-Input:
-Code: def get_suite ( self , suite_dict , label = None ) : suite = unittest.TestSuite ( ) for test_name in suite_dict : suite.addTest ( self.get_test ( test_name ) ) return suite
-Question: What does the code return?
-Predicted Answer: It creates a new TestSuite object and iterates through the suite_dict to add each test by name before returning the populated suite object.
-
-Output:
-{"accuracy": {"score": 5}, "completeness": {"score": 4}, "clarity": {"score": 5}, "relevance": {"score": 3}}
-
-Reasoning: Accurate — describes the code correctly. But the question only asks WHAT is returned, not HOW it works, so the extra workflow detail makes this partially off-topic.
-
----
-
-Input:
-Code: def is_valid_age ( age ) : return isinstance ( age , int ) and age >= 0 and age <= 120
-Question: What does the code check?
-Predicted Answer: whether the input is a string
-
-Output:
-{"accuracy": {"score": 1}, "completeness": {"score": 2}, "clarity": {"score": 5}, "relevance": {"score": 3}}
-
-Reasoning: Factually wrong (checks int, not string), but the answer is clearly written and partially on-topic (it does check a type condition).
-
-## Output Format
-Respond ONLY with a valid JSON object. No explanation, no preamble, no markdown.
+Final Instructions:
+Base your evaluation strictly on the content provided. Do not hallucinate.
+Be consistent and objective. Score each dimension independently.
+Respond ONLY with a JSON object in this exact format with no additional text:
 {
   "accuracy":     {"score": <1-5>},
   "completeness": {"score": <1-5>},
@@ -123,10 +91,11 @@ Respond ONLY with a valid JSON object. No explanation, no preamble, no markdown.
   "relevance":    {"score": <1-5>}
 }"""
 
-def build_user_prompt(code, question, prediction):
+def build_user_prompt(code, question, reference, prediction):
     return (
         f"Code:\n{code}\n\n"
         f"Question:\n{question}\n\n"
+        f"Reference Answer:\n{reference}\n\n"
         f"Predicted Answer:\n{prediction}"
     )
 
@@ -206,7 +175,7 @@ if tokenizer.pad_token is None:
 model = AutoModelForCausalLM.from_pretrained(
     JUDGE_MODEL_ID,
     cache_dir=HF_CACHE,
-    torch_dtype=torch.bfloat16,     # bfloat16 for Qwen2.5 — avoids torch_dtype warning
+    dtype=torch.bfloat16,       # FIX 2: bfloat16 for DeepSeek + avoids torch_dtype warning
     device_map="auto",
     trust_remote_code=True,
 )
@@ -228,7 +197,7 @@ for i, item in enumerate(tqdm(dataset, desc="Judging")):
     category   = item.get("category", "unknown")
     q_id       = item.get("id", f"q{i+1}")
 
-    user_prompt = build_user_prompt(code, question, prediction)
+    user_prompt = build_user_prompt(code, question, reference, prediction)
 
     messages = [
         {"role": "system", "content": SYSTEM_PROMPT},
@@ -253,7 +222,7 @@ for i, item in enumerate(tqdm(dataset, desc="Judging")):
         return_tensors="pt",
         padding=True,
         truncation=True,
-        max_length=8192,        # Qwen2.5-Coder-7B supports up to 128k; 8192 is safe for typical inputs
+        max_length=8192,        # FIX 3: increased for DeepSeek's longer context
     ).to(model.device)
 
     try:
