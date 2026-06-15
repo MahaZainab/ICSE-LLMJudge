@@ -136,7 +136,7 @@ if tokenizer.pad_token is None:
 model = AutoModelForCausalLM.from_pretrained(
     GENERATOR_MODEL_ID,
     cache_dir=HF_CACHE,
-    torch_dtype=torch.float16,
+    torch_dtype="auto",
     device_map="auto",
     trust_remote_code=True,
 )
