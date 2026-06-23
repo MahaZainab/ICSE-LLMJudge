@@ -15,19 +15,19 @@ HF_CACHE           = os.getenv("HF_HOME", "")
 
 FEW_SHOT_EXAMPLES = [
     {
-        "code":     "def get_name ( self ) : return self . _name",
-        "question": "What does the code return?",
-        "answer":   "the name"
+        "code":     "def init pool worker signal signal signal SIGINT signal SIG IGN",
+        "question": "Why does the code ignore SIGINT in worker processes?",
+        "answer":   "because it will be handled by the parent process"
     },
     {
-        "code":     "def is_empty ( self ) : return len ( self . items ) == 0",
-        "question": "Does the code check if the list is empty?",
-        "answer":   "Yes"
+        "code":     "def mad std data axis None return median absolute deviation data axis axis * 1 482602218505602",
+        "question": "How does the code calculate a robust standard deviation?",
+        "answer":   "using the median absolute deviation scaled by a constant"
     },
     {
-        "code":     "def sort_list ( items ) : return sorted ( items , reverse = True )",
-        "question": "How does the code sort the items?",
-        "answer":   "in descending order"
+        "code":     "def preprocess for train image output height output width resize side tf random uniform",
+        "question": "For what purpose does the code preprocess the given image?",
+        "answer":   "for training"
     },
 ]
 
@@ -40,11 +40,12 @@ SYSTEM_PROMPT = (
     "- Read the code carefully before answering.\n"
     "- Answer the question directly and concisely based solely on what the code does.\n"
     "- Match the style and length of the examples provided — a short phrase or single sentence is expected.\n"
-    "- For Yes/No questions, answer with Yes or No followed by a brief reason only if necessary.\n"
+    "- For Why questions, answer with the reason or cause.\n"
+    "- For How questions, answer with the mechanism or method used.\n"
+    "- For For what purpose questions, answer with the goal or intent.\n"
     "\n"
     "IMPORTANT: Study the examples carefully before answering.\n"
     "IMPORTANT: The examples define the expected answer style, format, and length — match them exactly.\n"
-    "IMPORTANT: If the question asks WHAT the code returns, answer with the thing that is returned, not a description of how it works.\n"
     "\n"
     "CRITICAL: DO NOT REPEAT OR PARAPHRASE THE QUESTION IN YOUR ANSWER.\n"
     "CRITICAL: DO NOT ADD EXPLANATIONS OR INFORMATION NOT PRESENT IN THE CODE.\n"
@@ -117,22 +118,19 @@ for i, item in enumerate(tqdm(dataset, desc="Generating")):
 
     user_prompt = build_user_prompt(FEW_SHOT_EXAMPLES, code, question)
 
-    messages = [
-        {"role": "system", "content": SYSTEM_PROMPT},
-        {"role": "user",   "content": user_prompt},
-    ]
-
     try:
         formatted = tokenizer.apply_chat_template(
-            messages,
+            [
+                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "user",   "content": user_prompt},
+            ],
             tokenize=False,
             add_generation_prompt=True,
         )
     except Exception:
         formatted = (
-            f"### System:\n{SYSTEM_PROMPT}\n\n"
-            f"### User:\n{user_prompt}\n\n"
-            f"### Assistant:\n"
+            f"{SYSTEM_PROMPT}\n\n"
+            f"{user_prompt}"
         )
 
     inputs = tokenizer(
@@ -156,6 +154,7 @@ for i, item in enumerate(tqdm(dataset, desc="Generating")):
 
     new_tokens = output_ids[0][inputs["input_ids"].shape[1]:]
     prediction = tokenizer.decode(new_tokens, skip_special_tokens=True).strip()
+    prediction = prediction.split("\n")[0].strip()
 
     print(f"[{i+1}/{len(dataset)}] category={category}")
     print(f"  Q:    {question}")
