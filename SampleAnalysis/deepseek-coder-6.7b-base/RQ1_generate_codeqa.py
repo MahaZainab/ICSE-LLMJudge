@@ -6,7 +6,7 @@ import torch
 from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-GENERATOR_MODEL_ID = "deepseek-aideepseek-coder-6.7b-base"
+GENERATOR_MODEL_ID = "deepseek-ai/deepseek-coder-6.7b-base"
 INPUT_FILE         = "difficult_codeqa_selected.json"
 OUTPUT_FILE        = "RQ1_generate_codeqa_difficult_samples_predictions.json"
 SAVE_EVERY         = 25
