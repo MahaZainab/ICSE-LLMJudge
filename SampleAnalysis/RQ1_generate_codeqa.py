@@ -112,7 +112,7 @@ for i, item in enumerate(tqdm(dataset, desc="Generating")):
     code     = item.get("code", "")
     question = item.get("question", "")
     gold     = item.get("answer", "")
-    category = item.get("_category", "unknown")
+    category = item.get("category", "unknown")
     q_id     = item.get("id", f"q{i+1}")
 
     user_prompt = build_user_prompt(FEW_SHOT_EXAMPLES, code, question)
