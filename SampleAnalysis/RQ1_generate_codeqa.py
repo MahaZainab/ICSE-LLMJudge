@@ -8,7 +8,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 
 GENERATOR_MODEL_ID = "meta-llama/Llama-3.2-3B"
 INPUT_FILE         = "difficult_codeqa_selected.json"
-OUTPUT_FILE        = "RQ1_codeqa_difficult_samples_predictions.json"
+OUTPUT_FILE        = "RQ1_generate_codeqa_difficult_samples_predictions.json"
 SAVE_EVERY         = 25
 MAX_NEW_TOKENS     = 128
 HF_CACHE           = os.getenv("HF_HOME", "")
