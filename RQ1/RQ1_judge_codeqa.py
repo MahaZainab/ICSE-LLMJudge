@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 import json
 import os
@@ -167,7 +166,7 @@ def build_user_prompt(code, question, reference, prediction):
         f"Predicted Answer:\n{prediction}"
     )
 
-# FIX 1: overwrite existing records by ID instead of skipping them
+
 def save_append(path, new_data):
     try:
         with open(path, "r", encoding="utf-8") as f:
@@ -176,7 +175,7 @@ def save_append(path, new_data):
         existing = []
     existing_map = {item.get("id"): item for item in existing}
     for item in new_data:
-        existing_map[item.get("id")] = item   # overwrite, not skip
+        existing_map[item.get("id")] = item 
     combined = list(existing_map.values())
     with open(path, "w", encoding="utf-8") as f:
         json.dump(combined, f, indent=2, ensure_ascii=False)
@@ -290,7 +289,7 @@ for i, item in enumerate(tqdm(dataset, desc="Judging")):
         return_tensors="pt",
         padding=True,
         truncation=True,
-        max_length=8192,        # Qwen2.5-Coder-7B supports up to 128k; 8192 is safe for typical inputs
+        max_length=8192,        
     ).to(model.device)
 
     try:
@@ -299,7 +298,7 @@ for i, item in enumerate(tqdm(dataset, desc="Judging")):
                 **inputs,
                 max_new_tokens=MAX_NEW_TOKENS,
                 do_sample=False,
-                use_cache=False,                    # FIX 4: avoids DynamicCache seen_tokens error
+                use_cache=False,                   
                 pad_token_id=tokenizer.eos_token_id,
                 eos_token_id=tokenizer.eos_token_id,
             )
@@ -320,7 +319,6 @@ for i, item in enumerate(tqdm(dataset, desc="Judging")):
     print(f"[{i+1}/{len(dataset)}] category={category}")
     print(f"  acc={acc} comp={comp} clar={clar} rel={rel}\n")
 
-    # FIX 5: store raw scores in results (JSON) to match csv_records — no more nested {"score": null}
     result = {
         "id":           q_id,
         "dataset":      "codeqa",
