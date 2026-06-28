@@ -8,8 +8,8 @@ from collections import defaultdict
 #   FAIL     : score < 2
 #   BORDER   : score == 2
 #   PASS     : score > 2
-#
-#
+# sub-bucket is further splitting
+# 
 #   EXCLUDE
 #   Case 1 — only PASS present       : all 4 dims > 2
 #             SLM performed well across all dimensions.
