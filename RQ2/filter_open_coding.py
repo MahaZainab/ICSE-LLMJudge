@@ -8,7 +8,7 @@ from collections import defaultdict
 #   FAIL     : score < 2
 #   BORDER   : score == 2
 #   PASS     : score > 2
-# sub-bucket is further splitting
+# sub-bucket is further splitting of cases based on which dimension(s) are the anchor for the case.
 # 
 #   EXCLUDE
 #   Case 1 — only PASS present       : all 4 dims > 2
