@@ -57,11 +57,7 @@ DIMS = ["accuracy", "completeness", "clarity", "relevance"]
 
 
 def classify(record):
-    """
-    Returns (case_label, sub_bucket) for a record.
-    sub_bucket is None for cases without further splitting.
-    For Cases 5, 6, 7 it is a tuple of the anchor dimension name(s).
-    """
+    
     scores = {d: record[d] for d in DIMS}
 
     has_fail   = any(v <  2 for v in scores.values())
