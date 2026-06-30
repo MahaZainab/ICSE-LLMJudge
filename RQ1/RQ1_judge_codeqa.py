@@ -10,10 +10,10 @@ from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 JUDGE_MODEL_ID = "Qwen/Qwen2.5-Coder-7B-Instruct"
-INPUT_FILE     = "RQ1_generate_codeqa/llama3.2_3b_instruct_predictions.json"
-OUTPUT_JSON    = "RQ1_judge_codeqa/llama3.2_3b_instruct_judged1.json"
-OUTPUT_CSV     = "RQ1_judge_codeqa/llama3.2_3b_instruct_judged1.csv"
-OUTPUT_PLOT    = "RQ1_judge_codeqa/llama3.2_3b_instruct_judged1.png"
+INPUT_FILE     = "RQ1_generate_codeqa/filtered/llama3.2_3b_instruct_predictions.json"
+OUTPUT_JSON    = "RQ1_judge_codeqa/filtered/llama3.2_3b_instruct_judged1.json"
+OUTPUT_CSV     = "RQ1_judge_codeqa/filtered/llama3.2_3b_instruct_judged1.csv"
+OUTPUT_PLOT    = "RQ1_judge_codeqa/filtered/llama3.2_3b_instruct_judged1.png"
 SAVE_EVERY     = 25
 MAX_NEW_TOKENS = 128
 HF_CACHE       = os.getenv("HF_HOME", "")
