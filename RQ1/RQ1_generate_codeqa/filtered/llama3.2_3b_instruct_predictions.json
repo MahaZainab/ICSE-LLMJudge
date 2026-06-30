@@ -1,59 +1,5 @@
 [
   {
-    "id": "q1",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def Make Suite From Dict d label None suite Suite label label suite Set Dict d suite Normalize return suite",
-    "question": "Does the code make a suite ?",
-    "answer": "Yes",
-    "prediction": "Yes"
-  },
-  {
-    "id": "q2",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def receive message topic name subscription name pubsub client pubsub Client topic pubsub client topic topic name subscription topic subscription subscription name results subscription pull return immediately True print ' Received{}messages ' format len results for ack id message in results print '*{} {} {}' format message message id message data message attributes if results subscription acknowledge [ack id for ack id message in results]",
-    "question": "Does the code receive a message from a pull subscription ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not receive a message from a pull subscription."
-  },
-  {
-    "id": "q3",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def Create Shared Budget client budget service client Get Service ' Budget Service' version 'v 201609 ' budget {'name' ' Shared Interplanetary Budget#%s' % uuid uuid 4 'amount' {'micro Amount' '2000000 '} 'delivery Method' 'STANDARD' 'is Explicitly Shared' 'true'}operation {'operator' 'ADD' 'operand' budget}response budget service mutate [operation] return response['value'][ 0 ]",
-    "question": "Be an explicit budget used to create the campaign only ?",
-    "answer": "Yes",
-    "prediction": "Answer: No, the explicit budget is not used to create the campaign, it is used to add an operation to the budget."
-  },
-  {
-    "id": "q4",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get Plugins Directory Path return archive get Absolute Frozen Folder Path file 'xml plugins'",
-    "question": "Does the code get the plugins directory path ?",
-    "answer": "Yes",
-    "prediction": "Answer: yes"
-  },
-  {
-    "id": "q5",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def ffmpeg write image filename image logfile False if image dtype 'uint 8 ' image image astype 'uint 8 ' cmd [get setting 'FFMPEG BINARY' '-y' '-s' '%dx%d' % image shape[ 2][ -1 ] '-f' 'rawvideo' '-pix fmt' 'rgba' if image shape[ 2 ] 4 else 'rgb 24 ' '-i' '-' filename]if logfile log file open filename + ' log' 'w+' else log file sp PIP Epopen params {'stdout' DEVNULL 'stderr' log file 'stdin' sp PIPE}if os name 'nt' popen params['creationflags'] 134217728 proc sp Popen cmd **popen params out err proc communicate image tostring if proc returncode err '\\n' join [ '[ Movie Py] Running %s\\n' % cmd 'WARNING thiscommandreturnedanerror ' err decode 'utf 8 ' ] raise IO Error err del proc",
-    "question": "Does the code write an image to a file ?",
-    "answer": "Yes",
-    "prediction": "Yes"
-  },
-  {
-    "id": "q6",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def url add parameters url params if params fragments list urlparse url value parse qs fragments[ 4 ] value update params fragments[ 4 ] urlencode value url urlunparse fragments return url",
-    "question": "Does the code add parameters to url ?",
-    "answer": "Yes",
-    "prediction": "Answer: yes"
-  },
-  {
     "id": "q7",
     "dataset": "codeqa",
     "category": "For what purpose",
@@ -61,78 +7,6 @@
     "question": "For what purpose do worksheet titles and ids read ?",
     "answer": "for a workbook",
     "prediction": "For what purpose do worksheet titles and ids read?\nThey are read to extract and yield the 'id' attribute from each worksheet element in the XML tree."
-  },
-  {
-    "id": "q8",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get token profile token os environ get 'VAULT TOKEN' profile get 'vault token' if token is None raise Command Execution Error ' Atokenwasnotconfigured' return token",
-    "question": "Does the code raise an error if it ca nt be found ?",
-    "answer": "Yes",
-    "prediction": "Answer: yes, it raises a 'Command Execution Error' if the token is not found."
-  },
-  {
-    "id": "q9",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get token profile token os environ get 'VAULT TOKEN' profile get 'vault token' if token is None raise Command Execution Error ' Atokenwasnotconfigured' return token",
-    "question": "Does the code get a token if it ca nt be found ?",
-    "answer": "Yes",
-    "prediction": "Answer: no"
-  },
-  {
-    "id": "q10",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def is windows return sys platform startswith u'win'",
-    "question": "Are we using windows when ?",
-    "answer": "Yes",
-    "prediction": "Are we using windows when the system platform starts with 'win'."
-  },
-  {
-    "id": "q11",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def empty urlconf request t Template EMPTY URLCONF TEMPLATE name ' Empty URL Conftemplate' c Context {'project name' settings SETTINGS MODULE split ' ' [0 ]} return Http Response Not Found t render c mimetype 'text/html'",
-    "question": "Does the code create an empty urlconf 404 error response ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code creates an empty URLCONF 404 error response."
-  },
-  {
-    "id": "q12",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def new key *args **kwargs return DES Cipher key *args **kwargs",
-    "question": "Does the code create a new des cipher ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code creates a new DES (Data Encryption Standard) cipher."
-  },
-  {
-    "id": "q13",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "@contextmanagerdef pelican open filename mode u'rb' strip crs sys platform u'win 32 ' with codecs open filename mode encoding u'utf- 8 ' as infile content infile read if content[ 1] codecs BOM UTF 8 decode u'utf 8 ' content content[ 1 ]if strip crs content content replace u'\\r\\n' u'\\n' yield content",
-    "question": "Does the code open a file ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code opens a file."
-  },
-  {
-    "id": "q14",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "@contextmanagerdef pelican open filename mode u'rb' strip crs sys platform u'win 32 ' with codecs open filename mode encoding u'utf- 8 ' as infile content infile read if content[ 1] codecs BOM UTF 8 decode u'utf 8 ' content content[ 1 ]if strip crs content content replace u'\\r\\n' u'\\n' yield content",
-    "question": "Does the code return its content ?",
-    "answer": "Yes",
-    "prediction": "Answer: no"
-  },
-  {
-    "id": "q15",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def init cnf CONFIG['host'] cnf get 'proxy' {} get 'host' if not CONFIG['host'] raise Minion Error message \" Cannotfind'host'parameterintheproxyconfiguration\" CONFIG['user'] cnf get 'proxy' {} get 'user' if not CONFIG['user'] raise Minion Error message \" Cannotfind'user'parameterintheproxyconfiguration\" CONFIG['uri'] '/api/{ 0 }' format CONFIG['user']",
-    "question": "Does the code initialize the module ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not initialize the module."
   },
   {
     "id": "q16",
@@ -144,42 +18,6 @@
     "prediction": "It reads byte arrays in chunks of 4 bytes."
   },
   {
-    "id": "q17",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def Index Definition To Proto app id index definition proto entity pb Composite Index proto set app id app id proto set id 0 proto set state entity pb Composite Index WRITE ONLY definition proto proto mutable definition definition proto set entity type index definition kind definition proto set ancestor index definition ancestor if index definition properties is not None for prop in index definition properties prop proto definition proto add property prop proto set name prop name prop proto set direction DIRECTION MAP[prop direction] return proto",
-    "question": "Does the code transform individual index definition to protocol buffer ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not transform individual index definition to protocol buffer."
-  },
-  {
-    "id": "q18",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def Index Definition To Proto app id index definition proto entity pb Composite Index proto set app id app id proto set id 0 proto set state entity pb Composite Index WRITE ONLY definition proto proto mutable definition definition proto set entity type index definition kind definition proto set ancestor index definition ancestor if index definition properties is not None for prop in index definition properties prop proto definition proto add property prop proto set name prop name prop proto set direction DIRECTION MAP[prop direction] return proto",
-    "question": "Does the code transform to protocol buffer individual index definition ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not transform to protocol buffer individual index definition."
-  },
-  {
-    "id": "q19",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def generate node environment name filename stream None if not isinstance node nodes Template raise Type Error \" Can'tcompilenontemplatenodes\" generator Code Generator environment name filename stream generator visit node if stream is None return generator stream getvalue",
-    "question": "Does the code generate the python source for a node tree ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not generate the Python source for a node tree."
-  },
-  {
-    "id": "q20",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def replication group absent name wait 600 region None key None keyid None profile None **args ret {'name' name 'result' True 'comment' '' 'changes' {}}args dict [ k v for k v in args items if not k startswith ' ' ] exists salt ['boto 3 elasticache replication group exists'] name region region key key keyid keyid profile profile if exists if opts ['test'] ret['comment'] ' Replicationgroup{ 0 }wouldberemoved ' format name ret['result'] Nonereturn retdeleted salt ['boto 3 elasticache delete replication group'] name wait wait region region key key keyid keyid profile profile **args if deleted ret['changes']['old'] nameret['changes']['new'] Noneelse ret['result'] Falseret['comment'] ' Failedtodelete{ 0 }replicationgroup ' format name else ret['comment'] ' Replicationgroup{ 0 }alreadyabsent ' format name return ret",
-    "question": "Does the code ensure ?",
-    "answer": "Yes",
-    "prediction": "Does the code ensure that the replication group is deleted if it exists and the 'test' option is not specified?"
-  },
-  {
     "id": "q21",
     "dataset": "codeqa",
     "category": "When",
@@ -187,15 +25,6 @@
     "question": "When do a cohort exist ?",
     "answer": "already",
     "prediction": "When a cohort exists."
-  },
-  {
-    "id": "q22",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def send instant emails recipient list feedback message reference exploration id has suggestion can users receive email email manager can users receive thread email recipient list exploration id has suggestion for index recipient id in enumerate recipient list if can users receive email[index] transaction services run in transaction enqueue feedback message instant email task recipient id feedback message reference",
-    "question": "Does the code add the given feedbackmessagereference to each of the recipients email buffers ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not explicitly add the feedback message reference to each of the recipients' email buffers."
   },
   {
     "id": "q23",
@@ -207,15 +36,6 @@
     "prediction": "Answer: by converting hexadecimal codes to characters."
   },
   {
-    "id": "q24",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get Accessible Attribute attribute Name xml Element function Name attribute Name[len 'get' ] lower if function Name not in evaluate global Creation Dictionary print ' Warning function Namenotinglobal Creation Dictionaryin get Accessible Attributeincreationfor 'print function Nameprint xml Elementreturn Noneplugin Module archive get Module With Path evaluate global Creation Dictionary[function Name] if plugin Module None print ' Warning get Accessible Attributeincreationcannotgetaplugin Modulefor 'print function Nameprint xml Elementreturn Nonereturn Creation plugin Module xml Element get Creation",
-    "question": "Does the code get the accessible attribute ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not get the accessible attribute."
-  },
-  {
     "id": "q25",
     "dataset": "codeqa",
     "category": "For what purpose",
@@ -223,24 +43,6 @@
     "question": "For what purpose do the full set of inherited kwargs return ?",
     "answer": "for the given cls",
     "prediction": "For what purpose do the full set of inherited kwargs return?\nto discard the'self' attribute from the inherited kwargs."
-  },
-  {
-    "id": "q26",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def cli name ret {'name' name 'changes' {} 'result' True 'comment' ''}ret['changes'] salt ['junos cli'] name return ret",
-    "question": "Does the code execute the cli commands ?",
-    "answer": "Yes",
-    "prediction": "Answer: no"
-  },
-  {
-    "id": "q27",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def cli name ret {'name' name 'changes' {} 'result' True 'comment' ''}ret['changes'] salt ['junos cli'] name return ret",
-    "question": "Does the code reuturn the text output ?",
-    "answer": "Yes",
-    "prediction": "Answer: no"
   },
   {
     "id": "q28",
@@ -252,24 +54,6 @@
     "prediction": "It resolves the layer by checking the service object's method and then returning the corresponding layer object based on the typename."
   },
   {
-    "id": "q29",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def resolve layer request typename permission 'base view resourcebase' msg PERMISSION MSG GENERIC **kwargs service typename typename split ' ' 1 if Service objects filter name service typename[ 0 ] exists service Service objects filter name service typename[ 0 ] return resolve object request Layer {'typename' service typename[ 1 ] if service[ 0 ] method 'C' else typename } permission permission permission msg msg **kwargs else return resolve object request Layer {'typename' typename} permission permission permission msg msg **kwargs",
-    "question": "Does the code resolve the layer by the provided typename ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code resolves the layer by the provided typename."
-  },
-  {
-    "id": "q30",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def resolve layer request typename permission 'base view resourcebase' msg PERMISSION MSG GENERIC **kwargs service typename typename split ' ' 1 if Service objects filter name service typename[ 0 ] exists service Service objects filter name service typename[ 0 ] return resolve object request Layer {'typename' service typename[ 1 ] if service[ 0 ] method 'C' else typename } permission permission permission msg msg **kwargs else return resolve object request Layer {'typename' typename} permission permission permission msg msg **kwargs",
-    "question": "Does the code check the optional permission ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code checks the optional permission."
-  },
-  {
     "id": "q31",
     "dataset": "codeqa",
     "category": "When",
@@ -277,24 +61,6 @@
     "question": "When do compatibility with netscapes cookie standard ensure ?",
     "answer": "the time",
     "prediction": "When does the code ensure compatibility with Netscape's cookie standard?\nIt ensures compatibility with Netscape's cookie standard by returning the date in the format 'YYYY-MM-DD HH:MM:SS GMT'."
-  },
-  {
-    "id": "q32",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def trim features value return trim var 'FEATURES' value",
-    "question": "Does the code remove a value from features variable in the make ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not remove a value from the 'features' variable."
-  },
-  {
-    "id": "q33",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def installed features image None return get components ' Feature Name' ' Features' ' Enabled'",
-    "question": "Does image window offline ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not check if the image is offline."
   },
   {
     "id": "q34",
@@ -324,42 +90,6 @@
     "prediction": "It does not modify the code."
   },
   {
-    "id": "q37",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def set Up Module global hasshass get test home assistant assert bootstrap setup component hass http DOMAIN {http DOMAIN {http CONF API PASSWORD API PASSWORD http CONF SERVER PORT SERVER PORT}} assert bootstrap setup component hass 'frontend' hass start",
-    "question": "Does the code initialize a home assistant server ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not initialize a home assistant server."
-  },
-  {
-    "id": "q38",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def negate all f return lambda *args **kwargs [ - y for y in f *args **kwargs ]",
-    "question": "Does f return a list of numbers when ?",
-    "answer": "Yes",
-    "prediction": "Does f return a list of numbers when it is a function that takes no arguments."
-  },
-  {
-    "id": "q39",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get parser class parser name parser name parser name lower if parser aliases has key parser name parser name parser aliases[parser name]module import parser name globals locals return module Parser",
-    "question": "Does the code return the parser class ?",
-    "answer": "Yes",
-    "prediction": "Answer: no"
-  },
-  {
-    "id": "q40",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get volume group info vg out err execute 'vgs' '--noheadings' '--nosuffix' '--separator' ' ' '--units' 'b' '-o' 'vg size vg free' vg run as root True info out split ' ' if len info 2 raise Runtime Error 'vg%smustbe LV Mvolumegroup' % vg return {'total' int info[ 0 ] 'free' int info[ 1 ] 'used' int info[ 0 ] - int info[ 1 ] }",
-    "question": "Do for a volume group return in bytes ?",
-    "answer": "Yes",
-    "prediction": "Answer: yes"
-  },
-  {
     "id": "q41",
     "dataset": "codeqa",
     "category": "Where",
@@ -367,15 +97,6 @@
     "question": "Where do for a volume group return ?",
     "answer": "in bytes",
     "prediction": "They return a dictionary containing the total, free, and used space for the volume group."
-  },
-  {
-    "id": "q42",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def ensure relative path drive path os path splitdrive path if path[ 0 1] os sep path drive + path[ 1 ] return path",
-    "question": "Does the code take the full path path ?",
-    "answer": "Yes",
-    "prediction": "Answer: no"
   },
   {
     "id": "q43",
@@ -387,15 +108,6 @@
     "prediction": "Answer: by checking if it is of type unicode and if it can encode 'utf-8'."
   },
   {
-    "id": "q44",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "@require contextdef volume types get by name or id context volume type list req volume types []for vol t in volume type list if not uuidutils is uuid like vol t vol type volume type get by name context vol t else vol type volume type get context vol t req volume types append vol type return req volume types",
-    "question": "Do a dict describe specific volume_type ?",
-    "answer": "Yes",
-    "prediction": "Answer: It returns a dictionary describing the specific volume type."
-  },
-  {
     "id": "q45",
     "dataset": "codeqa",
     "category": "When",
@@ -405,33 +117,6 @@
     "prediction": "When the tenant is found in the list of keystone tenants."
   },
   {
-    "id": "q46",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def stripid text return re stripid sub '\\\\ 1 ' text",
-    "question": "D the code remove the hexadecimal i d from a python object representation ?",
-    "answer": "Yes",
-    "prediction": "Answer: no, it removes the hexadecimal id from a string"
-  },
-  {
-    "id": "q47",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def b64 encode value *args **kwargs return base 64 b64 encode encode value *args **kwargs",
-    "question": "Does the code serialize a value to json ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not serialize a value to JSON."
-  },
-  {
-    "id": "q48",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def b64 encode value *args **kwargs return base 64 b64 encode encode value *args **kwargs",
-    "question": "Does the code use base64 ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code uses base64."
-  },
-  {
     "id": "q49",
     "dataset": "codeqa",
     "category": "When",
@@ -439,15 +124,6 @@
     "question": "When did args parse ?",
     "answer": "already",
     "prediction": "When did args parse?\nAt the start of the function."
-  },
-  {
-    "id": "q50",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def run setup script name script args None stop after 'run' if stop after not in 'init' 'config' 'commandline' 'run' raise Value Error \"invalidvaluefor'stop after' %r\" % stop after global setup stop after setup distribution setup stop after stop aftersave argv sys argvg {' file ' script name}l {}try try sys argv[ 0 ] script nameif script args is not None sys argv[ 1 ] script argsf open script name try exec f read in g lfinally f close finally sys argv save argv setup stop after Noneexcept System Exit passexcept raiseif setup distribution is None raise Runtime Error \"'distutils core setup 'wasnevercalled--perhaps'%s'isnota Distutilssetupscript?\" % script name return setup distribution",
-    "question": "Does the code run a setup script in a somewhat controlled environment ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code runs a setup script in a somewhat controlled environment."
   },
   {
     "id": "q51",
@@ -466,24 +142,6 @@
     "question": "Where does the code run a setup script ?",
     "answer": "in a somewhat controlled environment",
     "prediction": "in the current script"
-  },
-  {
-    "id": "q53",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def monomial div A B C monomial ldiv A B if all c > 0 for c in C return tuple C else return None",
-    "question": "Do tuples represent monomials ?",
-    "answer": "Yes",
-    "prediction": "No, tuples do not represent monomials."
-  },
-  {
-    "id": "q54",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get csr extensions csr ret Ordered Dict csrtempfile tempfile Named Temporary File csrtempfile write csr as pem csrtempfile flush csryaml parse openssl req csrtempfile name csrtempfile close if csryaml and ' Requested Extensions' in csryaml[' Certificate Request'][' Data'] csrexts csryaml[' Certificate Request'][' Data'][' Requested Extensions']if not csrexts return retfor short name long name in six iteritems EXT NAME MAPPINGS if csrexts and long name in csrexts ret[short name] csrexts[long name]return ret",
-    "question": "Do dicts contain the name ?",
-    "answer": "Yes",
-    "prediction": "Yes, dicts contain the name."
   },
   {
     "id": "q55",
@@ -522,24 +180,6 @@
     "prediction": "to map feature names to their corresponding modes"
   },
   {
-    "id": "q59",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def test write normal out String IO ascii write dat out Writer ascii RST assert equal splitlines out getvalue ' \\n Col 1 Col 2 Col 3 Col 4 \\n \\n 1 2\"hello\" 1 a\\n 2 4\\'sworlds 22 \\n \\n'",
-    "question": "Does the code write a table ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code writes a table."
-  },
-  {
-    "id": "q60",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def kill Backref receiver senderkey receiverkey id receiver receivers list senders Back get receiverkey while senderkey in receivers list try receivers list remove senderkey except breakif not receivers list try del senders Back[receiverkey]except Key Error passreturn True",
-    "question": "Does the code do the actual removal of back reference from receiver to senderkey ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not do the actual removal of back reference from receiver to senderkey."
-  },
-  {
     "id": "q61",
     "dataset": "codeqa",
     "category": "When",
@@ -567,15 +207,6 @@
     "prediction": "It returns False"
   },
   {
-    "id": "q64",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def findiso flavor url iso UR Ls[flavor]name path basename url iso path join VM Image Dir name if not path exists iso or stat iso [ST MODE] & 511 292 log '* Retrieving' url run 'curl-C--o%s%s' % iso url result run 'file' + iso if 'ISO' not in result and 'boot' not in result os remove iso raise Exception 'findiso couldnotdownloadisofrom' + url log '* Write-protectingiso' iso os chmod iso 292 log '* Usingiso' iso return iso",
-    "question": "Does the code find iso ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code downloads an ISO file from the given URL."
-  },
-  {
     "id": "q65",
     "dataset": "codeqa",
     "category": "Where",
@@ -583,69 +214,6 @@
     "question": "Where does the code run a callback ?",
     "answer": "in a transaction",
     "prediction": "Async"
-  },
-  {
-    "id": "q66",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "@utils positional 1 def transaction callback **ctx options fut transaction async callback **ctx options return fut get result",
-    "question": "Does the code run a callback in a transaction ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code runs a callback in a transaction."
-  },
-  {
-    "id": "q67",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def dmp strip f u if not u return dup strip f if dmp zero p f u return f i v 0 u - 1 for c in f if not dmp zero p c v breakelse i + 1if i len f return dmp zero u else return f[i ]",
-    "question": "Does the code remove leading zeros from f in k[x ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not remove leading zeros from f in k[x]."
-  },
-  {
-    "id": "q68",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def commit connection commit set clean",
-    "question": "Does the code do the commit itself ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not do the commit itself."
-  },
-  {
-    "id": "q69",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def commit connection commit set clean",
-    "question": "Does the code reset the dirty flag ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not reset the dirty flag."
-  },
-  {
-    "id": "q70",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get Sheet Thickness element Node return get Cascade Float Without Self 3 0 element Node 'sheet Thickness'",
-    "question": "Does the code get the sheet thickness ?",
-    "answer": "Yes",
-    "prediction": "Yes"
-  },
-  {
-    "id": "q71",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def find library lib path for d in path[ -1 ] real lib os path join d lib if os path exists real lib return real lib",
-    "question": "Does the code find a library ?",
-    "answer": "Yes",
-    "prediction": "Answer: yes"
-  },
-  {
-    "id": "q72",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def avail images conn None call None if call 'action' raise Salt Cloud System Exit ' Theavail imagesfunctionmustbecalledwith-for--function orwiththe--list-imagesoption' if not conn conn get conn images conn list images ret {}for img in images if isinstance img name string types and not six PY 3 img name img name encode 'ascii' 'salt-cloud-force-ascii' else img name str img name ret[img name] {}for attr in dir img if attr startswith ' ' continueattr value getattr img attr if isinstance attr value string types and not six PY 3 attr value attr value encode 'ascii' 'salt-cloud-force-ascii' ret[img name][attr] attr valuereturn ret",
-    "question": "Does the code return a dict of all available vm images on the cloud provider with relevant data ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code returns a dict of all available vm images on the cloud provider with relevant data."
   },
   {
     "id": "q73",
@@ -675,33 +243,6 @@
     "prediction": "The code retrieves the certificate from the server using the `getpeercert` function."
   },
   {
-    "id": "q76",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get server certificate addr ssl version PROTOCOL SS Lv 23 ca certs None addrif ca certs is not None cert reqs CERT REQUIRE Delse cert reqs CERT NON Es create connection addr s wrap socket s ssl version ssl version cert reqs cert reqs ca certs ca certs dercert s getpeercert True s close return DER cert to PEM cert dercert",
-    "question": "Does the code retrieve the certificate at the specified address from the server ?",
-    "answer": "Yes",
-    "prediction": "Answer: no"
-  },
-  {
-    "id": "q77",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get server certificate addr ssl version PROTOCOL SS Lv 23 ca certs None addrif ca certs is not None cert reqs CERT REQUIRE Delse cert reqs CERT NON Es create connection addr s wrap socket s ssl version ssl version cert reqs cert reqs ca certs ca certs dercert s getpeercert True s close return DER cert to PEM cert dercert",
-    "question": "Does the code retrieve the certificate from the server at the specified address ?",
-    "answer": "Yes",
-    "prediction": "Answer: no"
-  },
-  {
-    "id": "q78",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def test system numerics complex print 'TODO'",
-    "question": "Should this be tested here minimally ?",
-    "answer": "Yes",
-    "prediction": "Answer: no"
-  },
-  {
     "id": "q79",
     "dataset": "codeqa",
     "category": "How",
@@ -729,15 +270,6 @@
     "prediction": "It is not clear what the code does."
   },
   {
-    "id": "q82",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def run cmds cmds fail sequential False to return Truefor cmd tries in cmds if not to return and fail sequential return Falseelif run cmd cmd attempts tries continueelse to return Falsereturn to return",
-    "question": "Does the code run a list of tuples ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not run a list of tuples."
-  },
-  {
     "id": "q83",
     "dataset": "codeqa",
     "category": "Where",
@@ -745,15 +277,6 @@
     "question": "Where is the loop intersecting ?",
     "answer": "inside the x segment",
     "prediction": "Inside the segment Y."
-  },
-  {
-    "id": "q84",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def is Loop Intersecting Inside X Segment loop segment First X segment Second X segment Y Mirror y rotated Loop get Points Round Z Axis segment Y Mirror loop for point Index in xrange len rotated Loop point First rotated Loop[point Index]point Second rotated Loop[ point Index + 1 % len rotated Loop ]if is Line Intersecting Inside X Segment point First point Second segment First X segment Second X y return Truereturn False",
-    "question": "Is the loop intersecting inside the x segment ?",
-    "answer": "Yes",
-    "prediction": "The loop is intersecting inside the x segment."
   },
   {
     "id": "q85",
@@ -774,15 +297,6 @@
     "prediction": "The memory was aligned to a size of 4 bytes."
   },
   {
-    "id": "q87",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "@login required@require POS Tdef preview request kumascript errors []doc Nonerender preview Truewiki content request POST get 'content' '' doc id request POST get 'doc id' if doc id doc Document objects get id doc id if doc and doc defer rendering render preview Falseelse render preview kumascript should use rendered doc request GET html wiki content if render preview wiki content kumascript errors kumascript post request wiki content request LANGUAGE CODE context {'content' wiki content 'title' request POST get 'title' '' 'kumascript errors' kumascript errors}return render request 'wiki/preview html' context",
-    "question": "Does the code create an html fragment preview of the posted wiki syntax ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code creates an HTML fragment preview of the posted wiki syntax."
-  },
-  {
     "id": "q88",
     "dataset": "codeqa",
     "category": "Where",
@@ -792,15 +306,6 @@
     "prediction": "Code:\ndef extended_euclidean(f, g):\n    if not g:\n        return f, 1, 0\n    else:\n        x, y, p, q, u, v = extended_euclidean(g, f % g)\n        return y, x - (f // g) * y, p"
   },
   {
-    "id": "q89",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def dmp gcdex f g u K if not u return dup gcdex f g K else raise Multivariate Polynomial Error f g",
-    "question": "Did the code extend euclidean algorithm in f[x ] ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code extended the Euclidean algorithm for polynomials."
-  },
-  {
     "id": "q90",
     "dataset": "codeqa",
     "category": "Where",
@@ -808,60 +313,6 @@
     "question": "Where do the counts differ ?",
     "answer": "where",
     "prediction": "The counts differ in the elements that are not present in the's' list."
-  },
-  {
-    "id": "q91",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def count diff hashable actual expected s t ordered count actual ordered count expected result []for elem cnt s in s items cnt t t get elem 0 if cnt s cnt t diff Mismatch cnt s cnt t elem result append diff for elem cnt t in t items if elem not in s diff Mismatch 0 cnt t elem result append diff return result",
-    "question": "Do the counts differ where ?",
-    "answer": "Yes",
-    "prediction": "The counts differ where the elements are not equal."
-  },
-  {
-    "id": "q92",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get models app labels from django db models import get app get apps get modelfrom django db models import get models as get all modelsfrom django contrib contenttypes models import Content Type EXCLUDED MODELS Content Type models []if not app labels for app in get apps models + [m for m in get all models app if m not in EXCLUDED MODELS ]for app label in app labels if ' ' in app label app label model name app label split ' ' 1 models append get model app label model name else models + [m for m in get all models get app app label if m not in EXCLUDED MODELS ]return models",
-    "question": "Does the code get a list of models for the given app labels ?",
-    "answer": "Yes",
-    "prediction": "Yes"
-  },
-  {
-    "id": "q93",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def storify f *requireds **defaults stor Storage for k in requireds + tuple f keys v f[k]if isinstance v list v v[ -1 ]if hasattr v 'value' v v valuesetattr stor k v for k v in defaults iteritems result vif hasattr stor k result stor[k]if v and not isinstance result tuple result result setattr stor k result return stor",
-    "question": "Does the code create a storage object ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code creates a storage object."
-  },
-  {
-    "id": "q94",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def delete pipeline pipeline id region None key None keyid None profile None client get client region key keyid profile r {}try client delete pipeline pipeline Id pipeline id r['result'] Trueexcept botocore exceptions Boto Core Error botocore exceptions Client Error as e r['error'] str e return r",
-    "question": "Does the code delete a pipeline ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code deletes a pipeline."
-  },
-  {
-    "id": "q95",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def next redirect data default default view **get kwargs next data get 'next' default if next is None next urlresolvers reverse default view if get kwargs if '#' in next tmp next rsplit '#' 1 next tmp[ 0 ]anchor '#' + tmp[ 1 ] else anchor ''joiner '?' in next and '&' or '?' next + joiner + urllib urlencode get kwargs + anchor return Http Response Redirect next",
-    "question": "Does the code handle the \" where should i go next ? \" part of comment views ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code handles the \"where should I go next?\" part of comment views by checking if the 'next' parameter is present and if it contains a '#'."
-  },
-  {
-    "id": "q96",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def test greater than assert hug types greater than 10 '11 ' 11 assert hug types greater than 10 11 11 assert hug types greater than 10 1000 1000 assert '10 ' in hug types greater than 10 doc with pytest raises Value Error assert hug types greater than 10 9",
-    "question": "Do hugs greater than type limis the values passed in succefully ?",
-    "answer": "Yes",
-    "prediction": "No, hugs greater than type limits the values passed successfully."
   },
   {
     "id": "q97",
@@ -882,33 +333,6 @@
     "prediction": "In the direction of increasing order."
   },
   {
-    "id": "q99",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def authorize user context context user id if is user context context if not context user id raise exception Not Authorized elif context user id user id raise exception Not Authorized",
-    "question": "Has the code ensures ?",
-    "answer": "Yes",
-    "prediction": "Answer: it ensures that the user is authorized to access the requested context."
-  },
-  {
-    "id": "q100",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def authorize user context context user id if is user context context if not context user id raise exception Not Authorized elif context user id user id raise exception Not Authorized",
-    "question": "Does a request have permission to access the given user ?",
-    "answer": "Yes",
-    "prediction": "Answer: No, the request does not have permission to access the given user."
-  },
-  {
-    "id": "q101",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def add Offset Add To Lists loop offset vector 3 Index vertexes vector 3 Index + offsetloop append vector 3 Index vertexes append vector 3 Index",
-    "question": "Does the code add an indexed loop to the vertexes ?",
-    "answer": "Yes",
-    "prediction": "Answer: yes"
-  },
-  {
     "id": "q102",
     "dataset": "codeqa",
     "category": "When",
@@ -925,51 +349,6 @@
     "question": "When is an error raised ?",
     "answer": "when the version is unknown",
     "prediction": "assert raises ValueError"
-  },
-  {
-    "id": "q104",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def cms sign text text signing cert file name signing key file name ensure subprocess process subprocess Popen ['openssl' 'cms' '-sign' '-signer' signing cert file name '-inkey' signing key file name '-outform' 'PEM' '-nosmimecap' '-nodetach' '-nocerts' '-noattr'] stdin subprocess PIPE stdout subprocess PIPE stderr subprocess PIPE output err process communicate text retcode process poll if retcode or ' Error' in err if retcode 3 LOG error \" Signingerror Unabletoloadcertificate-ensureyou'veconfigured PK Iwith'keystone-managepki setup'\" else LOG error ' Signingerror %s' % err raise subprocess Called Process Error retcode 'openssl' return output",
-    "question": "Do a produce a base64 encoding of a der formatted cms document URL ?",
-    "answer": "Yes",
-    "prediction": "The code does not produce a base64 encoding of a DER formatted CMS document URL."
-  },
-  {
-    "id": "q105",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def cms sign text text signing cert file name signing key file name ensure subprocess process subprocess Popen ['openssl' 'cms' '-sign' '-signer' signing cert file name '-inkey' signing key file name '-outform' 'PEM' '-nosmimecap' '-nodetach' '-nocerts' '-noattr'] stdin subprocess PIPE stdout subprocess PIPE stderr subprocess PIPE output err process communicate text retcode process poll if retcode or ' Error' in err if retcode 3 LOG error \" Signingerror Unabletoloadcertificate-ensureyou'veconfigured PK Iwith'keystone-managepki setup'\" else LOG error ' Signingerror %s' % err raise subprocess Called Process Error retcode 'openssl' return output",
-    "question": "Does openssl use to sign a document ?",
-    "answer": "Yes",
-    "prediction": "Yes"
-  },
-  {
-    "id": "q106",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def enable name runas None service get service name label service['plist'][' Label']return launchctl 'enable' 'system/{ 0 }' format label runas runas",
-    "question": "Does the code enable a launchd service ?",
-    "answer": "Yes",
-    "prediction": "Yes"
-  },
-  {
-    "id": "q107",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def retrieve fid share key None url build url RESOURCE id fid params make params share key share key return request 'get' url params params",
-    "question": "Does the code retrieve a plot from plotly ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not retrieve a plot from plotly."
-  },
-  {
-    "id": "q108",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def translate exception exc info initial skip 0 tb exc info[ 2 ]frames []for x in xrange initial skip if tb is not None tb tb tb nextinitial tb tbwhile tb is not None if tb tb frame f code in internal code tb tb tb nextcontinuenext tb tb nexttemplate tb tb frame f globals get ' jinja template ' if template is not None lineno template get corresponding lineno tb tb lineno tb fake exc info exc info[ 2] + tb template filename lineno [2 ]frames append Traceback Frame Proxy tb tb nextif not frames raise exc info[ 0 ] exc info[ 1 ] exc info[ 2 ]traceback Processed Traceback exc info[ 0 ] exc info[ 1 ] frames if tb set next is not None traceback chain frames return traceback",
-    "question": "Will it rewrite the exceptions if passed an exc_info all the way down to the correct line numbers and frames automatically ?",
-    "answer": "Yes",
-    "prediction": "Yes"
   },
   {
     "id": "q109",
@@ -999,42 +378,6 @@
     "prediction": "Answer: by treating the input as a JSON string and evaluating it as Python code."
   },
   {
-    "id": "q112",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def has userland tool executable if os path isabs executable return os path exists executable else for d in os environ['PATH'] split ' ' f os path join d executable if os path exists f return Truereturn False",
-    "question": "Does the system have a given executable ?",
-    "answer": "Yes",
-    "prediction": "True"
-  },
-  {
-    "id": "q113",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def str to unicode s encoding None if not type s str return sif not encoding encoding ENCODIN Gfor c in [encoding 'utf- 8 ' 'latin- 1 '] try return s decode c except Unicode Decode Error passreturn s decode encoding 'replace'",
-    "question": "Do a string of unknown character set convert to a unicode string ?",
-    "answer": "Yes",
-    "prediction": "Answer: it attempts to convert the string to UTF-8 and Latin-1 if the conversion fails, and if that also fails, it replaces the characters with a replacement marker."
-  },
-  {
-    "id": "q114",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def merge dict 1 dict 2 for key val 2 in dict 2 items if val 2 is not None val 1 dict 1 get key if isinstance val 2 dict if val 1 is None val 1 {}if isinstance val 1 Alias val 1 val 1 val 2 elif isinstance val 1 tuple alias others val 1 others others copy merge others val 2 val 1 alias others else val 1 val 1 copy merge val 1 val 2 else val 1 val 2 dict 1 [key] val 1",
-    "question": "Does the code merge the data from dict2 into the dict1 dictionary ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code merges the data from dict2 into the dict1 dictionary."
-  },
-  {
-    "id": "q115",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def test solve polynomial cv 1a assert solve sqrt x - 1 x [1 ] assert solve sqrt x - 2 x [4 ] assert solve x ** Rational 1 4 - 2 x [16 ] assert solve x ** Rational 1 3 - 3 x [27 ] assert solve sqrt x + x ** Rational 1 3 + x ** Rational 1 4 x [0 ]",
-    "question": "Did a polynomial equation use the change of variable y - > x**rational ?",
-    "answer": "Yes",
-    "prediction": "The code uses the change of variable y -> x**rational to simplify the polynomial equation."
-  },
-  {
     "id": "q116",
     "dataset": "codeqa",
     "category": "How",
@@ -1042,69 +385,6 @@
     "question": "How can equations be converted to a polynomial equation ?",
     "answer": "using the change of variable y - > x**rational",
     "prediction": "Code:\ndef solve ( polynomial ) : \n    # implementation details omitted \n    pass\n\nQuestion:\nHow are polynomial equations represented internally?"
-  },
-  {
-    "id": "q117",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def classdot 2 class path if path[ 0 ] 'L' and path[ -1 ] ' ' print 'WARNING %salreadya Lclass name' % path return pathnew name 'L' + path replace ' ' '/' + ' ' return new name",
-    "question": "Does the code convert a path such as android ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not convert a path such as 'android'."
-  },
-  {
-    "id": "q118",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def natsort Key string return [ int s if s isdigit else s for s in re split ' \\\\d+ ' string ]",
-    "question": "Does the code see URL ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not see URL."
-  },
-  {
-    "id": "q119",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "@register u'kill-line' def kill line event buff event current bufferif event arg < 0 deleted buff delete before cursor count - buff document get start of line position elif buff document current char u'\\n' deleted buff delete 1 else deleted buff delete count buff document get end of line position event cli clipboard set text deleted",
-    "question": "Does the code kill the text to the end of the line ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not kill the text to the end of the line."
-  },
-  {
-    "id": "q120",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def write file data with open 'requirements all txt' 'w+' as req file req file write data",
-    "question": "Does the code write the modules to the requirements_all ?",
-    "answer": "Yes",
-    "prediction": "Answer: no"
-  },
-  {
-    "id": "q121",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def run sock delay while True now int time time lines []loadavg get loadavg lines append 'system loadavg 1min%s%d' % loadavg[ 0 ] now lines append 'system loadavg 5min%s%d' % loadavg[ 1 ] now lines append 'system loadavg 15 min%s%d' % loadavg[ 2 ] now message '\\n' join lines + '\\n' print 'sendingmessage'print '-' * 80 print messagesock sendall message time sleep delay",
-    "question": "Does the code make ?",
-    "answer": "Yes",
-    "prediction": "Does the code send a message over a socket?"
-  },
-  {
-    "id": "q122",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def runtest test verbose quiet huntrleaks False use resources None pgo False test support verbose verboseif use resources is not None test support use resources use resourcestry return runtest inner test verbose quiet huntrleaks pgo finally cleanup test droppings test verbose",
-    "question": "Does the code run a single test ?",
-    "answer": "Yes",
-    "prediction": "No"
-  },
-  {
-    "id": "q123",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def render template multiple times request return Http Response render to string 'base html' + render to string 'base html'",
-    "question": "Does a view render a template multiple times ?",
-    "answer": "Yes",
-    "prediction": "Answer: yes"
   },
   {
     "id": "q124",
@@ -1116,15 +396,6 @@
     "prediction": "When a view renders a template."
   },
   {
-    "id": "q125",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "@not implemented for 'directed' @not implemented for 'multigraph' def ra index soundarajan hopcroft G ebunch None community 'community' def predict u v Cu community G u community Cv community G v community if Cu Cv return 0cnbors nx common neighbors G u v return sum 1 / G degree w for w in cnbors if community G w community Cu return apply prediction G predict ebunch",
-    "question": "Does the code compute the resource allocation index of all node pairs in ebunch using community information ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code computes the resource allocation index of all node pairs in ebunch using community information."
-  },
-  {
     "id": "q126",
     "dataset": "codeqa",
     "category": "How",
@@ -1132,33 +403,6 @@
     "question": "How does the code compute the resource allocation index of all node pairs in ebunch ?",
     "answer": "using community information",
     "prediction": "It computes the resource allocation index of all node pairs in ebunch by summing the number of common neighbors between each pair of nodes."
-  },
-  {
-    "id": "q127",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def commit using None if using is None using DEFAULT DB ALIA Sconnection connections[using]connection commit",
-    "question": "Does the code do the commit itself ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not do the commit itself."
-  },
-  {
-    "id": "q128",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def commit using None if using is None using DEFAULT DB ALIA Sconnection connections[using]connection commit",
-    "question": "Does the code reset the dirty flag ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not reset the dirty flag."
-  },
-  {
-    "id": "q129",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def assert not none obj msg None values True msg 'is None'if obj is None if msg is None msg msgelif values is True msg '%s %s' % msg msg report failure msg",
-    "question": "Does the code fail the test if given object is none ?",
-    "answer": "Yes",
-    "prediction": "Answer: no"
   },
   {
     "id": "q130",
@@ -1177,51 +421,6 @@
     "question": "How did local s3 image represent ?",
     "answer": "by provided uuid",
     "prediction": "It does not represent a local file."
-  },
-  {
-    "id": "q132",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def s3 image create context image uuid return IMPL s3 image create context image uuid",
-    "question": "Does the code create local s3 image represented by provided uuid ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not create a local s3 image represented by the provided uuid."
-  },
-  {
-    "id": "q133",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get version package name pre version None version os environ get 'OSLO PACKAGE VERSION' None if version return versionversion get version from pkg info package name if version return versionversion get version from git pre version if version return versionraise Exception ' Versioningforthisprojectrequireseitheransdisttarball oraccesstoanupstreamgitrepository '",
-    "question": "Does the code get the version of the project ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code gets the version of the project."
-  },
-  {
-    "id": "q134",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def dmp slice f m n u K return dmp slice in f m n 0 u K",
-    "question": "Does the code take a continuous subsequence of terms of f in k[x ] ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code takes a continuous subsequence of terms of f in k[x ]"
-  },
-  {
-    "id": "q135",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def ping google sitemap url None ping url PING URL sitemap full url get sitemap full url sitemap url params urlencode {'sitemap' sitemap full url} urlopen '%s?%s' % ping url params",
-    "question": "Does google alert ?",
-    "answer": "Yes",
-    "prediction": "Answer: no"
-  },
-  {
-    "id": "q136",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def remote expr return annotate columns expression clause element as expr expr {'remote' True}",
-    "question": "Does the code annotate a portion of a primaryjoin expression with a remote annotation ?",
-    "answer": "Yes",
-    "prediction": "Yes"
   },
   {
     "id": "q137",
@@ -1251,15 +450,6 @@
     "prediction": "The code applies minimum variance constraint to the data."
   },
   {
-    "id": "q140",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def env is exposed env return salt utils check whitelist blacklist env whitelist opts ['hgfs env whitelist'] blacklist opts ['hgfs env blacklist']",
-    "question": "Do it compare against a whitelist and blacklist ?",
-    "answer": "Yes",
-    "prediction": "Yes"
-  },
-  {
     "id": "q141",
     "dataset": "codeqa",
     "category": "How",
@@ -1269,15 +459,6 @@
     "prediction": "Answer: by checking if the environment is in the whitelist."
   },
   {
-    "id": "q142",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def iter period start end period period start startincrement datetime timedelta seconds period for i in xrange int math ceil timeutils delta seconds start end / float period next start period start + increment yield period start next start period start next start",
-    "question": "Did the code split a time from start to end in periods of a number of seconds ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code split a time from start to end in periods of a number of seconds."
-  },
-  {
     "id": "q143",
     "dataset": "codeqa",
     "category": "When",
@@ -1285,96 +466,6 @@
     "question": "When did the code split a time from start to end ?",
     "answer": "in periods of a number of seconds",
     "prediction": "When the code splits a time from start to end, it does so at every increment of the time period."
-  },
-  {
-    "id": "q144",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def update Indices db db executescript '\\n--syncing\\ncreateindexifnotexistsix notes usnonnotes usn \\ncreateindexifnotexistsix cards usnoncards usn \\ncreateindexifnotexistsix revlog usnonrevlog usn \\n--cardspacing etc\\ncreateindexifnotexistsix cards nidoncards nid \\n--schedulinganddecklimiting\\ncreateindexifnotexistsix cards schedoncards did queue due \\n--revlogbycard\\ncreateindexifnotexistsix revlog cidonrevlog cid \\n--fielduniqueness\\ncreateindexifnotexistsix notes csumonnotes csum \\n'",
-    "question": "Does the code add indices to the db ?",
-    "answer": "Yes",
-    "prediction": "Yes"
-  },
-  {
-    "id": "q145",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get New Repository return Whittle Repository",
-    "question": "Does the code get new repository ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not get a new repository."
-  },
-  {
-    "id": "q146",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def mw snippet server query snippet url u'https //' + server + u'/w/api php?format json&action query&prop extracts&exintro&explaintext&exchars 300 &redirects&titles ' snippet url + querysnippet json loads web get snippet url snippet snippet[u'query'][u'pages']snippet snippet[list snippet keys [0 ]]return snippet[u'extract']",
-    "question": "Does the code retriv a snippet of the specified length from the given page on the given server ?",
-    "answer": "Yes",
-    "prediction": "Answer: yes"
-  },
-  {
-    "id": "q147",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "@register filter is safe False @stringfilterdef urlencode value safe None kwargs {}if safe is not None kwargs['safe'] safereturn urlquote value **kwargs",
-    "question": "Does the code escape a value for use in a url ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code escapes a value for use in a URL."
-  },
-  {
-    "id": "q148",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def dump crl type crl bio new mem buf if type FILETYPE PEM ret lib PEM write bio X509 CRL bio crl crl elif type FILETYPE ASN 1 ret lib i2 d X509 CRL bio bio crl crl elif type FILETYPE TEXT ret lib X509 CRL print bio crl crl else raise Value Error 'typeargumentmustbe FILETYPE PEM FILETYPE ASN 1 or FILETYPE TEXT' assert ret 1 return bio to string bio",
-    "question": "Does the code dump a certificate revocation list to a buffer ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code dumps a certificate revocation list to a buffer."
-  },
-  {
-    "id": "q149",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get Evaluated Value default Value element Node key if element Node None return default Valueif key in element Node attributes return get Evaluated Value Obliviously element Node key return default Value",
-    "question": "Does the code get the evaluated value ?",
-    "answer": "Yes",
-    "prediction": "Answer: no"
-  },
-  {
-    "id": "q150",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def str to bool string if string is not None if string lower in ['true' 'yes' '1 ' 'on'] return Trueelif string lower in ['false' 'no' '0 ' 'off'] return Falsereturn None",
-    "question": "Does the code convert a string to bool value ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code converts a string to a boolean value."
-  },
-  {
-    "id": "q151",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def shutdown handler List handler List for h in handler List[ ] try h flush h close except if raise Exceptions raise",
-    "question": "Does the code perform any cleanup actions in the logging system ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code performs cleanup actions by calling `flush` and `close` on the handlers in the `handler` list."
-  },
-  {
-    "id": "q152",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def add additional response fields request serialized discussion entities usernames discussion entity type include profile image if include profile image username profile dict get user profile dict request usernames ' ' join usernames for discussion entity in serialized discussion entities discussion entity['users'] get users discussion entity type discussion entity username profile dict return serialized discussion entities",
-    "question": "Does the code add additional data to serialized discussion thread / comment ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code adds additional data to serialized discussion entities, specifically the discussion entity type, username, profile image, and profile information."
-  },
-  {
-    "id": "q153",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def run Command commandline fd os popen commandline 'r' data fd read xit fd close if xit is not None sys stdout write data raise Runtime Error 'commandfailed %s' % commandline if VERBOSE sys stdout write data sys stdout flush",
-    "question": "Does the code run a command and raise runtimeerror if it fails ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code runs a command and raises a RuntimeError if it fails."
   },
   {
     "id": "q154",
@@ -1395,24 +486,6 @@
     "prediction": "When imports are put at the top of the file."
   },
   {
-    "id": "q156",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def srpc *params **kparams kparams[' no ctx'] Truereturn rpc *params **kparams",
-    "question": "Do method decorator tag a method as a remote procedure call ?",
-    "answer": "Yes",
-    "prediction": "Answer: Yes"
-  },
-  {
-    "id": "q157",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get Sides Minimum Three Based On Precision element Node radius return max get Sides Based On Precision element Node radius 3",
-    "question": "Does the code get the number of polygon sides ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not get the number of polygon sides."
-  },
-  {
     "id": "q158",
     "dataset": "codeqa",
     "category": "How",
@@ -1420,24 +493,6 @@
     "question": "How do user authentication check ?",
     "answer": "code",
     "prediction": "Answer: by checking the presence of an 'Authorization' header in the request."
-  },
-  {
-    "id": "q159",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def is author or privileged cc content context return context['is requester privileged'] or is author cc content context",
-    "question": "Do the requester author the given content ?",
-    "answer": "Yes",
-    "prediction": "Answer: no"
-  },
-  {
-    "id": "q160",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def errno from exception e if hasattr e 'errno' return e errnoelif e args return e args[ 0 ]else return None",
-    "question": "Does the code provide the errno from an exception object ?",
-    "answer": "Yes",
-    "prediction": "Answer: no"
   },
   {
     "id": "q161",
@@ -1449,15 +504,6 @@
     "prediction": "It is used to verify that a command does not produce a specific output."
   },
   {
-    "id": "q162",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def volume glance metadata copy to volume context volume id snapshot id return IMPL volume glance metadata copy to volume context volume id snapshot id",
-    "question": "Does the code update the glance metadata from a volume by copying all of the key : value pairs from the originating snapshot ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not update the glance metadata from a volume by copying all of the key : value pairs from the originating snapshot."
-  },
-  {
     "id": "q163",
     "dataset": "codeqa",
     "category": "How",
@@ -1465,24 +511,6 @@
     "question": "How does the code update the glance metadata from a volume ?",
     "answer": "by copying all of the key : value pairs from the originating snapshot",
     "prediction": "Answer: it does not update the glance metadata from a volume."
-  },
-  {
-    "id": "q164",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def write config config newlines 2 succ write config config newlines changes format changes new config return format state result name '' result succ changes changes",
-    "question": "Does the code write the given parameter config into the config file ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not write the given parameter config into the config file."
-  },
-  {
-    "id": "q165",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def remove Backrefs senderkey try signals connections[senderkey]except Key Error signals Noneelse items signals items def all Receivers for signal set in items for item in set yield item for receiver in all Receivers kill Backref receiver senderkey",
-    "question": "Does the code remove all back - references to this senderkey ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not remove all back-references to the senderkey."
   },
   {
     "id": "q166",
@@ -1494,15 +522,6 @@
     "prediction": "Answer: by joining the path with the name of the built-in function."
   },
   {
-    "id": "q167",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def setup platform hass config add devices discovery info None file path config[CONF FILE PATH]if not os access file path os R OK LOGGER error 'filepathisnotreadable' return Falseadd devices [ Local File config[CONF NAME] file path ]",
-    "question": "Does the code setup the camera ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not setup the camera."
-  },
-  {
     "id": "q168",
     "dataset": "codeqa",
     "category": "When",
@@ -1510,24 +529,6 @@
     "question": "When did field override set ?",
     "answer": "previously",
     "prediction": "When the field override is set."
-  },
-  {
-    "id": "q169",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "@register filter is safe False def dictsort value arg try return sorted value key Variable arg resolve except Type Error Variable Does Not Exist return u''",
-    "question": "Does the code take a list of dicts ?",
-    "answer": "Yes",
-    "prediction": "Yes"
-  },
-  {
-    "id": "q170",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def run operation jboss config operation fail on error True retries 1 cli command result call cli jboss config operation retries if cli command result['retcode'] 0 if is cli output cli command result['stdout'] cli result parse cli command result['stdout'] cli result['success'] cli result['outcome'] 'success' else raise Command Execution Error ' Operationhasreturnedunparseableoutput {0 }' format cli command result['stdout'] elif is cli output cli command result['stdout'] cli result parse cli command result['stdout'] cli result['success'] Falsematch re search '^ JBAS\\\\d+ ' cli result['failure-description'] cli result['err code'] match group 1 cli result['stdout'] cli command result['stdout']elif fail on error raise Command Execution Error \" Commandexecutionfailed returncode {retcode} stdout '{stdout}' stderr '{stderr}'\" format **cli command result else cli result {'success' False 'stdout' cli command result['stdout'] 'stderr' cli command result['stderr'] 'retcode' cli command result['retcode']}return cli result",
-    "question": "Does the code execute an operation against jboss instance against jboss instance ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not execute an operation against a JBoss instance."
   },
   {
     "id": "q171",
@@ -1548,51 +549,6 @@
     "prediction": "Answer: by printing the function name, line number, filename, and module name."
   },
   {
-    "id": "q173",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def reverse x axes if isinstance axes int axes [axes]slices [ slice None None -1 if i in axes else slice None None None for i in range x ndim ]return x[slices]",
-    "question": "Does the code reverse a tensor along the the specified axes ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code reverses a tensor along the specified axes."
-  },
-  {
-    "id": "q174",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def run With Config swarm Config options out Dir None output Label 'default' perm Work Dir None verbosity 1 global g current Verbosity Levelg current Verbosity Level verbosityif out Dir is None out Dir os getcwd if perm Work Dir is None perm Work Dir os getcwd check Overwrite options out Dir generate Exp Files From Swarm Description swarm Config out Dir options['exp Desc Config'] swarm Configoptions['output Label'] output Labeloptions['out Dir'] out Diroptions['perm Work Dir'] perm Work Dirrun Options inject Default Options options validate Options run Options return run Action run Options",
-    "question": "Does the code start a swarm ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not start a swarm."
-  },
-  {
-    "id": "q175",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def execute func args msg None verbose 0 dry run 0 if msg is None msg '%s%r' % func name args if msg[ -2 ] ' ' msg msg[ 0 -2 ] + ' ' log info msg if not dry run func *args",
-    "question": "Does some action affect the outside world ?",
-    "answer": "Yes",
-    "prediction": "No, some actions do not affect the outside world."
-  },
-  {
-    "id": "q176",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def execute func args msg None verbose 0 dry run 0 if msg is None msg '%s%r' % func name args if msg[ -2 ] ' ' msg msg[ 0 -2 ] + ' ' log info msg if not dry run func *args",
-    "question": "Does the code perform some action that affects the outside world ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code performs an action that affects the outside world by logging the message."
-  },
-  {
-    "id": "q177",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def cache from env env allow none False return item from env env 'swift cache' allow none",
-    "question": "Does the code get memcache connection pool from the environment ( which had been previously set by the memcache middleware ?",
-    "answer": "Yes",
-    "prediction": "Answer: no"
-  },
-  {
     "id": "q178",
     "dataset": "codeqa",
     "category": "When",
@@ -1609,15 +565,6 @@
     "question": "How do subcommands execute ?",
     "answer": "in",
     "prediction": "They inherit the environment from the parent process."
-  },
-  {
-    "id": "q180",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get tag uri url date url split urlparse urlparse url hostname getattr url split 'hostname' url split[ 1 ] split ' ' [0 ] path url split[ 2 ]fragment url split[ 5 ]d ''if date is not None d ' %s' % datetime safe new datetime date strftime '%Y-%m-%d' return u'tag %s%s %s/%s' % hostname d path fragment",
-    "question": "Does the code create a taguri ?",
-    "answer": "Yes",
-    "prediction": "Answer: no"
   },
   {
     "id": "q181",
@@ -1638,33 +585,6 @@
     "prediction": "Answer: through the `sdata` parameter."
   },
   {
-    "id": "q183",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def send mail to admin email subject email body app id app identity services get application id body ' Sentfrom%s \\n\\n%s' % app id email body email services send mail feconf SYSTEM EMAIL ADDRESS feconf ADMIN EMAIL ADDRESS email subject body body replace '\\n' '<br/>' bcc admin False",
-    "question": "Does the code send an email to the admin email address ?",
-    "answer": "Yes",
-    "prediction": "Yes"
-  },
-  {
-    "id": "q184",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def instance fault create context values fault ref models Instance Fault fault ref update values fault ref save return dict fault ref iteritems",
-    "question": "Does the code create a new instancefault ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not create a new instancefault."
-  },
-  {
-    "id": "q185",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get url prefixer return getattr locals 'prefixer' None",
-    "question": "Does the code get the prefixer for the current thread ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not get the prefixer for the current thread."
-  },
-  {
     "id": "q186",
     "dataset": "codeqa",
     "category": "How",
@@ -1672,24 +592,6 @@
     "question": "How do a numerically stable reference sigmoid implementation use ?",
     "answer": "test",
     "prediction": "The code uses NumPy's `exp` function to compute the exponential of a number, which is numerically stable because it avoids overflow issues that can occur with the `1 / (1 + x)` approach."
-  },
-  {
-    "id": "q187",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def expr from dict rep *gens result []for monom coeff in rep items term [coeff]for g m in zip gens monom if m term append Pow g m result append Mul *term return Add *result",
-    "question": "Does the code convert a multinomial form into an expression ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code converts a multinomial form into an expression."
-  },
-  {
-    "id": "q188",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def is votable source try with iterparser get xml iterator source as iterator for start tag data pos in iterator if tag u'xml' return Falsebreakfor start tag data pos in iterator if tag u'VOTABLE' return Falsebreakreturn Trueexcept Value Error return False",
-    "question": "Does the code read the header of a file to determine if it is a votable file ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not read the header of a file."
   },
   {
     "id": "q189",
@@ -1701,15 +603,6 @@
     "prediction": "The code checks if the file was modified since its header."
   },
   {
-    "id": "q190",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def was modified since header None mtime 0 size 0 try if header is None raise Value Errormatches re match '^ [^ ]+ length [0 - 9 ]+ ?$' header re IGNORECASE header mtime parse http date matches group 1 header len matches group 3 if header len and int header len size raise Value Errorif mtime > header mtime raise Value Errorexcept Attribute Error Value Error Overflow Error return Truereturn False",
-    "question": "Did the user download it last ?",
-    "answer": "Yes",
-    "prediction": "The code returns True"
-  },
-  {
     "id": "q191",
     "dataset": "codeqa",
     "category": "When",
@@ -1717,15 +610,6 @@
     "question": "When did the user download it ?",
     "answer": "last",
     "prediction": "The code does not provide information about when the user downloaded the file."
-  },
-  {
-    "id": "q192",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "@register tagdef templatetag parser token bits token contents split if len bits 2 raise Template Syntax Error u\"'templatetag'statementtakesoneargument\" tag bits[ 1 ]if tag not in Template Tag Node mapping raise Template Syntax Error u\" Invalidtemplatetagargument '%s' Mustbeoneof %s\" % tag list Template Tag Node mapping return Template Tag Node tag",
-    "question": "Did the bits use to compose template tags ?",
-    "answer": "Yes",
-    "prediction": "Yes, the bits were used to compose template tags."
   },
   {
     "id": "q193",
@@ -1737,15 +621,6 @@
     "prediction": "It runs the given function in a separate thread."
   },
   {
-    "id": "q194",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def run with reloader main func extra files None interval 1 reloader type 'auto' import signalreloader reloader loops[reloader type] extra files interval signal signal signal SIGTERM lambda *args sys exit 0 try if os environ get 'WERKZEUG RUN MAIN' 'true' t threading Thread target main func args t set Daemon True t start reloader run else sys exit reloader restart with reloader except Keyboard Interrupt pass",
-    "question": "Does the code run the given function in an independent python interpreter ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not run the given function in an independent Python interpreter."
-  },
-  {
     "id": "q195",
     "dataset": "codeqa",
     "category": "When",
@@ -1753,24 +628,6 @@
     "question": "When does the code get the float ?",
     "answer": "after the first occurence of the character in the split line",
     "prediction": "When the code gets the float, it is when the line contains a character that is not None."
-  },
-  {
-    "id": "q196",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get Float From Character Split Line character split Line line From Character gcodec get String From Character Split Line character split Line if line From Character None return Nonereturn float line From Character",
-    "question": "Does the code get the float after the first occurence of the character in the split line ?",
-    "answer": "Yes",
-    "prediction": "No, the code gets the float after the first occurrence of the character in the split line."
-  },
-  {
-    "id": "q197",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get logger logger if isinstance logger string t logger logging get Logger logger if not logger handlers logger add Handler logging Null Handler return logger",
-    "question": "Does the code get logger by name ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not get logger by name."
   },
   {
     "id": "q198",
@@ -1782,24 +639,6 @@
     "prediction": "It gets the logger by either using the provided logger string or creating a new logger if no logger is provided."
   },
   {
-    "id": "q199",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def copy 2 src dst shutil copy 2 fsencoding src fsencoding dst",
-    "question": "Do that ensure filesystem encoding of paths ?",
-    "answer": "Yes",
-    "prediction": "Answer: no"
-  },
-  {
-    "id": "q200",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def stop reactor global twisted threaddef stop reactor '\" Helperforcallingstopfromwithingthethread 'reactor stop reactor call From Thread stop reactor reactor thread join for p in reactor get Delayed Calls if p active p cancel twisted thread None",
-    "question": "Does the code join the reactor thread until it stops ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not join the reactor thread until it stops."
-  },
-  {
     "id": "q201",
     "dataset": "codeqa",
     "category": "When",
@@ -1807,42 +646,6 @@
     "question": "Till when does the code join the reactor thread ?",
     "answer": "until it stops",
     "prediction": "Until all delayed calls are cancelled."
-  },
-  {
-    "id": "q202",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def stop reactor global twisted threaddef stop reactor '\" Helperforcallingstopfromwithingthethread 'reactor stop reactor call From Thread stop reactor reactor thread join for p in reactor get Delayed Calls if p active p cancel twisted thread None",
-    "question": "Does the code stop the reactor ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not stop the reactor."
-  },
-  {
-    "id": "q203",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def attach translations collections attach trans dict Collection collections",
-    "question": "Did the code put all translations into a translations dict ?",
-    "answer": "Yes",
-    "prediction": "Yes"
-  },
-  {
-    "id": "q204",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def whitespace around comma logical line line logical linefor m in WHITESPACE AFTER COMMA REGEX finditer line found m start + 1 if ' DCTB ' in m group yield found \"E 242 tabafter'%s'\" % m group [0 ] else yield found \"E 241 multiplespacesafter'%s'\" % m group [0 ]",
-    "question": "Do it align with another ?",
-    "answer": "Yes",
-    "prediction": "No, it does not align with another."
-  },
-  {
-    "id": "q205",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def whitespace around comma logical line line logical linefor m in WHITESPACE AFTER COMMA REGEX finditer line found m start + 1 if ' DCTB ' in m group yield found \"E 242 tabafter'%s'\" % m group [0 ] else yield found \"E 241 multiplespacesafter'%s'\" % m group [0 ]",
-    "question": "Do extraneous whitespace avoid in the following situations : - more than one space around an assignment operator to align it with another ?",
-    "answer": "Yes",
-    "prediction": "No, they do not."
   },
   {
     "id": "q206",
@@ -1854,42 +657,6 @@
     "prediction": "after commas"
   },
   {
-    "id": "q207",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def assert false expr msg None if expr report failure msg",
-    "question": "Does the code fail the test if the expression is true ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not fail the test if the expression is true."
-  },
-  {
-    "id": "q208",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def create app name site sourcepath apppool None ret {'name' name 'changes' {} 'comment' str 'result' None}current apps salt ['win iis list apps'] site if name in current apps ret['comment'] ' Applicationalreadypresent {0 }' format name ret['result'] Trueelif opts ['test'] ret['comment'] ' Applicationwillbecreated {0 }' format name ret['changes'] {'old' None 'new' name}else ret['comment'] ' Createdapplication {0 }' format name ret['changes'] {'old' None 'new' name}ret['result'] salt ['win iis create app'] name site sourcepath apppool return ret",
-    "question": "Does the code create an iis application ?",
-    "answer": "Yes",
-    "prediction": "Yes"
-  },
-  {
-    "id": "q209",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def ones shape dtype numpy float 32 stream None warnings warn 'chainer cuda onesisdeprecated Usecupy onesinstead ' Deprecation Warning check cuda available assert stream is None return cupy ones shape dtype dtype",
-    "question": "Does the code create a zero - filled : class : cupy ?",
-    "answer": "Yes",
-    "prediction": "Answer: no"
-  },
-  {
-    "id": "q210",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get New Repository return Clairvoyance Repository",
-    "question": "Does the code get new repository ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not get a new repository."
-  },
-  {
     "id": "q211",
     "dataset": "codeqa",
     "category": "Where",
@@ -1897,15 +664,6 @@
     "question": "Where does the code run the designated module ?",
     "answer": "in the _ _ main _ _ namespace",
     "prediction": "The code runs the designated module in the current process."
-  },
-  {
-    "id": "q212",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def run module as main mod name set argv 0 True try loader code fname get module details mod name except Import Error as exc if set argv 0 info str exc else info \"can'tfind' main py'in%r\" % sys argv[ 0 ] msg '%s %s' % sys executable info sys exit msg pkg name mod name rpartition ' ' [0 ]main globals sys modules[' main '] dict if set argv 0 sys argv[ 0 ] fnamereturn run code code main globals None ' main ' fname loader pkg name",
-    "question": "Does the code run the designated module in the _ _ main _ _ namespace ?",
-    "answer": "Yes",
-    "prediction": "Yes"
   },
   {
     "id": "q213",
@@ -1926,15 +684,6 @@
     "prediction": "In the same direction as the command."
   },
   {
-    "id": "q215",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def run hive args check return code True cmd load hive cmd + args p subprocess Popen cmd stdout subprocess PIPE stderr subprocess PIPE stdout stderr p communicate if check return code and p returncode 0 raise Hive Command Error ' Hivecommand {0 }failedwitherrorcode {1 }' format '' join cmd p returncode stdout stderr return stdout",
-    "question": "Does the code run the hive from the command line ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not run the hive from the command line."
-  },
-  {
     "id": "q216",
     "dataset": "codeqa",
     "category": "How",
@@ -1951,15 +700,6 @@
     "question": "How did mappings represent ?",
     "answer": "by dicts or sequences",
     "prediction": "They represented dictionaries."
-  },
-  {
-    "id": "q218",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def fanout cast conf context topic msg connection pool LOG debug ' Makingasynchronousfanoutcast ' add unique id msg pack context msg context with Connection Context conf connection pool as conn conn fanout send topic rpc common serialize msg msg",
-    "question": "Does the code send a message on a fanout exchange without waiting for a response ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code sends a message on a fanout exchange without waiting for a response."
   },
   {
     "id": "q219",
@@ -1989,24 +729,6 @@
     "prediction": "When does the function `false` return? \nAlways"
   },
   {
-    "id": "q222",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def db del user username user get object User username username if user user delete",
-    "question": "Does the code delete a user from database ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not delete a user from the database."
-  },
-  {
-    "id": "q223",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def libvlc audio get volume p mi f Cfunctions get 'libvlc audio get volume' None or Cfunction 'libvlc audio get volume' 1 None ctypes c int Media Player return f p mi",
-    "question": "Does the code get current software audio volume ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not get current software audio volume."
-  },
-  {
     "id": "q224",
     "dataset": "codeqa",
     "category": "How",
@@ -2014,42 +736,6 @@
     "question": "How does the code get a category from the database ?",
     "answer": "via name",
     "prediction": "It fetches a category by name from the database."
-  },
-  {
-    "id": "q225",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get category by name app name sa session app model context currenttry return sa session query app model Category filter by name name one except sqlalchemy orm exc No Result Found return None",
-    "question": "Does the code get a category from the database via name ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code retrieves a category from the database via its name."
-  },
-  {
-    "id": "q226",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def unidecode string if version info[ 0 ] < 3 and not isinstance string unicode warnings warn ' Argument%risnotanunicodeobject Passinganencodedstringwilllikelyhaveunexpectedresults ' % type string Runtime Warning 2 retval []for char in string codepoint ord char if codepoint < 128 retval append str char continueif codepoint > 983039 continueif 55296 < codepoint < 57343 warnings warn ' Surrogatecharacter%rwillbeignored Youmightbeusinganarrow Pythonbuild ' % char Runtime Warning 2 section codepoint >> 8 position codepoint % 256 try table Cache[section]except Key Error try mod import 'unidecode x% 03 x' % section globals locals ['data'] except Import Error Cache[section] Nonecontinue Cache[section] table mod dataif table and len table > position retval append table[position] return '' join retval",
-    "question": "Does the code transliterate an unicode object into an ascii string ?",
-    "answer": "Yes",
-    "prediction": "Yes"
-  },
-  {
-    "id": "q227",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def touched ae dst pardir os path split dst [0 ]if not pardir pardir os curdirimport Finderf Finder Finder f update File FS Ref pardir",
-    "question": "Does the code tell the finder a file has changed ?",
-    "answer": "Yes",
-    "prediction": "Answer: no"
-  },
-  {
-    "id": "q228",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def spawn argv master read read stdin read read if type argv type '' argv argv pid master fd fork if pid CHILD os execlp argv[ 0 ] *argv try mode tty tcgetattr STDIN FILENO tty setraw STDIN FILENO restore 1except tty error restore 0try copy master fd master read stdin read except OS Error if restore tty tcsetattr STDIN FILENO tty TCSAFLUSH mode os close master fd return os waitpid pid 0 [1 ]",
-    "question": "Does the code create a spawned process ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code creates a spawned process."
   },
   {
     "id": "q229",
@@ -2068,15 +754,6 @@
     "question": "How does the code find the cross edges of an image ?",
     "answer": "using roberts cross operator",
     "prediction": "It finds the cross edges of an image by convolving the image with the ROBERTS PD WEIGHTS."
-  },
-  {
-    "id": "q231",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def roberts pos diag image mask None assert nD image 2 image img as float image result convolve image ROBERTS PD WEIGHTS return mask filter result result mask",
-    "question": "Does the code find the cross edges of an image using roberts cross operator ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code uses the Robert's cross operator to find the cross edges of an image."
   },
   {
     "id": "q232",
@@ -2106,15 +783,6 @@
     "prediction": "to delete after renaming"
   },
   {
-    "id": "q235",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def fetch crl project id if not CONF use project ca project id Nonecrl file path crl path project id if not os path exists crl file path raise exception Crypto CRL File Not Found project project id with open crl file path 'r' as crlfile return crlfile read",
-    "question": "Does the code get crl file for project ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code gets the CRL file for the specified project."
-  },
-  {
     "id": "q236",
     "dataset": "codeqa",
     "category": "For what purpose",
@@ -2124,15 +792,6 @@
     "prediction": "to read a CRL file."
   },
   {
-    "id": "q237",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def to epoch time date epoch datetime fromtimestamp 0 delta date - epoch try return int delta total seconds except Attribute Error return delta seconds + delta days * 24 * 3600",
-    "question": "Does the code convert a datetime object to an integer number of seconds since the unix epoch ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code converts a datetime object to an integer number of seconds since the Unix epoch."
-  },
-  {
     "id": "q238",
     "dataset": "codeqa",
     "category": "When",
@@ -2140,24 +799,6 @@
     "question": "When does the code convert a datetime object to an integer number of seconds ?",
     "answer": "since the unix epoch",
     "prediction": "When the code converts a datetime object to an integer number of seconds, it does so when the 'fromtimestamp' argument is 0."
-  },
-  {
-    "id": "q239",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def move source destination use sudo False func use sudo and run as root or run func '/bin/mv{ 0 }{ 1 }' format quote source quote destination",
-    "question": "Does the code move a file or directory ?",
-    "answer": "Yes",
-    "prediction": "Answer: a file"
-  },
-  {
-    "id": "q240",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def create rule dict from obj rule return dict id rule id name rule name description rule description protocol rule protocol source port range rule source port range destination port range rule destination port range source address prefix rule source address prefix destination address prefix rule destination address prefix access rule access priority rule priority direction rule direction provisioning state rule provisioning state etag rule etag",
-    "question": "Does the code create a dict ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code creates a dictionary."
   },
   {
     "id": "q241",
@@ -2178,24 +819,6 @@
     "prediction": "The languages changed between revisions 0 and 1."
   },
   {
-    "id": "q243",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def make enum enum type 'enum' base classes None methods None **attrs def init instance *args **kwargs raise Runtime Error '%stypescannotbeinitialized ' % enum type if base classes is None base classes if methods is None methods {}base classes base classes + object for k v in methods iteritems methods[k] classmethod v attrs['enums'] attrs copy methods update attrs methods[' init '] init return type enum type base classes methods",
-    "question": "Does the code generate a enumeration with the given attributes ?",
-    "answer": "Yes",
-    "prediction": "Answer: yes"
-  },
-  {
-    "id": "q244",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get headers headers {}creds config get credentials proxy auth basic auth creds['proxy username'] creds['proxy password'] if config get config ['plotly proxy authorization'] headers['authorization'] proxy authreturn headers",
-    "question": "Does the code use session credentials / config ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code uses both session credentials and config."
-  },
-  {
     "id": "q245",
     "dataset": "codeqa",
     "category": "Where",
@@ -2203,15 +826,6 @@
     "question": "In which direction does a sequence pad ?",
     "answer": "out",
     "prediction": "In the same direction as the sequence."
-  },
-  {
-    "id": "q246",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get Split Line Before Bracket Semicolon line bracket Semicolon Index min line find ' ' line find ' ' if bracket Semicolon Index < 0 return line split return line[ bracket Semicolon Index] split",
-    "question": "Does the code get the split line before a bracket or semicolon ?",
-    "answer": "Yes",
-    "prediction": "No, the code gets the split line before a semicolon."
   },
   {
     "id": "q247",
@@ -2223,15 +837,6 @@
     "prediction": "It prints a string with random colors."
   },
   {
-    "id": "q248",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get Geometry Output By Arguments arguments element Node evaluate set Attributes By Arguments ['radius' 'end Z' 'start'] arguments element Node return get Geometry Output None element Node",
-    "question": "Does the code get vector3 vertexes from attribute dictionary by arguments ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not get vector3 vertexes from attribute dictionary by arguments."
-  },
-  {
     "id": "q249",
     "dataset": "codeqa",
     "category": "How",
@@ -2241,24 +846,6 @@
     "prediction": "It does not get vector3 vertexes from attribute dictionary."
   },
   {
-    "id": "q250",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def wait rm name recurse False profile None return {'name' name 'changes' {} 'result' True 'comment' ''}",
-    "question": "Does the code delete a key from etcd only if the watch statement calls it ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not delete a key from etcd only if the watch statement calls it."
-  },
-  {
-    "id": "q251",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def wait rm name recurse False profile None return {'name' name 'changes' {} 'result' True 'comment' ''}",
-    "question": "Does the watch statement call it ?",
-    "answer": "Yes",
-    "prediction": "No, the watch statement does not call it."
-  },
-  {
     "id": "q252",
     "dataset": "codeqa",
     "category": "When",
@@ -2266,15 +853,6 @@
     "question": "Till when did by ifrc use old default eden form style ?",
     "answer": "still",
     "prediction": "The code uses the old default form style until the 'hidden' argument is provided."
-  },
-  {
-    "id": "q253",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def key pair get all by user context user id limit None marker None return IMPL key pair get all by user context user id limit limit marker marker",
-    "question": "Does the code get all key_pairs by user ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not get all key_pairs by user."
   },
   {
     "id": "q254",
@@ -2313,42 +891,6 @@
     "prediction": "When the current process is not the main process."
   },
   {
-    "id": "q258",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def patch logger class try from multiprocessing process import current processexcept Import Error current process Nonelogging acquire Lock try Old Logger Class logging get Logger Class if not getattr Old Logger Class ' process aware' False class Process Aware Logger Old Logger Class process aware Truedef make Record self *args **kwds record Old Logger Class make Record self *args **kwds if current process record process Name current process nameelse record process Name ''return recordlogging set Logger Class Process Aware Logger finally logging release Lock",
-    "question": "Does the code make ?",
-    "answer": "Yes",
-    "prediction": "Does the code make the logger process-aware?"
-  },
-  {
-    "id": "q259",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def reparam string dictionary dictionary dictionary copy dictionary[' builtins '] object vals []result []for live chunk in interpolate string if live v eval chunk dictionary result append sqlquote v else result append chunk return SQL Query join result ''",
-    "question": "Does the code interpolate the string using values from the dictionary ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code interpolates the string using values from the dictionary."
-  },
-  {
-    "id": "q260",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def reparam string dictionary dictionary dictionary copy dictionary[' builtins '] object vals []result []for live chunk in interpolate string if live v eval chunk dictionary result append sqlquote v else result append chunk return SQL Query join result ''",
-    "question": "Does the code take a string and a dictionary ?",
-    "answer": "Yes",
-    "prediction": "Yes"
-  },
-  {
-    "id": "q261",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def reparam string dictionary dictionary dictionary copy dictionary[' builtins '] object vals []result []for live chunk in interpolate string if live v eval chunk dictionary result append sqlquote v else result append chunk return SQL Query join result ''",
-    "question": "Does the code use values from the dictionary ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code uses values from the dictionary."
-  },
-  {
     "id": "q262",
     "dataset": "codeqa",
     "category": "How",
@@ -2367,33 +909,6 @@
     "prediction": "The stk500v2 programmer call in the downward direction."
   },
   {
-    "id": "q264",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def extract zip source remove False fatal True tempdir tempfile mkdtemp zip file Safe Unzip source try if zip file is valid fatal zip file extract to dest tempdir except rm local tmp dir tempdir raiseif remove os remove source return tempdir",
-    "question": "Does the code extract the zip file ?",
-    "answer": "Yes",
-    "prediction": "Answer: yes"
-  },
-  {
-    "id": "q265",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def getent refresh False if 'group getent' in context and not refresh return context ['group getent']ret []for grinfo in grp getgrall ret append format info grinfo context ['group getent'] retreturn ret",
-    "question": "Do all groups cli example ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not return all groups."
-  },
-  {
-    "id": "q266",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get Cubic Path By Begin End begin control Points element Node end return svg reader get Cubic Points begin control Points end lineation get Number Of Bezier Points begin element Node end",
-    "question": "Does the code get the cubic path by begin and end ?",
-    "answer": "Yes",
-    "prediction": "Answer: yes"
-  },
-  {
     "id": "q267",
     "dataset": "codeqa",
     "category": "How",
@@ -2401,15 +916,6 @@
     "question": "How does the code get the cubic path ?",
     "answer": "by begin and end",
     "prediction": "It gets the cubic path by reading the SVG file."
-  },
-  {
-    "id": "q268",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "@register tagdef render comment form parser token return Render Comment Form Node handle token parser token",
-    "question": "Does the code render the comment form through the comments / form ?",
-    "answer": "Yes",
-    "prediction": "Answer: no"
   },
   {
     "id": "q269",
@@ -2421,33 +927,6 @@
     "prediction": "It does not render the comment form."
   },
   {
-    "id": "q270",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def link path dest replace False if samefile path dest returnpath syspath path dest syspath dest if os path exists dest and not replace raise Filesystem Error u'fileexists' 'rename' path dest try os symlink path dest except Not Implemented Error raise Filesystem Error u'O Sdoesnotsupportsymboliclinks link' path dest traceback format exc except OS Error as exc if hasattr 'sys' 'getwindowsversion' if sys getwindowsversion [0 ] < 6 exc u'O Sdoesnotsupportsymboliclinks 'raise Filesystem Error exc 'link' path dest traceback format exc",
-    "question": "Does the code create a symbolic link from path to dest ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not create a symbolic link from path to dest."
-  },
-  {
-    "id": "q271",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def julian 2 num j if cbook iterable j j np asarray j return j - JULIAN OFFSET",
-    "question": "Does the code convert a julian date to a matplotlib date ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not convert a julian date to a matplotlib date."
-  },
-  {
-    "id": "q272",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def fd f return f fileno if hasattr f 'fileno' else f",
-    "question": "Does the code get a filedescriptor from something which could be a file or an fd ?",
-    "answer": "Yes",
-    "prediction": "Answer: yes"
-  },
-  {
     "id": "q273",
     "dataset": "codeqa",
     "category": "How",
@@ -2457,105 +936,6 @@
     "prediction": "It was not built."
   },
   {
-    "id": "q274",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def popall seq for i in xrange len seq seq pop",
-    "question": "Does the code empty a list ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code empties a list."
-  },
-  {
-    "id": "q275",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def reraise translated exception exc type exc value exc trace sys exc info new exc translate plain exception exc value raise new exc None exc trace",
-    "question": "Does the code keep its traceback intact ?",
-    "answer": "Yes",
-    "prediction": "Answer: no"
-  },
-  {
-    "id": "q276",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def reraise translated exception exc type exc value exc trace sys exc info new exc translate plain exception exc value raise new exc None exc trace",
-    "question": "Does the code transform the exception ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not transform the exception."
-  },
-  {
-    "id": "q277",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def lvremove lvname vgname cmd ['lvremove' '-f' '{ 0 }/{ 1 }' format vgname lvname ]out salt ['cmd run'] cmd python shell False return out strip",
-    "question": "Does the code remove a given existing logical volume from a named existing volume group cli example ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code removes a given existing logical volume from a named existing volume group."
-  },
-  {
-    "id": "q278",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def find resource resource path if isinstance path text type path ascii native path D traverse resource path view name D['view name']context D['context']if view name raise Key Error '%rhasnosubelement%s' % context view name return context",
-    "question": "Do a string or tuple represent a path ?",
-    "answer": "Yes",
-    "prediction": "A string"
-  },
-  {
-    "id": "q279",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get Module module Name return the System Path[module Name]",
-    "question": "Does the code retrieve a module from the system path ?",
-    "answer": "Yes",
-    "prediction": "Yes"
-  },
-  {
-    "id": "q280",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def load data f gzip open ' /data/mnist pkl gz' 'rb' training data validation data test data c Pickle load f f close return training data validation data test data",
-    "question": "Do the mnist data return as a tuple containing the training data ?",
-    "answer": "Yes",
-    "prediction": "No, the mnist data return as a tuple containing the training data, validation data, and test data."
-  },
-  {
-    "id": "q281",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def load data f gzip open ' /data/mnist pkl gz' 'rb' training data validation data test data c Pickle load f f close return training data validation data test data",
-    "question": "Do a tuple contain the training data ?",
-    "answer": "Yes",
-    "prediction": "No, the tuple does not contain the training data."
-  },
-  {
-    "id": "q282",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def to bytes seq if isinstance seq bytes return seqelif isinstance seq bytearray return bytes seq elif isinstance seq memoryview return seq tobytes elif isinstance seq unicode raise Type Error 'unicodestringsarenotsupported pleaseencodetobytes { r}' format seq else return bytes bytearray seq",
-    "question": "Does the code convert a sequence to a bytes type ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code converts a sequence to a bytes type."
-  },
-  {
-    "id": "q283",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def new key *args **kwargs return DES 3 Cipher key *args **kwargs",
-    "question": "Does the code create a new tdes cipher ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code creates a new TDES (Triple Data Encryption Algorithm) cipher."
-  },
-  {
-    "id": "q284",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get Crafted Text From Text gcode Text repository None if gcodec is Procedure Done Or File Is Empty gcode Text 'outline' return gcode Textif repository None repository settings get Read Repository Outline Repository if not repository activate Outline value return gcode Textreturn Outline Skein get Crafted Gcode gcode Text repository",
-    "question": "Does the code outline a gcode linear move text ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not outline a gcode linear move text."
-  },
-  {
     "id": "q285",
     "dataset": "codeqa",
     "category": "How",
@@ -2563,24 +943,6 @@
     "question": "How does the code create a new engine instance ?",
     "answer": "using a configuration dictionary",
     "prediction": "Answer: by using the SQLAlchemy library and passing the configuration options to the engine constructor."
-  },
-  {
-    "id": "q286",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def engine from config configuration prefix 'sqlalchemy ' **kwargs options dict key[len prefix ] configuration[key] for key in configuration if key startswith prefix options[' coerce config'] Trueoptions update kwargs url options pop 'url' return create engine url **options",
-    "question": "Does the code create a new engine instance using a configuration dictionary ?",
-    "answer": "Yes",
-    "prediction": "Yes"
-  },
-  {
-    "id": "q287",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def ask User text parent None help '' defaultno False msgfunc None title ' Anki' if not parent parent aqt mw app active Window if not msgfunc msgfunc Q Message Box questionsb Q Message Box Yes Q Message Box No if help sb Q Message Box Helpwhile 1 if defaultno default Q Message Box Noelse default Q Message Box Yesr msgfunc parent title text sb default if r Q Message Box Help open Help help else breakreturn r Q Message Box Yes",
-    "question": "Does the code show a yes / no question ?",
-    "answer": "Yes",
-    "prediction": "Yes"
   },
   {
     "id": "q288",
@@ -2601,15 +963,6 @@
     "prediction": "Bounding-box regression targets are computed to predict the offsets of the bounding boxes from the ground truth bounding boxes."
   },
   {
-    "id": "q290",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def int coercable string try int string return Trueexcept Value Error return False",
-    "question": "Can string be coerced to int ?",
-    "answer": "Yes",
-    "prediction": "False"
-  },
-  {
     "id": "q291",
     "dataset": "codeqa",
     "category": "How",
@@ -2617,24 +970,6 @@
     "question": "How do n - th cyclotomic polnomial generate ?",
     "answer": "efficiently",
     "prediction": "Answer: by iteratively multiplying the polynomial by (x - p) for each prime factor p of n."
-  },
-  {
-    "id": "q292",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def generate jwt now int time time header json json dumps {'typ' 'JWT' 'alg' 'RS 256 '} payload json json dumps {'iat' now 'exp' now + 3600 'iss' DEFAULT SERVICE ACCOUNT 'sub' DEFAULT SERVICE ACCOUNT 'aud' 'echo endpoints sample google com' 'email' DEFAULT SERVICE ACCOUNT} header And Payload '{} {}' format base 64 urlsafe b64 encode header json base 64 urlsafe b64 encode payload json key name signature app identity sign blob header And Payload signed jwt '{} {}' format header And Payload base 64 urlsafe b64 encode signature return signed jwt",
-    "question": "Does the code generate a signed json web token using the google app engine default service account ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code generates a signed JSON web token using the Google App Engine default service account."
-  },
-  {
-    "id": "q293",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def generate jwt now int time time header json json dumps {'typ' 'JWT' 'alg' 'RS 256 '} payload json json dumps {'iat' now 'exp' now + 3600 'iss' DEFAULT SERVICE ACCOUNT 'sub' DEFAULT SERVICE ACCOUNT 'aud' 'echo endpoints sample google com' 'email' DEFAULT SERVICE ACCOUNT} header And Payload '{} {}' format base 64 urlsafe b64 encode header json base 64 urlsafe b64 encode payload json key name signature app identity sign blob header And Payload signed jwt '{} {}' format header And Payload base 64 urlsafe b64 encode signature return signed jwt",
-    "question": "Did a signed json web token use the google app engine default service account ?",
-    "answer": "Yes",
-    "prediction": "Yes, the signed JSON web token uses the Google App Engine default service account."
   },
   {
     "id": "q294",
@@ -2646,33 +981,6 @@
     "prediction": "It generates a signed JSON Web Token (JWT)."
   },
   {
-    "id": "q295",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def run cli module cli cliswitch module params['pn cliswitch']command module params['pn command']cmd shlex split cli result out err module run command cmd print cli cli split cliswitch [1 ]if result 0 module exit json command print cli msg '%s ' % command stderr err strip changed False if out module exit json command print cli msg '%s ' % command stdout out strip changed False else module exit json command cli msg '%s Nothingtodisplay ' % command changed False",
-    "question": "Does this method execute the cli command on the target node(s ) ?",
-    "answer": "Yes",
-    "prediction": "Yes, this method executes the cli command on the target node(s)."
-  },
-  {
-    "id": "q296",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def run cli module cli cliswitch module params['pn cliswitch']command module params['pn command']cmd shlex split cli result out err module run command cmd print cli cli split cliswitch [1 ]if result 0 module exit json command print cli msg '%s ' % command stderr err strip changed False if out module exit json command print cli msg '%s ' % command stdout out strip changed False else module exit json command cli msg '%s Nothingtodisplay ' % command changed False",
-    "question": "Does this method return the output ?",
-    "answer": "Yes",
-    "prediction": "Answer: no"
-  },
-  {
-    "id": "q297",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def add path index 0 curr Index -1 sys Path get path path normalize dir path index int index if index < 0 index len sys Path + index + 1 if index > len sys Path index len sys Path local Path os environ['PATH'] split os pathsep if path not in local Path local Path append path os environ['PATH'] os pathsep join local Path try curr Index sys Path index path if curr Index index sys Path pop curr Index else return Trueexcept Value Error passsys Path insert index path regedit salt ['reg set value'] 'HKEY LOCAL MACHINE' 'SYSTEM\\\\ Current Control Set\\\\ Control\\\\ Session Manager\\\\ Environment' 'PATH' ' ' join sys Path 'REG EXPAND SZ' if regedit return rehash else return False",
-    "question": "Does the code add the directory to the system path in the index location returns ?",
-    "answer": "Yes",
-    "prediction": "True"
-  },
-  {
     "id": "q298",
     "dataset": "codeqa",
     "category": "Where",
@@ -2680,33 +988,6 @@
     "question": "Where do tabs replace the code ?",
     "answer": "by spaces",
     "prediction": "In the returned text."
-  },
-  {
-    "id": "q299",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def fix indentation text return text replace ' DCTB ' '' * 4",
-    "question": "Do tabs replace the code by spaces ?",
-    "answer": "Yes",
-    "prediction": "No, the code replaces spaces with tabs."
-  },
-  {
-    "id": "q300",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def add Bottom Loop delta Z loops bottom Loop loops[ 0 ]bottom Addition []bottom Z euclidean get Bottom Path bottom Loop + delta Z for point in bottom Loop bottom Addition append Vector 3 Index len bottom Addition point x point y bottom Z loops insert 0 bottom Addition number Of Vertexes 0for loop in loops for point in loop point index number Of Vertexesnumber Of Vertexes + 1",
-    "question": "Does the code add bottom loop to loops ?",
-    "answer": "Yes",
-    "prediction": "Answer: yes"
-  },
-  {
-    "id": "q301",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def create user api domain id **kwargs user new user ref domain id domain id **kwargs password user['password']user api create user user user['password'] passwordreturn user",
-    "question": "Does the code create a user via the api ?",
-    "answer": "Yes",
-    "prediction": "Yes"
   },
   {
     "id": "q302",
@@ -2727,51 +1008,6 @@
     "prediction": "Answer: by storing the result in a dictionary and returning it if the key exists, otherwise computing the result and storing it before returning it."
   },
   {
-    "id": "q304",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def from rdata ttl *rdatas return from rdata list ttl rdatas",
-    "question": "Does the code create an rdataset with the specified ttl ?",
-    "answer": "Yes",
-    "prediction": "Answer: no"
-  },
-  {
-    "id": "q305",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def default settings params def default settings fn command for k w in params items settings setdefault k w return fn command return decorator default settings",
-    "question": "Does the code add default values to settings if it not presented ?",
-    "answer": "Yes",
-    "prediction": "Answer: yes"
-  },
-  {
-    "id": "q306",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def stubout create vm stubs def f *args raise fake Failure ' Test Exceptionraisedbyfakecreate vm' stubs Set vm utils 'create vm' f",
-    "question": "Does the code simulate a failure in create_vm ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code simulates a failure in `create_vm`."
-  },
-  {
-    "id": "q307",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def libvlc media player get media p mi f Cfunctions get 'libvlc media player get media' None or Cfunction 'libvlc media player get media' 1 class result Media ctypes c void p Media Player return f p mi",
-    "question": "Does the code get the media used by the media_player ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not get the media used by the media_player."
-  },
-  {
-    "id": "q308",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def add lazy relation cls field relation operation if relation RECURSIVE RELATIONSHIP CONSTANT app label cls meta app labelmodel name cls name elif isinstance relation six string types try app label model name relation split ' ' except Value Error app label cls meta app labelmodel name relationelse app label relation meta app labelmodel name relation meta object namemodel get model app label model name seed cache False only installed False if model operation field model cls else key app label model name value cls field operation pending lookups setdefault key [] append value",
-    "question": "Does the code add a lookup on cls when a related field is defined using a string ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code adds a lookup on cls when a related field is defined using a string."
-  },
-  {
     "id": "q309",
     "dataset": "codeqa",
     "category": "When",
@@ -2790,15 +1026,6 @@
     "prediction": "When the related field is not a string."
   },
   {
-    "id": "q311",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get device devnum 0 if not custack custack push get gpu devnum return custack top",
-    "question": "Does the code use a device by device number ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not use a device by device number."
-  },
-  {
     "id": "q312",
     "dataset": "codeqa",
     "category": "How",
@@ -2806,33 +1033,6 @@
     "question": "How does the code use a device ?",
     "answer": "by device number",
     "prediction": "It is used as a default device."
-  },
-  {
-    "id": "q313",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get device devnum 0 if not custack custack push get gpu devnum return custack top",
-    "question": "Does the code get the current device ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not get the current device."
-  },
-  {
-    "id": "q314",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def task status update context data dict model context['model']session model meta create local session context['session'] sessionuser context['user']id data dict get 'id' schema context get 'schema' or schema default task status schema if id task status model Task Status get id context['task status'] task statusif task status is None raise Not Found ' Task Statuswasnotfound ' check access 'task status update' context data dict data errors validate data dict schema context if errors session rollback raise Validation Error errors task status model save task status dict save data context session commit session close return model dictize task status dictize task status context",
-    "question": "Does the code update a task status ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code updates a task status."
-  },
-  {
-    "id": "q315",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "@register filter is safe True @stringfilterdef capfirst value return value and value[ 0 ] upper + value[ 1 ]",
-    "question": "Does the code capitalize the first character of the value ?",
-    "answer": "Yes",
-    "prediction": "Yes"
   },
   {
     "id": "q316",
@@ -2844,24 +1044,6 @@
     "prediction": "When a context manager sets an environment variable, it does so before entering the block of code within the `with` statement."
   },
   {
-    "id": "q317",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "@contextlib contextmanagerdef setenv key value old value os environ get key None if value is None os environ pop key None else os environ[key] value yield if old value is None os environ pop key None else os environ[key] value",
-    "question": "Do context manager set an environment variable temporarily ?",
-    "answer": "Yes",
-    "prediction": "Yes, the context manager sets an environment variable temporarily."
-  },
-  {
-    "id": "q318",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "@register inclusion tag get template 'inclusion html' takes context False def inclusion explicit no context from template arg return {'result' 'inclusion explicit no context from template- Expectedresult %s' % arg }",
-    "question": "Did the code expect inclusion_explicit_no_context_from_template _ _ doc _ _ ?",
-    "answer": "Yes",
-    "prediction": "Answer: Yes"
-  },
-  {
     "id": "q319",
     "dataset": "codeqa",
     "category": "How",
@@ -2869,15 +1051,6 @@
     "question": "How do dictionary of predecessors return ?",
     "answer": "in depth - first - search from source",
     "prediction": "It returns a dictionary where each key is a node and its corresponding value is a list of its predecessors."
-  },
-  {
-    "id": "q320",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def status job label runas None service service by name job label lookup name service['plist'][' Label'] if service else job label launchctl data get launchctl data lookup name runas runas if launchctl data if BEFORE YOSEMITE if six PY 3 return 'PID' in plistlib loads launchctl data else return 'PID' in dict plistlib read Plist From String launchctl data else pattern '\"PID\" [0 - 9 ]+ 'return True if re search pattern launchctl data else False else return False",
-    "question": "Does the code return the status for a service ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code returns the status for a service."
   },
   {
     "id": "q321",
@@ -2889,15 +1062,6 @@
     "prediction": "In the same direction as the sequence."
   },
   {
-    "id": "q322",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get prefetcher instance attr prefetcher Noneattr found Falseis fetched Falserel obj descriptor getattr instance class attr None if rel obj descriptor is None try rel obj getattr instance attr attr found Trueexcept Attribute Error passelse attr found Trueif rel obj descriptor if hasattr rel obj descriptor 'get prefetch queryset' prefetcher rel obj descriptorif rel obj descriptor is cached instance is fetched Trueelse rel obj getattr instance attr if hasattr rel obj 'get prefetch queryset' prefetcher rel objreturn prefetcher rel obj descriptor attr found is fetched",
-    "question": "Did attribute attr on the given instance ?",
-    "answer": "Yes",
-    "prediction": "Answer: Yes"
-  },
-  {
     "id": "q323",
     "dataset": "codeqa",
     "category": "Where",
@@ -2907,24 +1071,6 @@
     "prediction": "The code checks the attribute `attr` in the instance `rel obj`."
   },
   {
-    "id": "q324",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def foldr fn elems initializer None name None if initializer is None initializer elems[ -1 ]elems elems[ -1 ]fn 2 lambda x acc fn acc x return theano foldr fn 2 elems initializer name name [0 ]",
-    "question": "Does the code reduce elems to combine them from right to left using fn ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code reduces elems to combine them from right to left using fn."
-  },
-  {
-    "id": "q325",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def foldr fn elems initializer None name None if initializer is None initializer elems[ -1 ]elems elems[ -1 ]fn 2 lambda x acc fn acc x return theano foldr fn 2 elems initializer name name [0 ]",
-    "question": "Do fn use to combine them from right to left ?",
-    "answer": "Yes",
-    "prediction": "Yes, the function `fn` uses `foldr` to combine elements from right to left."
-  },
-  {
     "id": "q326",
     "dataset": "codeqa",
     "category": "How",
@@ -2932,15 +1078,6 @@
     "question": "How does the code reduce elems to combine them from right to left ?",
     "answer": "using fn",
     "prediction": "It combines elements from right to left."
-  },
-  {
-    "id": "q327",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def invert image lut []for i in range 256 lut append 255 - i return lut image lut",
-    "question": "Does the code invert the image ?",
-    "answer": "Yes",
-    "prediction": "Answer: no"
   },
   {
     "id": "q328",
@@ -2961,78 +1098,6 @@
     "prediction": "Answer: to check if the decorated function is compatible with the Python version."
   },
   {
-    "id": "q330",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def assign name value ret {}cmd 'sysctl{ 0 } \"{ 1 }\"' format name value data salt ['cmd run all'] cmd python shell False if data['retcode'] 0 raise Command Execution Error 'sysctlfailed {0 }' format data['stderr'] new name new value data['stdout'] split ' ' 1 ret[new name] new value split '->' [ -1 ]return ret",
-    "question": "Does the code assign a single sysctl parameter for this minion cli example ?",
-    "answer": "Yes",
-    "prediction": "No, the code assigns multiple sysctl parameters."
-  },
-  {
-    "id": "q331",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def step 4 state C state C 0 astype np int covered C C * state row uncovered[ np newaxis] covered C * astype state col uncovered dtype np int copy False n state C shape[ 0 ]m state C shape[ 1 ]while True row col np unravel index np argmax covered C n m if covered C[ row col ] 0 return step 6 else state marked[ row col ] 2star col np argmax state marked[row] 1 if not state marked[ row star col ] 1 state Z0 r rowstate Z0 c colreturn step 5 else col star colstate row uncovered[row] Falsestate col uncovered[col] Truecovered C[ col] C[ col] * astype state row uncovered dtype np int copy False covered C[row] 0",
-    "question": "Does the code find a noncovered zero ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code finds a non-covered zero."
-  },
-  {
-    "id": "q332",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "@require admin contextdef group type access add context type id project id group type id group type get id from group type context type id access ref models Group Type Projects access ref update {'group type id' group type id 'project id' project id} session get session with session begin try access ref save session session except db exc DB Duplicate Entry raise exception Group Type Access Exists group type id type id project id project id return access ref",
-    "question": "Does the code add given tenant to the group type access list ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not add the given tenant to the group type access list."
-  },
-  {
-    "id": "q333",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def make image dict image def fetch attrs d attrs return dict [ a d[a] for a in attrs if a in d keys ] properties dict p['name'] p['value'] for p in image['properties'] if not p['deleted'] image dict fetch attrs image glance db IMAGE ATTRS image dict['properties'] properties limit locations image dict return image dict",
-    "question": "Can we use to serialize the image an image ?",
-    "answer": "Yes",
-    "prediction": "No, we cannot use this function to serialize an image."
-  },
-  {
-    "id": "q334",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def make image dict image def fetch attrs d attrs return dict [ a d[a] for a in attrs if a in d keys ] properties dict p['name'] p['value'] for p in image['properties'] if not p['deleted'] image dict fetch attrs image glance db IMAGE ATTRS image dict['properties'] properties limit locations image dict return image dict",
-    "question": "Does the code create a dict representation of an image which we can use to serialize the image ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code creates a dict representation of an image."
-  },
-  {
-    "id": "q335",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def fix makefile makefile if not os path isfile makefile returnfin open makefile if 1 lines fin readlines fin close fout open makefile 'w' if 1 for line in lines if line startswith 'PERL ' continueif line startswith 'CP ' line 'CP copy\\n'if line startswith 'MKDIR ' line 'MKDIR mkdir\\n'if line startswith 'CFLAG ' line line strip for algo in 'RC 5 ' 'MDC 2 ' 'IDEA' noalgo '-DOPENSSL NO %s' % algo if noalgo not in line line line + noalgo line line + '\\n' fout write line fout close",
-    "question": "Does the code fix some stuff in all makefiles ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not fix all makefiles."
-  },
-  {
-    "id": "q336",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get parser description ' Runcheckthatallgoogle-cloudmodulesareincludedindocs 'parser argparse Argument Parser description description parser add argument '--build-root' dest 'build root' help ' Therootdirectorywheredocsarelocated ' return parser",
-    "question": "Does the code get simple argparse parser to determine package ?",
-    "answer": "Yes",
-    "prediction": "No, the code gets a custom argparse parser."
-  },
-  {
-    "id": "q337",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def get New Repository return Alteration Repository",
-    "question": "Does the code get new repository ?",
-    "answer": "Yes",
-    "prediction": "No, the code does not get a new repository."
-  },
-  {
     "id": "q338",
     "dataset": "codeqa",
     "category": "For what purpose",
@@ -3040,15 +1105,6 @@
     "question": "For what purpose do the docstring process ?",
     "answer": "for a given python object",
     "prediction": "For what purpose do the docstrings process?\nto generate documentation for the function"
-  },
-  {
-    "id": "q339",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def next Line caller currentframe 1 return getsourcefile sys modules[caller f globals[' name ']] caller f lineno + 1",
-    "question": "Is this function called where ?",
-    "answer": "Yes",
-    "prediction": "It is called from the current line of code."
   },
   {
     "id": "q340",
@@ -3069,33 +1125,6 @@
     "prediction": "It deletes an existing address."
   },
   {
-    "id": "q342",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def enable task name return run cmd 'kapacitorenable{ 0 }' format name",
-    "question": "Does the code enable a kapacitor task ?",
-    "answer": "Yes",
-    "prediction": "Yes"
-  },
-  {
-    "id": "q343",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def auth request if hasattr request 'user' user request userelse from django contrib auth models import Anonymous Useruser Anonymous User return {'user' user 'perms' Perm Wrapper user }",
-    "question": "Do apps use djangos authentication system ?",
-    "answer": "Yes",
-    "prediction": "Yes, apps use Django's authentication system."
-  },
-  {
-    "id": "q344",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def run command commands args cwd None verbose False hide stderr False assert isinstance commands list p Nonefor c in commands try dispcmd str [c] + args p subprocess Popen [c] + args cwd cwd stdout subprocess PIPE stderr subprocess PIPE if hide stderr else None breakexcept Environment Error e sys exc info [1 ]if e errno errno ENOENT continueif verbose print 'unabletorun%s' % dispcmd print ereturn Noneelse if verbose print 'unabletofindcommand tried%s' % commands return Nonestdout p communicate [0 ] strip if sys version info[ 0 ] > 3 stdout stdout decode if p returncode 0 if verbose print 'unabletorun%s error ' % dispcmd return Nonereturn stdout",
-    "question": "Does the code call the given command(s ?",
-    "answer": "Yes",
-    "prediction": "Yes"
-  },
-  {
     "id": "q345",
     "dataset": "codeqa",
     "category": "How",
@@ -3105,15 +1134,6 @@
     "prediction": "Answer: by appending the series label to the list of labels if it is not None."
   },
   {
-    "id": "q346",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def adduser group name cmd 'dscl -merge/ Groups/{ 0 } Group Membership{ 1 }' format group name return salt ['cmd retcode'] cmd 0",
-    "question": "Does the code add a user in the group ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code adds a user to a group."
-  },
-  {
     "id": "q347",
     "dataset": "codeqa",
     "category": "When",
@@ -3121,15 +1141,6 @@
     "question": "When is an error raised ?",
     "answer": "when sample is called before fitting",
     "prediction": "assert raises Runtime Error"
-  },
-  {
-    "id": "q348",
-    "dataset": "codeqa",
-    "category": "Yes/No",
-    "code": "def monitor Test N 3 seconds 3 topo Single Switch Topo N net Mininet topo net start hosts net hostsinfo ' Startingtest \\n' server hosts[ 0 ] outfiles errfiles {} {} for h in hosts outfiles[h] '/tmp/%s out' % h name errfiles[h] '/tmp/%s err' % h name h cmd 'echo>' outfiles[h] h cmd 'echo>' errfiles[h] h cmd Print 'ping' server IP '>' outfiles[h] '2 >' errfiles[h] '&' info ' Monitoringoutputfor' seconds 'seconds\\n' for h line in monitor Files outfiles seconds timeoutms 500 if h info '%s %s\\n' % h name line for h in hosts h cmd 'kill%ping' net stop",
-    "question": "Does the code monitor multiple hosts ?",
-    "answer": "Yes",
-    "prediction": "Yes, the code monitors multiple hosts."
   },
   {
     "id": "q349",
