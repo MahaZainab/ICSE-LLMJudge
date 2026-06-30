@@ -50,8 +50,8 @@ from collections import defaultdict
 #             borderline anchor), then grouped by identical score
 #             profile.
 
-INPUT_FILE  = "RQ1_judge_codeqa_difficult_samples_judged.json"
-OUTPUT_FILE = "RQ1_open_coding_filtered.json"
+INPUT_FILE  = "llama3_2_3b_instruct_judged.json"
+OUTPUT_FILE = "llama3_2_3b_instruct_open_coding_filtered.json"
 
 DIMS = ["accuracy", "completeness", "clarity", "relevance"]
 
