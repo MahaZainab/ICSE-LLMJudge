@@ -57,8 +57,13 @@ DIMS = ["accuracy", "completeness", "clarity", "relevance"]
 
 
 def classify(record):
-    
+
     scores = {d: record[d] for d in DIMS}
+
+    # Guard against unparsed/null judge scores (e.g. markdown-fence
+    # parsing failures) instead of crashing the comparison below.
+    if any(v is None for v in scores.values()):
+        return "Case0_null_scores", None
 
     has_fail   = any(v <  2 for v in scores.values())
     has_border = any(v == 2 for v in scores.values())
@@ -106,10 +111,11 @@ def score_profile(record):
 
 
 def main():
-    with open(INPUT_FILE) as f:
+    with open(INPUT_FILE, encoding="utf-8") as f:
         data = json.load(f)
 
     excluded = []
+    null_scores = []
     included = defaultdict(lambda: defaultdict(list))  # case -> sub_bucket -> records
 
     for record in data:
@@ -117,6 +123,8 @@ def main():
 
         if case_label == "Case1_exclude":
             excluded.append(record)
+        elif case_label == "Case0_null_scores":
+            null_scores.append(record)
         else:
             bucket_key = str(sub_bucket) if sub_bucket else "all"
             included[case_label][bucket_key].append(record)
@@ -125,6 +133,9 @@ def main():
     print("=" * 60)
     print("OPEN CODING FILTER SUMMARY")
     print("=" * 60)
+    print(f"\nNULL SCORES (unparsed judge output): {len(null_scores)} records")
+    if null_scores:
+        print(f"  ids={[r['id'] for r in null_scores]}")
     print(f"\nEXCLUDED (Case 1 — all dims > 2): {len(excluded)} records\n")
 
     total_included = 0
@@ -162,8 +173,8 @@ def main():
     print("=" * 60)
 
     # --- Save output ---
-    with open(OUTPUT_FILE, "w") as f:
-        json.dump(output, f, indent=2)
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+        json.dump(output, f, indent=2, ensure_ascii=False)
     print(f"\nFiltered records saved to: {OUTPUT_FILE}")
 
 
