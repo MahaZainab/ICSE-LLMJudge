@@ -15,32 +15,41 @@ HF_CACHE           = os.getenv("HF_HOME", "")
 
 FEW_SHOT_EXAMPLES = [
     {
-        "code":     "def get_name ( self ) : return self . _name",
-        "question": "What does the code return?",
-        "answer":   "the name"
-    },
-    {
-        "code":     "def is_empty ( self ) : return len ( self . items ) == 0",
-        "question": "Does the code check if the list is empty?",
-        "answer":   "Yes"
-    },
-    {
         "code":     "def sort_list ( items ) : return sorted ( items , reverse = True )",
         "question": "How does the code sort the items?",
         "answer":   "in descending order"
+    },
+    {
+        "code":     "def on_timeout ( self ) : self . retries += 1\nif self . retries > 3 : self . stop ( )",
+        "question": "When does the code stop retrying?",
+        "answer":   "after more than 3 retries"
+    },
+    {
+        "code":     "def save_log ( entry ) : with open ( 'logs/app.log' , 'a' ) as f : f . write ( entry )",
+        "question": "Where does the code write the log entry?",
+        "answer":   "to the file logs/app.log"
+    },
+    {
+        "code":     "def validate_input ( data ) : if not data : raise ValueError ( 'empty input' )",
+        "question": "For what purpose does the code raise a ValueError?",
+        "answer":   "to signal that the input data is empty"
+    },
+    {
+        "code":     "def cache_result ( self , key , value ) : self . _cache [ key ] = value",
+        "question": "Why does the code store the value in a dictionary?",
+        "answer":   "to cache the result for later lookup by key"
     },
 ]
 
 SYSTEM_PROMPT = (
     "You are an expert software engineer with deep experience in source code comprehension, "
-    "code review, and software documentation across multiple programming languages including Python\n"
-    "You will be given a code snippet and a natural language question about that code.\n"
+    "code review, and software documentation in Python.\n"
+    "You will be given a Python code snippet and a natural language question about that code.\n"
     "\n"
     "Your task:\n"
     "- Read the code carefully before answering.\n"
     "- Answer the question directly and concisely based solely on what the code does.\n"
     "- Match the style and length of the examples provided — a short phrase or single sentence is expected.\n"
-    "- For Yes/No questions, answer with Yes or No followed by a brief reason only if necessary.\n"
     "\n"
     "IMPORTANT: Study the examples carefully before answering.\n"
     "IMPORTANT: The examples define the expected answer style, format, and length — match them exactly.\n"
