@@ -82,12 +82,6 @@ Reference Answer: Due to a timeout / etc.
 Predicted Answer: No, the function reconnects the client.
 Output: {"accuracy": {"score": 1}, "completeness": {"score": 1}, "clarity": {"score": 3}, "relevance": {"score": 1}}
 
-Example 3 — fully correct, concise answer:
-Code: def get_suite ( self , suite_dict , label = None ) : suite = unittest.TestSuite ( ) for test_name in suite_dict : suite.addTest ( self.get_test ( test_name ) ) return suite
-Question: What does the code return?
-Predicted Answer: a test suite
-Reference Answer: a TestSuite object
-Output: {"accuracy": {"score": 5}, "completeness": {"score": 5}, "clarity": {"score": 5}, "relevance": {"score": 5}}
 
 Respond ONLY with a valid JSON object in exactly this format:
 {
