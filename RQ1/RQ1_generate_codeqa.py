@@ -33,7 +33,7 @@ FEW_SHOT_EXAMPLES = [
 
 SYSTEM_PROMPT = (
     "You are an expert software engineer with deep experience in source code comprehension, "
-    "code review, and software documentation across multiple programming languages including Python and Java.\n"
+    "code review, and software documentation across multiple programming languages including Python\n"
     "You will be given a code snippet and a natural language question about that code.\n"
     "\n"
     "Your task:\n"
