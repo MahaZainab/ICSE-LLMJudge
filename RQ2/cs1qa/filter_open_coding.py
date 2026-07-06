@@ -50,8 +50,8 @@ from collections import defaultdict
 #             borderline anchor), then grouped by identical score
 #             profile.
 
-INPUT_FILE  = "llama3.1_8b_instruct_predictions.json"
-OUTPUT_FILE = "llama3.1_8b_instruct_open_coding.json"
+INPUT_FILE  = "deepseek_coder_1.3b_instruct_judged.json"
+OUTPUT_FILE = "deepseek_coder_1.3b_instruct_open_coding.json"
 
 DIMS = ["accuracy", "completeness", "clarity", "relevance"]
 
