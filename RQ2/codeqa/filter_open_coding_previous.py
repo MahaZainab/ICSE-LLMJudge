@@ -141,20 +141,11 @@ def main():
     total_included = 0
     output = {}
 
-    # --- Copy-paste-friendly table block ---
-    # Columns: Case | Records | Sub-bucket | Profile (acc/comp/clar/rel) | n
-    # Tab-separated so pasting into Excel/Google Sheets/Word tables splits
-    # into columns automatically.
-    print("-" * 60)
-    print("COPY-PASTE TABLE (tab-separated)")
-    print("-" * 60)
-    print("Case\tRecords\tSub-bucket\tProfile\tn")
-
     for case_label in sorted(included.keys()):
         buckets = included[case_label]
         case_total = sum(len(v) for v in buckets.values())
         total_included += case_total
-        print(f"{case_label}\t{case_total}\t\t\t")
+        print(f"{case_label}  ({case_total} records)")
         output[case_label] = {}
 
         for bucket_key in sorted(buckets.keys()):
@@ -164,15 +155,20 @@ def main():
             for r in records:
                 profile_groups[score_profile(r)].append(r)
 
+            print(f"  sub-bucket: {bucket_key}")
             output[case_label][bucket_key] = {}
 
             for profile, group in sorted(profile_groups.items()):
                 profile_str = (f"acc={profile[0]} comp={profile[1]} "
                                f"clar={profile[2]} rel={profile[3]}")
-                print(f"\t\t{bucket_key}\t{profile_str}\t{len(group)}")
+                ids = [r["id"] for r in group]
+                cats = [r["category"] for r in group]
+                print(f"    profile [{profile_str}]  n={len(group)}  "
+                      f"ids={ids}  categories={cats}")
                 output[case_label][bucket_key][profile_str] = group
 
-    print("-" * 60)
+        print()
+
     print(f"TOTAL INCLUDED FOR OPEN CODING: {total_included} records")
     print("=" * 60)
 
