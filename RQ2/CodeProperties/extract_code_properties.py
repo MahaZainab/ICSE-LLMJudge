@@ -116,8 +116,8 @@ def process_file(path, code_key="code", full=False):
 
 
 if __name__ == "__main__":
-    codeqa = process_file("/mnt/user-data/uploads/CodeQA_clean_final_v2.json", full=False)
-    cs1qa = process_file("/mnt/user-data/uploads/CS1QA_clean_final_v2.json", full=True)
+    codeqa = process_file("CodeQA_clean_final_v2.json", full=False)
+    cs1qa = process_file("CS1QA_clean_final_v2.json", full=True)
 
     for name, data in [("CodeQA", codeqa), ("CS1QA", cs1qa)]:
         print(f"\n=== {name}: {len(data)} records ===")
