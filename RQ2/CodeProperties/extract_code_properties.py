@@ -116,8 +116,8 @@ def process_file(path, code_key="code", full=False):
 
 
 if __name__ == "__main__":
-    codeqa = process_file("/mnt/user-data/uploads/CodeQA_clean_final_v2.json", full=False)
-    cs1qa = process_file("/mnt/user-data/uploads/CS1QA_clean_final_v2.json", full=True)
+    codeqa = process_file("CodeQA_clean_final_v2.json", full=False)
+    cs1qa = process_file("CS1QA_clean_final_v2.json", full=True)
 
     for name, data in [("CodeQA", codeqa), ("CS1QA", cs1qa)]:
         print(f"\n=== {name}: {len(data)} records ===")
@@ -129,5 +129,5 @@ if __name__ == "__main__":
             else:
                 print(f"  {k}: mean={sum(vals)/len(vals):.2f}, max={max(vals)}")
 
-    json.dump(codeqa, open("/mnt/user-data/outputs/CodeQA_with_properties.json", "w"), indent=2)
-    json.dump(cs1qa, open("/mnt/user-data/outputs/CS1QA_with_properties.json", "w"), indent=2)
+    json.dump(codeqa, open("CodeQA_with_properties.json", "w"), indent=2)
+    json.dump(cs1qa, open("CS1QA_with_properties.json", "w"), indent=2)
