@@ -108,7 +108,7 @@ def extract_full(code):
 
 
 def process_file(path, code_key="code", full=False):
-    data = json.load(open(path))
+    data = json.load(open(path, encoding="utf-8"))
     extractor = extract_full if full else extract_lexical
     for ex in data:
         ex["properties"] = extractor(ex[code_key])
