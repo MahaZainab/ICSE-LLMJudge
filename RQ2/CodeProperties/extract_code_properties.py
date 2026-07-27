@@ -1,20 +1,3 @@
-"""
-Code property extraction for RQ2 error-distribution analysis.
-
-Two extraction paths, matched to what each dataset's release actually preserves:
-
-- CodeQA (`extract_lexical`): parens/commas/colons/dots/= are stripped in the
-  public release, but keywords, string quotes, and []/{}  survive. Properties
-  are computed by counting keyword occurrences, not by parsing.
-
-- CS1QA (`extract_full`): the code field retains all punctuation (just missing
-  newlines/indentation), so we can additionally use regex-based structural
-  counts (real call counts, param counts, assignment counts, nesting depth)
-  that CodeQA's release can't support.
-
-Everything here works directly on `ex["code"]` as it exists in the two
-uploaded JSON files -- no external data required.
-"""
 
 import json
 import re
