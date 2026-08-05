@@ -18,7 +18,7 @@ MAX_TOKENS_REFINE   = 128
 MAX_TOKENS_JUDGE    = 128
 
 DATASET_NAME = "CodeQA"
-DATA_PATH = "CodeQA_clean_final_v2.json"
+DATA_PATH = "CodeQA_dataset.json"
 OUT_DIR = "results"
 
 .
