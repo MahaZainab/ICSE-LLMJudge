@@ -83,7 +83,7 @@ FEEDBACK_SYSTEM = (
     "- Accuracy: does it correctly reflect what the code does?\n"
     "- Relevance: does it answer exactly what is asked?\n"
     "- Completeness: does it cover what the question asks?\n"
-    "- Length: CodeQA answers are a short phrase or single sentence.\n\n"
+    "- Clarity: how clearly does it communicate its point?\n\n"
     "CRITICAL: DO NOT REWRITE THE ANSWER — feedback only.\n"
     "CRITICAL: BASE FEEDBACK ONLY ON THE PROVIDED CODE.\n"
     "CRITICAL: END WITH A LINE STARTING 'Actionable fix:' NAMING THE CONCRETE CHANGE NEEDED.\n\n"
