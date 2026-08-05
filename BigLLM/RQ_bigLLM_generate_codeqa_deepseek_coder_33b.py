@@ -20,9 +20,9 @@ from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 GENERATOR_MODEL_ID = "deepseek-ai/deepseek-coder-33b-instruct"
-INPUT_FILE         = "../DataPreprocessing/filtered_dataset.json"
-OUTPUT_FILE        = "RQ1_generate_codeqa/filtered/deepseek_coder_33b_instruct_predictions.json"
-STATS_FILE         = "RQ1_generate_codeqa/filtered/deepseek_coder_33b_instruct_stats.json"
+INPUT_FILE         = "filtered_dataset.json"
+OUTPUT_FILE        = "deepseek_coder_33b_instruct_codeqa_predictions.json"
+STATS_FILE         = "deepseek_coder_33b_instruct_codeqa_stats.json"
 SAVE_EVERY         = 25
 MAX_NEW_TOKENS     = 128
 HF_CACHE           = os.getenv("HF_HOME", "")
@@ -104,7 +104,9 @@ def save_append(path, new_data):
         json.dump(combined, f, indent=2, ensure_ascii=False)
 
 def save_stats(path, stats):
-    os.makedirs(os.path.dirname(path), exist_ok=True)
+    dirname = os.path.dirname(path)
+    if dirname:
+        os.makedirs(dirname, exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(stats, f, indent=2, ensure_ascii=False)
 
