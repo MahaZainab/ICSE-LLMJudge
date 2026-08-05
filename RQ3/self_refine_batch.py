@@ -66,7 +66,7 @@ FEEDBACK_FEW_SHOT = {
         "Relevance: The question asks for a cause/purpose, and the draft does not give one — "
         "low relevance to what was asked.\n"
         "Completeness: Incomplete — the consequence of skipping the check (division by zero via "
-        "len(scores) as a divisor) is never mentioned.\n"
+        "Clarity: The answer is clear and easy to understand.\n"
         "Actionable fix: Look at the return statement — scores is used as a divisor. State the "
         "purpose as avoiding a division-by-zero error when the list is empty, not the check's mechanics."
     ),
