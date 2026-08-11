@@ -1,0 +1,14 @@
+{
+  "model_id": "google/gemma-2-2b-it",
+  "params_b": 2.0,
+  "dataset": "codeqa",
+  "n_examples": 100,
+  "probe_only": true,
+  "load_time_s": 11.42,
+  "peak_gpu_mem_after_load_mb": 4994.6,
+  "peak_gpu_mem_overall_mb": 5153.0,
+  "avg_latency_s": 0.616,
+  "total_generation_time_s": 61.6,
+  "projected_full_dataset_time_h": 2.7,
+  "projected_full_dataset_n": 15754
+}

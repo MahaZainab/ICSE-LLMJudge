@@ -1,0 +1,14 @@
+{
+  "model_id": "microsoft/Phi-3.5-mini-instruct",
+  "params_b": 3.8,
+  "dataset": "codeqa",
+  "n_examples": 100,
+  "probe_only": true,
+  "load_time_s": 14.89,
+  "peak_gpu_mem_after_load_mb": 7296.4,
+  "peak_gpu_mem_overall_mb": 7729.9,
+  "avg_latency_s": 0.5233,
+  "total_generation_time_s": 52.33,
+  "projected_full_dataset_time_h": 2.29,
+  "projected_full_dataset_n": 15754
+}

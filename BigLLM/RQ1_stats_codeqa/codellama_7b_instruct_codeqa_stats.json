@@ -1,0 +1,14 @@
+{
+  "model_id": "codellama/CodeLlama-7b-Instruct-hf",
+  "params_b": 7.0,
+  "dataset": "codeqa",
+  "n_examples": 100,
+  "probe_only": true,
+  "load_time_s": 29.56,
+  "peak_gpu_mem_after_load_mb": 12860.9,
+  "peak_gpu_mem_overall_mb": 13428.3,
+  "avg_latency_s": 1.0904,
+  "total_generation_time_s": 109.04,
+  "projected_full_dataset_time_h": 4.77,
+  "projected_full_dataset_n": 15754
+}

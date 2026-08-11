@@ -1,0 +1,14 @@
+{
+  "model_id": "meta-llama/Llama-3.1-8B-Instruct",
+  "params_b": 8.0,
+  "dataset": "codeqa",
+  "n_examples": 100,
+  "probe_only": true,
+  "load_time_s": 35.62,
+  "peak_gpu_mem_after_load_mb": 15324.6,
+  "peak_gpu_mem_overall_mb": 15529.6,
+  "avg_latency_s": 0.3294,
+  "total_generation_time_s": 32.94,
+  "projected_full_dataset_time_h": 1.44,
+  "projected_full_dataset_n": 15754
+}

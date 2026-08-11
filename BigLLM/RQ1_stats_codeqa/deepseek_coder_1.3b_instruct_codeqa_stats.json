@@ -1,0 +1,14 @@
+{
+  "model_id": "deepseek-ai/deepseek-coder-1.3b-instruct",
+  "params_b": 1.3,
+  "dataset": "codeqa",
+  "n_examples": 100,
+  "probe_only": true,
+  "load_time_s": 5.66,
+  "peak_gpu_mem_after_load_mb": 2579.3,
+  "peak_gpu_mem_overall_mb": 2810.5,
+  "avg_latency_s": 2.021,
+  "total_generation_time_s": 202.1,
+  "projected_full_dataset_time_h": 8.84,
+  "projected_full_dataset_n": 15754
+}

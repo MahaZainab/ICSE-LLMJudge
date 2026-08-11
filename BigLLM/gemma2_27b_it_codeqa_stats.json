@@ -1,0 +1,10 @@
+{
+  "model_id": "google/gemma-2-27b-it",
+  "dataset": "codeqa",
+  "n_examples": 15754,
+  "load_time_s": 549.03,
+  "peak_gpu_mem_after_load_mb": 51931.6,
+  "peak_gpu_mem_overall_mb": 58801.9,
+  "avg_latency_s": 0.912,
+  "total_generation_time_s": 14367.93
+}

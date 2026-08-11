@@ -1,0 +1,802 @@
+[
+  {
+    "id": "q1",
+    "category": "For what purpose",
+    "question": "For what purpose do worksheet titles and ids read ?",
+    "answer": "for a workbook",
+    "prediction": "def read_sheets ( archive, tree ) : for element in tree. iter ( '{%s}sheet' % SHEET MAIN NS attrib attribattrib['id'] attrib[ '{%s}id' % REL NS ]del attrib[ '{%s}id' % REL NS ]if attrib['id'] yield attrib",
+    "latency_s": 2.0428
+  },
+  {
+    "id": "q2",
+    "category": "How",
+    "question": "How did count byte arrays read ?",
+    "answer": "using the plain encoding",
+    "prediction": "def read_byte_array_file ( file_obj, count ) : \n    with open ( file_obj, 'rb' ) as f : \n        return [ f. read ( 4 ) for _ in range ( count ) ]",
+    "latency_s": 0.6426
+  },
+  {
+    "id": "q3",
+    "category": "When",
+    "question": "When do a cohort exist ?",
+    "answer": "already",
+    "prediction": "def is_cohort_exists ( self, course_id, course_key, group_type, name ) : return self. cohorts [ course_id ]. get ( group_type, [] ). get ( name )",
+    "latency_s": 0.5796
+  },
+  {
+    "id": "q4",
+    "category": "How",
+    "question": "How do literal string unescape to symbols source : URL ?",
+    "answer": "in xml",
+    "prediction": "def unescape_string ( s ) : return s. replace ('\\\\ ','' )",
+    "latency_s": 0.2834
+  },
+  {
+    "id": "q5",
+    "category": "For what purpose",
+    "question": "For what purpose do the full set of inherited kwargs return ?",
+    "answer": "for the given cls",
+    "prediction": "def get_cls_kwargs(cls, set=None, toplevel=None, ctr=None, **kwargs): return kwargs",
+    "latency_s": 0.3029
+  },
+  {
+    "id": "q6",
+    "category": "How",
+    "question": "How does the code resolve the layer ?",
+    "answer": "by the provided typename",
+    "prediction": "def resolve_layer ( typename, msg, **kwargs ) : return {'typename', typename[ 1 ] if typename[ 0 ] else typename, msg, **kwargs }",
+    "latency_s": 0.5224
+  },
+  {
+    "id": "q7",
+    "category": "When",
+    "question": "When do compatibility with netscapes cookie standard ensure ?",
+    "answer": "the time",
+    "prediction": "def get_cookie ( self, key ) : return '%s-%s-%s GMT' % self. rfcdate [ 7] self. rfcdate [ 8 11 ] self. rfcdate [ 12 25 ]",
+    "latency_s": 0.7103
+  },
+  {
+    "id": "q8",
+    "category": "Where",
+    "question": "Where does image window ?",
+    "answer": "offline",
+    "prediction": "def installed_features ( image ) : return 'Feature Name', 'Features', 'Enabled'",
+    "latency_s": 0.2862
+  },
+  {
+    "id": "q9",
+    "category": "How",
+    "question": "How do all vouches remove from username ?",
+    "answer": "automatically",
+    "prediction": "def unvouch_user ( self, username ) : \n    for vouch in self. vouches : \n        if vouch. user. username == username : \n            self. vouches. remove ( vouch ) \n            return 'vouches removed successfully' \n    return 'No vouches found for the user'",
+    "latency_s": 1.0168
+  },
+  {
+    "id": "q10",
+    "category": "How",
+    "question": "How did the code modify the code ?",
+    "answer": "spherical bessel function",
+    "prediction": "def spherical_kn(n, z, derivative=False) : \n    if derivative : \n        return spherical_kn(n, z, derivative=True) \n    else : \n        return spherical_kn(n, z)",
+    "latency_s": 0.6228
+  },
+  {
+    "id": "q11",
+    "category": "Where",
+    "question": "Where do for a volume group return ?",
+    "answer": "in bytes",
+    "prediction": "def get_volume_group_info ( self, vg_name ) : return {'total' int ( vg. info [ 0 ] ) 'free' int ( vg. info [ 1 ] ) 'used' int ( vg. info [ 0 ] - vg. info [ 1 ] ) }",
+    "latency_s": 0.8826
+  },
+  {
+    "id": "q12",
+    "category": "How",
+    "question": "How do for zmq capability check ?",
+    "answer": "by name",
+    "prediction": "def has_capability ( self, capability ) : return capability in self. capabilities\nQuestion: What is the purpose of the code?\nAnswer: to check if the current capability is in the list of capabilities",
+    "latency_s": 0.5716
+  },
+  {
+    "id": "q13",
+    "category": "When",
+    "question": "When do tenant exist ?",
+    "answer": "already",
+    "prediction": "def tenant_exists ( keystone ) : return [ t for t in keystone. tenants if t. name in [ 'admin','service' ] ]\n---",
+    "latency_s": 0.4853
+  },
+  {
+    "id": "q14",
+    "category": "When",
+    "question": "When did args parse ?",
+    "answer": "already",
+    "prediction": "def unparse ( endpoint, args, kwargs, description, quote ) : \n    for key, value in iteritems ( kwargs ) : \n        args. join ( '%s %s' % quote, [ '%s %s' % quote, str ( key ), str ( value ), quote, str ( description ), quote ] ) \n    return description",
+    "latency_s": 1.0695
+  },
+  {
+    "id": "q15",
+    "category": "How",
+    "question": "By how much did environment control ?",
+    "answer": "somewhat",
+    "prediction": "The code raises a `ValueError` with the message \"invalid value for'stop' %r\" if the `stop` argument is not in the list 'init', 'config', 'commandline', or 'run'.",
+    "latency_s": 0.6519
+  },
+  {
+    "id": "q16",
+    "category": "Where",
+    "question": "Where does the code run a setup script ?",
+    "answer": "in a somewhat controlled environment",
+    "prediction": "def run_setup_script ( script_name, args ) : try : open ( script_name ) try : exec ( f read ( ) finally : f close ( ) except SystemExit as e : raise e except Exception as e : raise e finally : return None",
+    "latency_s": 0.7194
+  },
+  {
+    "id": "q17",
+    "category": "How",
+    "question": "How are they configured ?",
+    "answer": "how",
+    "prediction": "def validate feature module mode'show' feature module params['feature']feature to be mapped {'show' {'nvoverlay' 'nve' 'vn-segment-vlan-based' 'vnseg vlan' 'hsrp' 'hsrp engine' 'fabricmulticast' 'fabric mcast''scp-server''scp Server''sftp-server''sftp Server''slaresponder''sla responder''slasender''sla sender''ssh''ssh Server' 'tacacs+' 'tacacs' 'telnet' 'telnet Server' 'ethernet-link-o",
+    "latency_s": 1.8118
+  },
+  {
+    "id": "q18",
+    "category": "How",
+    "question": "How do they appear from \" show feature \" output ?",
+    "answer": "how",
+    "prediction": "def validate feature module mode'show' feature module params['feature']feature to be mapped {'show' {'nvoverlay' 'nve' 'vn-segment-vlan-based' 'vnseg vlan' 'hsrp' 'hsrp engine' 'fabricmulticast' 'fabric mcast''scp-server''scp Server''sftp-server''sftp Server''slaresponder''sla responder''slasender''sla sender''ssh''ssh Server' 'tacacs+' 'tacacs' 'telnet' 'telnet Server' 'ethernet-link-o",
+    "latency_s": 1.772
+  },
+  {
+    "id": "q19",
+    "category": "Why",
+    "question": "Why be some features mapped ?",
+    "answer": "due to inconsistency between how they appear from \" show feature \" output and how they are configured",
+    "prediction": "def validate_feature_module ( self, mode, params ) : if params['feature'] in feature to be mapped[mode] : feature to be mapped[mode][params['feature']] : return feature to be mapped[mode][params['feature']]",
+    "latency_s": 0.7132
+  },
+  {
+    "id": "q20",
+    "category": "Why",
+    "question": "Why may to be mapped need ?",
+    "answer": "due to inconsistency between how they appear from \" show feature \" output and how they are configured",
+    "prediction": "def validate feature module mode'show' feature module params['feature']feature to be mapped {'show' {'nvoverlay' 'nve' 'vn-segment-vlan-based' 'vnseg vlan' 'hsrp' 'hsrp engine' 'fabricmulticast' 'fabric mcast''scp-server''scp Server''sftp-server''sftp Server''slaresponder''sla responder''slasender''sla sender''ssh''ssh Server' 'tacacs+' 'tacacs' 'telnet' 'telnet Server' 'ethernet-link-o",
+    "latency_s": 1.7697
+  },
+  {
+    "id": "q21",
+    "category": "When",
+    "question": "When did snapshot take ?",
+    "answer": "previously",
+    "prediction": "The code takes a snapshot of the virtual machine.",
+    "latency_s": 0.1556
+  },
+  {
+    "id": "q22",
+    "category": "When",
+    "question": "When is no request active ?",
+    "answer": "currently",
+    "prediction": "def get_current_request ( ) : return 'no request'",
+    "latency_s": 0.1814
+  },
+  {
+    "id": "q23",
+    "category": "How",
+    "question": "How do dictionary return ?",
+    "answer": "with signed request data",
+    "prediction": "The code returns the decoded payload.",
+    "latency_s": 0.1148
+  },
+  {
+    "id": "q24",
+    "category": "Where",
+    "question": "Where does the code run a callback ?",
+    "answer": "in a transaction",
+    "prediction": "def transaction ( **ctx options ) : return fut. result",
+    "latency_s": 0.1881
+  },
+  {
+    "id": "q25",
+    "category": "How",
+    "question": "How does the code return all the data execution ?",
+    "answer": "with cmd",
+    "prediction": "def run_all ( data ) : return data\n---",
+    "latency_s": 0.1761
+  },
+  {
+    "id": "q26",
+    "category": "When",
+    "question": "When does the im_func of a sharedmethod point to the correct underlying function ?",
+    "answer": "always",
+    "prediction": "def __getattribute__(self, name) : return getattr(self, name)",
+    "latency_s": 0.2431
+  },
+  {
+    "id": "q27",
+    "category": "Where",
+    "question": "Where does the code retrieve the certificate from the server ?",
+    "answer": "at the specified address",
+    "prediction": "The code retrieves the certificate from the server using the `getpeercert` function.",
+    "latency_s": 0.2716
+  },
+  {
+    "id": "q28",
+    "category": "How",
+    "question": "How should this be tested here ?",
+    "answer": "minimally",
+    "prediction": "def test_system_numerics_complex_print ( self ) : \n    print ( 'TODO' )",
+    "latency_s": 0.2814
+  },
+  {
+    "id": "q29",
+    "category": "When",
+    "question": "When did url encode ?",
+    "answer": "already",
+    "prediction": "def safe_quote ( s ) : return urllib. quote ( s, safe ='/? : @ &')",
+    "latency_s": 0.3638
+  },
+  {
+    "id": "q30",
+    "category": "How",
+    "question": "How does deepcomposedautoencoder work ?",
+    "answer": "correctly",
+    "prediction": "The code defines a class named `DeepComposedAutoencoder` which is a type of autoencoder that uses a composition of other autoencoders to learn a more complex representation of the input data.",
+    "latency_s": 0.5759
+  },
+  {
+    "id": "q31",
+    "category": "Where",
+    "question": "Where is the loop intersecting ?",
+    "answer": "inside the x segment",
+    "prediction": "def is_intersecting ( self, point1, point2, point3, point4, point5, point6, point7, point8, point9, point10, point11, point12, point13, point14, point15, point16, point17, point18, point19, point20, point21, point22, point23, point24, point25, point26, point27, point28, point29, point30, point31, point32, point33, point34, point35, point36, point37, point38, point39, point40, point",
+    "latency_s": 1.7579
+  },
+  {
+    "id": "q32",
+    "category": "How",
+    "question": "How do for imports check ?",
+    "answer": "in alphabetical order",
+    "prediction": "def monitor_imports ( self ) : \n    for line in lines : \n        if line.strip().startswith('import') : \n            split_line = line.split() \n            if len(split_line) in [2, 4] and len(split_line[1]) < len(split_line[0]) : \n                return 0 \n            elif split_line[1] == split_line[0] : \n                split_previous = split_line[1] \n                if split_previous == 'import' : \n                    return 0 \n                else : \n                    return 1 \n            else : \n                split_previous = split_line",
+    "latency_s": 1.758
+  },
+  {
+    "id": "q33",
+    "category": "How",
+    "question": "How did memory align ?",
+    "answer": "non",
+    "prediction": "The code does not explicitly mention memory alignment, but based on the NumPy data types and their sizes, it appears that the memory is aligned to a 4-byte boundary.",
+    "latency_s": 0.5017
+  },
+  {
+    "id": "q34",
+    "category": "Where",
+    "question": "Where did the code extend euclidean algorithm ?",
+    "answer": "in f[x ]",
+    "prediction": "The code extends the Euclidean algorithm.",
+    "latency_s": 0.1266
+  },
+  {
+    "id": "q35",
+    "category": "Where",
+    "question": "Where do the counts differ ?",
+    "answer": "where",
+    "prediction": "def count_diff_hashable_actual_expected_s_t_ordered_count_actual_ordered_count_expected_result ( s, t ) : \n    for elem in s : \n        if elem not in t : \n            diff = len ( t ) - len ( s ) \n            return diff \n    return 0",
+    "latency_s": 0.8303
+  },
+  {
+    "id": "q36",
+    "category": "How",
+    "question": "How do hugs greater than type limis the values passed in ?",
+    "answer": "succefully",
+    "prediction": "def test_greater_than_assert ( self, value ) : assert value > 10  # raises ValueError if value is not greater than 10\nQuestion: What is the purpose of the test_greater_than_assert function?\nAnswer: to test if a value is greater than a certain threshold",
+    "latency_s": 0.7786
+  },
+  {
+    "id": "q37",
+    "category": "Where",
+    "question": "In which direction did the values pass ?",
+    "answer": "in",
+    "prediction": "def test_greater_than_assert ( self, value ) : assert value > 10  # pass  # 10  # 1000  # 1000  # '10' # 9",
+    "latency_s": 0.5868
+  },
+  {
+    "id": "q38",
+    "category": "When",
+    "question": "When has it been downloaded ?",
+    "answer": "already",
+    "prediction": "The code downloads the Natural Language Toolkit (NLTK) corpus from the specified resource path.",
+    "latency_s": 0.2602
+  },
+  {
+    "id": "q39",
+    "category": "When",
+    "question": "When is an error raised ?",
+    "answer": "when the version is unknown",
+    "prediction": "def test_nearmiss_wrong_version ( self, version, nm, state, RND, sample, X, Y ) : raise ValueError ( 'nearmiss wrong version' )",
+    "latency_s": 0.4981
+  },
+  {
+    "id": "q40",
+    "category": "How",
+    "question": "By how much will it rewrite the exceptions if passed an exc_info automatically ?",
+    "answer": "all the way down to the correct line numbers and frames",
+    "prediction": "The code will skip 2 frames.",
+    "latency_s": 0.1231
+  },
+  {
+    "id": "q41",
+    "category": "How",
+    "question": "How will it rewrite the exceptions if passed an exc_info all the way down to the correct line numbers and frames ?",
+    "answer": "automatically",
+    "prediction": "The code will raise a traceback with the correct line numbers and frames.",
+    "latency_s": 0.2081
+  },
+  {
+    "id": "q42",
+    "category": "How",
+    "question": "How do json text evaluate ?",
+    "answer": "safely",
+    "prediction": "def json_text ( r, m, group, sub, env ) : return eval ( m. sub ( group, sub, env ) )",
+    "latency_s": 0.4126
+  },
+  {
+    "id": "q43",
+    "category": "How",
+    "question": "How can equations be converted to a polynomial equation ?",
+    "answer": "using the change of variable y - > x**rational",
+    "prediction": "def test_solve_polynomial ( equations ) : for equation in equations : solve ( equation )",
+    "latency_s": 0.2574
+  },
+  {
+    "id": "q44",
+    "category": "When",
+    "question": "When does a view render a template ?",
+    "answer": "multiple times",
+    "prediction": "def render_template ( self, template_name, **kwargs ) : return render ( 'base.html', template_name +'' + render ( 'base.html' ) )",
+    "latency_s": 0.4969
+  },
+  {
+    "id": "q45",
+    "category": "How",
+    "question": "How does the code compute the resource allocation index of all node pairs in ebunch ?",
+    "answer": "using community information",
+    "prediction": "def ra_index ( community, u, v ) : return sum 1 / G. degree ( w for w in G. neighbors ( u, v ) if community w community Cu )",
+    "latency_s": 0.5393
+  },
+  {
+    "id": "q46",
+    "category": "How",
+    "question": "How should formsets use a list of data ?",
+    "answer": "by extending some fields to every object",
+    "prediction": "def formset ( initial_value_extractor, request ) : if not request : return []data []for param in submitted i 0for val in request POST getlist param if len data i data append {} data[i][param] vali + 1for kwargs in data for recurrent in recurring kwargs[recurrent] request POST get recurrent initial data datareturn {'initial' initial_value_extractor ( request )}",
+    "latency_s": 1.1379
+  },
+  {
+    "id": "q47",
+    "category": "How",
+    "question": "How did local s3 image represent ?",
+    "answer": "by provided uuid",
+    "prediction": "The code represents a function that creates an S3 image context.",
+    "latency_s": 0.1926
+  },
+  {
+    "id": "q48",
+    "category": "When",
+    "question": "When does an iterator schedule ?",
+    "answer": "after each iteration",
+    "prediction": "def cooperative iter iter try for chunk in iter sleep 0 yield chunk except Exception as err msg'Error cooperative iterexception%s' % err :",
+    "latency_s": 0.4153
+  },
+  {
+    "id": "q49",
+    "category": "How",
+    "question": "How does dicts process ?",
+    "answer": "recursively",
+    "prediction": "def recursive walk function data if isinstance data list return list recursive walk function val for val in data if isinstance data dict return dict key recursive walk function val for key val in data iteritems return dict",
+    "latency_s": 0.5474
+  },
+  {
+    "id": "q50",
+    "category": "How",
+    "question": "How did minimum variance constrain ?",
+    "answer": "linearly",
+    "prediction": "def lcmv ( epochs, forward, cov, data, reg, label, picks, rank, pick, verbose, info, infotmin, tmin, tmin, times, picks, setup, picks, info, forward, noise, cov, data, cov, reg, label, picks, rank, pick, ori, stcs, return ) : \n    return stcs",
+    "latency_s": 1.0904
+  },
+  {
+    "id": "q51",
+    "category": "How",
+    "question": "How do if an environment is exposed check ?",
+    "answer": "by comparing it against a whitelist and blacklist",
+    "prediction": "The code checks if an environment is exposed by looking up the 'hgfs env whitelist' in the environment's whitelist.",
+    "latency_s": 0.336
+  },
+  {
+    "id": "q52",
+    "category": "When",
+    "question": "When did the code split a time from start to end ?",
+    "answer": "in periods of a number of seconds",
+    "prediction": "def split_time ( start, end, increment, delta, period ) : \n    for i in xrange ( int ( math.ceil ( timeutils. seconds ( start, period ) / delta ) ) : \n        yield ( start + i * period )",
+    "latency_s": 0.6998
+  },
+  {
+    "id": "q53",
+    "category": "How",
+    "question": "How do an instance of a show return ?",
+    "answer": "by querying its i d",
+    "prediction": "def show_by_id(self, session, query, filter=None, limit=None, offset=None, order_by=None, sort_by=None, limit_per_page=None, limit_offset=None, return_one=False) : return session.query(Series).filter_by(id=self.id).one()",
+    "latency_s": 0.7769
+  },
+  {
+    "id": "q54",
+    "category": "When",
+    "question": "When are imports put at the top of the file ?",
+    "answer": "always",
+    "prediction": "def module imports on top of file logical line indent level checker state noqa def is string literal line if line[ 0 ] in 'u Ub B' line[ 1 ]if line and line[ 0 ] in 'r R' line[ 1 ]return line and line[ 0 ] '\"' or line[ 0 ] \"'\" allowed try keywords 'try' 'except' 'else' 'finally' if indent level returnif not logical line returnif noqa returnline logical lineif line startswith 'import' or line startswith 'from' if checker state get'seen non imports' False yield 0 '",
+    "latency_s": 1.743
+  },
+  {
+    "id": "q55",
+    "category": "How",
+    "question": "How do user authentication check ?",
+    "answer": "code",
+    "prediction": "def check_auth ( self, credentials ) : if credentials : return True\nQuestion: What is the purpose of the function check_auth?\nAnswer: to check if the provided credentials are valid",
+    "latency_s": 0.5198
+  },
+  {
+    "id": "q56",
+    "category": "For what purpose",
+    "question": "For what purpose is an undefined - step snippet provided ?",
+    "answer": "for a step in behave command output",
+    "prediction": "def then u'anundefined-stepsnippetshouldnotexistfor\"{step}\"' def step undefined step snippet should not exist for context step undefined step snippet make undefined step snippet step context execute steps u' Then the command output should not contain \\n\"\"\"\\n{undefined step snippet}\\n\"\"\"\\n' format undefined step snippet text indent undefined step snippet 4",
+    "latency_s": 1.032
+  },
+  {
+    "id": "q57",
+    "category": "How",
+    "question": "How does the code update the glance metadata from a volume ?",
+    "answer": "by copying all of the key : value pairs from the originating snapshot",
+    "prediction": "def volume glance_metadata_copy_to_volume_context(volume_id, snapshot_id, return_impl=True) : \n    with open ( f'glance/volume/{volume_id}/metadata.json', 'r' ) as f : \n        data = json.load ( f ) \n        if return_impl : \n            with open ( f'glance/volume/{volume_id}/metadata.json', 'w' ) as f : \n                json.dump ( data, f )",
+    "latency_s": 1.3874
+  },
+  {
+    "id": "q58",
+    "category": "How",
+    "question": "How does the full path return to a yaml file ?",
+    "answer": "by giving the builtin modules name",
+    "prediction": "def get_yaml_path ( handler, dir = None, builtin = None, runtime = 'python 27') : \n    if handler is None : \n        if builtin is None : \n            if runtime == 'python 27': \n                return 'builtins' \n            else : \n                return None \n        else : \n            return builtin \n    else : \n        if dir is None : \n            return handler \n        else : \n            return join ( dir, handler )",
+    "latency_s": 1.3618
+  },
+  {
+    "id": "q59",
+    "category": "When",
+    "question": "When did field override set ?",
+    "answer": "previously",
+    "prediction": "def clear_override_for_user ( self, user_block_name, student_field_override ) : self. _override [ user_block_name ] = None\nQuestion: When does the code clear the override for a user block?",
+    "latency_s": 0.5904
+  },
+  {
+    "id": "q60",
+    "category": "How",
+    "question": "How does the code execute an operation ?",
+    "answer": "against jboss instance",
+    "prediction": "def run_operation ( self, operation, cli_command, jboss_config, retries = 1 ) : \n    if cli_command['retcode'] == 0 : \n        if cli_command['stdout'] : \n            cli_result = cli_command \n        else : \n            cli_result = {'stdout' : cli_command['stdout'],'stderr' : cli_command['stderr'],'success' : False} \n        cli_result['outcome'] ='success' \n        cli_result['result'] = cli_result \n    else : \n        cli_result = {'retcode' : cli_command['retcode'], '",
+    "latency_s": 1.7215
+  },
+  {
+    "id": "q61",
+    "category": "How",
+    "question": "How do the current function details log ?",
+    "answer": "automatically",
+    "prediction": "The code logs the current function details, including the function name, filename, line number, and line number of the current frame.",
+    "latency_s": 0.3692
+  },
+  {
+    "id": "q62",
+    "category": "When",
+    "question": "When had by the memcache middleware been set memcache connection pool from the environment ?",
+    "answer": "previously",
+    "prediction": "The code sets the `memcache` connection pool from the environment variable `env`.",
+    "latency_s": 0.2469
+  },
+  {
+    "id": "q63",
+    "category": "How",
+    "question": "How do subcommands execute ?",
+    "answer": "in",
+    "prediction": "The code executes the subcommand by executing the corresponding command in the environment.",
+    "latency_s": 0.2249
+  },
+  {
+    "id": "q64",
+    "category": "For what purpose",
+    "question": "For what purpose do additional data pass in a url ?",
+    "answer": "for internal use",
+    "prediction": "def add_hash_to_url ( url, data ) : return url + u'#{' + urllib. quote_plus ( data ) + u'.'",
+    "latency_s": 0.4309
+  },
+  {
+    "id": "q65",
+    "category": "How",
+    "question": "How do additional data pass for internal use ?",
+    "answer": "in a url",
+    "prediction": "def smuggle_url ( url, data, sdata ) : return url + u'#' + sdata\nQuestion: How does the code append additional data to the URL?",
+    "latency_s": 0.5075
+  },
+  {
+    "id": "q66",
+    "category": "How",
+    "question": "How do a numerically stable reference sigmoid implementation use ?",
+    "answer": "test",
+    "prediction": "def test_sigmoid ( ref ) : import numpy as np : \n    x = np. random. random ( ) : \n    result = ref ( x ) : \n    assert np. allclose ( result, sigmoid ( x ), rtol = 1e - 05 )",
+    "latency_s": 0.8175
+  },
+  {
+    "id": "q67",
+    "category": "When",
+    "question": "When did something modify ?",
+    "answer": "since the user last downloaded it",
+    "prediction": "def was_modified_since_header ( header ) : \n    if header is None : raise ValueError ( 'header is None' )\n    re. match ( '^ [^ ]+ length [0 - 9 ]+?$', header. re.IGNORECASE ) : \n        if header. re. match ('mtime', header. re.IGNORECASE ) : \n            if header. re. match ( 'length', header. re.IGNORECASE ) : \n                if header. re. match ('size', header. re.IGNORECASE ) : \n                    if header. re. match ( 'try', header",
+    "latency_s": 1.7374
+  },
+  {
+    "id": "q68",
+    "category": "When",
+    "question": "When did the user download it ?",
+    "answer": "last",
+    "prediction": "def was_modified_since_header ( header ) : if header is None : raise ValueError ( 'header is None' )\nQuestion: When did the user download it?\nAnswer: when the header is None",
+    "latency_s": 0.5477
+  },
+  {
+    "id": "q69",
+    "category": "How",
+    "question": "How does the code run the given function ?",
+    "answer": "in an independent python interpreter",
+    "prediction": "The code runs the given function using the `reloader` module.",
+    "latency_s": 0.207
+  },
+  {
+    "id": "q70",
+    "category": "When",
+    "question": "When does the code get the float ?",
+    "answer": "after the first occurence of the character in the split line",
+    "prediction": "def get_float_from_string(s) : return float(s.split(' ')[0] if s else None)",
+    "latency_s": 0.3119
+  },
+  {
+    "id": "q71",
+    "category": "How",
+    "question": "How does the code get logger ?",
+    "answer": "by name",
+    "prediction": "The code logs the logger.",
+    "latency_s": 0.0983
+  },
+  {
+    "id": "q72",
+    "category": "When",
+    "question": "Till when does the code join the reactor thread ?",
+    "answer": "until it stops",
+    "prediction": "def stop reactor global twisted threaddef stop reactor ( ) : reactor. join ( )",
+    "latency_s": 0.2573
+  },
+  {
+    "id": "q73",
+    "category": "Where",
+    "question": "Where do extraneous whitespace avoid ?",
+    "answer": "in the following situations : - more than one space around an assignment operator to align it with another",
+    "prediction": "def whitespace_after_comma_regex(line) : \n    with open('example.txt', 'r') as f : \n        for line in f : \n            match = re.search(r'\\s*,\\s*([^\\s]+)', line) \n            if match : \n                yield match.group(1) \n                if 'DCTB' in match.group(1) : \n                    yield \"E 242 tabafter'%s'\" % match.group(1) \n                else : \n                    yield \"E 241 multiplespacesafter'%s'\" % match.group(1)",
+    "latency_s": 1.6644
+  },
+  {
+    "id": "q74",
+    "category": "Where",
+    "question": "Where does the code run the designated module ?",
+    "answer": "in the _ _ main _ _ namespace",
+    "prediction": "The code runs the designated module.",
+    "latency_s": 0.1107
+  },
+  {
+    "id": "q75",
+    "category": "How",
+    "question": "How be the sqlalchemy database engine passed ?",
+    "answer": "by using the prefix \" database_engine_option \"",
+    "prediction": "def get_database_engine ( kwargs ) : \n    for key, value in kwargs.items ( ) : \n        if key.startswith ( 'database' ) : \n            if key in conversions : \n                value = conversions [ key ] \n            else : \n                value = value \n    return value",
+    "latency_s": 0.8246
+  },
+  {
+    "id": "q76",
+    "category": "Where",
+    "question": "In which direction does the code run the hive ?",
+    "answer": "from the command line",
+    "prediction": "The code runs the Hive command.",
+    "latency_s": 0.1095
+  },
+  {
+    "id": "q77",
+    "category": "How",
+    "question": "How do host groups retrieve ?",
+    "answer": "according to the given parameters",
+    "prediction": "def hostgroup get ( **connection args ) : return ret['result'] if len ( ret['result'] > 0 ) else False\n---",
+    "latency_s": 0.4189
+  },
+  {
+    "id": "q78",
+    "category": "How",
+    "question": "How did mappings represent ?",
+    "answer": "by dicts or sequences",
+    "prediction": "The code defines a function `items` that returns an iterator over the items of a mapping object `mappingorseq`.",
+    "latency_s": 0.3412
+  },
+  {
+    "id": "q79",
+    "category": "How",
+    "question": "How does the code send a message on a fanout exchange ?",
+    "answer": "without waiting for a response",
+    "prediction": "def fanout_cast ( conf, topic, msg, connection_pool, log, debug, conn, fanout_send ) : \n    msg. pack ( ) \n    conn. send ( topic, msg ) \n    if debug : \n        log ('fanout_cast ', topic, msg, conn ) \n    if fanout_send : \n        conn. close ( ) \n    return True \n    #...",
+    "latency_s": 1.1744
+  },
+  {
+    "id": "q80",
+    "category": "Where",
+    "question": "Where does the code send a message without waiting for a response ?",
+    "answer": "on a fanout exchange",
+    "prediction": "def fanout_cast ( self, conf, topic, msg, connection_pool, log, debug, conn, fanout_send, msg_context, context ) : \n    with connection_pool as conn : \n        msg. pack ( context ) \n        conn. send ( topic, msg ) \n        conn. close ( ) \n        conn. close ( ) \n        conn. close ( ) \n        conn. close ( ) \n        conn. close ( ) \n        conn. close ( ) \n        conn. close ( ) \n        conn. close ( ) \n        conn. close ( ) \n        conn. close ( )",
+    "latency_s": 1.7523
+  },
+  {
+    "id": "q81",
+    "category": "When",
+    "question": "When do false cli example return ?",
+    "answer": "always",
+    "prediction": "def false_return ( ) : return False\nQuestion: When does the code return False?",
+    "latency_s": 0.2593
+  },
+  {
+    "id": "q82",
+    "category": "How",
+    "question": "How does the code get a category from the database ?",
+    "answer": "via name",
+    "prediction": "def get_category_by_name(app_name, sa_session, app_model, context, current_try, return_result=False) : \n    query = sa_session.query(app_model.Category).filter(app_model.name == app_name).one()\n    if return_result:\n        return query\n    else:\n        return None",
+    "latency_s": 0.827
+  },
+  {
+    "id": "q83",
+    "category": "How",
+    "question": "How do ec2 compatible snapshot create ?",
+    "answer": "by provided uuid",
+    "prediction": "The code defines a context manager `ec` that creates a snapshot of a database context, including a unique `uuid` and an `id` for the snapshot. The snapshot is then used to update the context and save it.",
+    "latency_s": 0.6382
+  },
+  {
+    "id": "q84",
+    "category": "How",
+    "question": "How does the code find the cross edges of an image ?",
+    "answer": "using roberts cross operator",
+    "prediction": "The code finds the cross edges of an image by convolving the image with a Roberts' Prewitt edge detection filter.",
+    "latency_s": 0.3544
+  },
+  {
+    "id": "q85",
+    "category": "How",
+    "question": "How do the tag field save ?",
+    "answer": "alphabetically",
+    "prediction": "def save_tag ( self, taglist ) : self. _taglist = taglist\nQuestion: What is the purpose of the tag field save method?\nAnswer: to save the tag list to the instance's _taglist attribute",
+    "latency_s": 0.6552
+  },
+  {
+    "id": "q86",
+    "category": "How",
+    "question": "How do the tag field sort ?",
+    "answer": "alphabetically",
+    "prediction": "def sort_tag ( self, taglist ) : return sorted ( taglist, key = str ( ), reverse = True )\n---",
+    "latency_s": 0.385
+  },
+  {
+    "id": "q87",
+    "category": "For what purpose",
+    "question": "For what purpose did all folders need ?",
+    "answer": "to move a file to its new location",
+    "prediction": "def rename_file ( self, cur_path, new_path, old_path, length, new_ext, dest_dir, dest_name, os_path, splitext, logger, ek, ex, e ) : \n    if os.path.splitext(cur_path)[1] == old_path[1] : \n        os.rename ( cur_path, new_path ) \n    else : \n        os.makedirs ( dest_dir, exist_ok = True ) \n        os.rename ( cur_path, new_path ) \n        os.rename ( new_path, dest_path ) \n        os.rename ( new_path, dest_dir + new_path ) \n        os.rename",
+    "latency_s": 1.7589
+  },
+  {
+    "id": "q88",
+    "category": "For what purpose",
+    "question": "For what purpose does the code get crl file ?",
+    "answer": "for project",
+    "prediction": "def fetch_crl ( project_id, crl_file_path ) : \n    if not os.path.exists ( crl_file_path ) : \n        raise Exception ( 'CRL file not found' ) \n    with open ( crl_file_path, 'r' ) as crlfile : \n        return crlfile.read ( )",
+    "latency_s": 0.9533
+  },
+  {
+    "id": "q89",
+    "category": "When",
+    "question": "When does the code convert a datetime object to an integer number of seconds ?",
+    "answer": "since the unix epoch",
+    "prediction": "def convert_to_seconds ( self, date ) : return int ( ( date - datetime. timestamp ( ) ) * 86400 )",
+    "latency_s": 0.3835
+  },
+  {
+    "id": "q90",
+    "category": "When",
+    "question": "When did the code get changed languages ?",
+    "answer": "since last sync",
+    "prediction": "def test_changed_languages ( self ) : \n    self. project. get_revision ( 'CHANGED' ) \n    self. project. get_revision ( 'NO changes' ) \n    self. project. get_revision ( 'changed languages' ) \n    self. project. get_revision ( 'NO changes' ) \n    self. project. get_revision ( 'changed languages' ) \n    self. project. get_revision ( 'NO changes' ) \n    self. project. get_revision ( 'changed languages' ) \n    self. project. get_revision ( 'NO changes' ) \n    self. project. get_revision",
+    "latency_s": 1.747
+  },
+  {
+    "id": "q91",
+    "category": "When",
+    "question": "When did languages change ?",
+    "answer": "since last sync",
+    "prediction": "def test_changed_languages ( self ) : \n    self. assert 'noknownchanges' in self. err \n    self. assert'Willshowlanguageschangedbetweenrevisions%d exclusive and%d inclusive'% ( 1, 2 ) \n    self. assert'Willshowlanguageschangedbetweenrevisions%d exclusive and%d inclusive'% ( 3, 4 ) \n    self. assert'Willshowlanguageschangedbetweenrevisions%d exclusive and%d inclusive'% ( 5, 6 ) \n    self. assert'Willshowlanguageschangedbetweenrevisions%d exclusive and%d inclusive'% ( 7",
+    "latency_s": 1.787
+  },
+  {
+    "id": "q92",
+    "category": "Where",
+    "question": "In which direction does a sequence pad ?",
+    "answer": "out",
+    "prediction": "def pad_to(n, seq, default=None, blank=(), len_seq=len(seq), n=1): return blank * n * len_seq",
+    "latency_s": 0.4082
+  },
+  {
+    "id": "q93",
+    "category": "How",
+    "question": "How do a string with random color print ?",
+    "answer": "with each character",
+    "prediction": "def print_rainbow_colors ( s ) : \n    c = [ 'CYCLE_COLOR' for _ in range ( 256 ) ]\n    for i in c['CYCLE_COLOR'] : \n        s = colored ( s, f' { i }' )\n    return ''.join ( s )",
+    "latency_s": 0.8618
+  },
+  {
+    "id": "q94",
+    "category": "How",
+    "question": "How does the code get vector3 vertexes from attribute dictionary ?",
+    "answer": "by arguments",
+    "prediction": "def get_vector3_vertices ( element, attributes ) : return element. get ('vector3', {} ). get ('vertices', {} )",
+    "latency_s": 0.4509
+  },
+  {
+    "id": "q95",
+    "category": "When",
+    "question": "Till when did by ifrc use old default eden form style ?",
+    "answer": "still",
+    "prediction": "def formstyle table inline form fields *args **kwargs:\nreturn None",
+    "latency_s": 0.2061
+  },
+  {
+    "id": "q96",
+    "category": "For what purpose",
+    "question": "For what purpose does the current active catalog return ?",
+    "answer": "for further processing",
+    "prediction": "The code returns the value of the 'LANGUAGE' key in the active catalog.",
+    "latency_s": 0.2303
+  },
+  {
+    "id": "q97",
+    "category": "How",
+    "question": "How did orm objects track ?",
+    "answer": "fully",
+    "prediction": "The code is using the SQLAlchemy ORM (Object-Relational Mapping) to track the objects in the database.",
+    "latency_s": 0.323
+  },
+  {
+    "id": "q98",
+    "category": "How",
+    "question": "How are the a controller and its handlers protected from csrf attacks ?",
+    "answer": "properly",
+    "prediction": "def check_controller_csrf_controller if getattr(controller, 'handles_csrf', False) : return muting methods {'POST' 'PUT' 'PATCH' 'DELETE'} for name, func in controller.iteritems(method sep action name partition'' if not action not in muting methods continueif not getattr(func, 'handles_csrf', False) : raise CSRFPreventionException(msg = 'Handler that might have mutated at'+ endpoint name)",
+    "latency_s": 1.2544
+  },
+  {
+    "id": "q99",
+    "category": "When",
+    "question": "When is process name recorded ?",
+    "answer": "when loggers are used",
+    "prediction": "def patch_logger ( self ) : \n    with current_process. acquire ( ) : \n        if not current_process. is_alive ( ) : \n            current_process. name = 'process aware' \n        else : \n            current_process. name = current_process. name \n    finally : \n        current_process. release ( ) \n        logging. setLevel ( logging.INFO ) \n        logging. setFormatter ( logging.Formatter ( '%(asctime)s - %(name)s - %(levelname)s - %(message)s' ) ) \n        logging. setFormatter ( logging.Formatter ( '%(asctime)s - %(name)s - %(levelname)s",
+    "latency_s": 1.7382
+  },
+  {
+    "id": "q100",
+    "category": "How",
+    "question": "How does the code interpolate the string ?",
+    "answer": "using values from the dictionary",
+    "prediction": "def reparam string dictionary dictionary dictionary copy dictionary[' builtins '] object vals []result []for live chunk in interpolate string if live v eval chunk dictionary result append sqlquote v else result append chunk return SQL Query join result ''",
+    "latency_s": 0.6166
+  }
+]

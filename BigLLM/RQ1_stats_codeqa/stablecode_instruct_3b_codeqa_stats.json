@@ -1,0 +1,14 @@
+{
+  "model_id": "stabilityai/stable-code-instruct-3b",
+  "params_b": 3.0,
+  "dataset": "codeqa",
+  "n_examples": 100,
+  "probe_only": true,
+  "load_time_s": 11.25,
+  "peak_gpu_mem_after_load_mb": 5340.0,
+  "peak_gpu_mem_overall_mb": 5690.2,
+  "avg_latency_s": 2.4156,
+  "total_generation_time_s": 241.56,
+  "projected_full_dataset_time_h": 10.57,
+  "projected_full_dataset_n": 15754
+}

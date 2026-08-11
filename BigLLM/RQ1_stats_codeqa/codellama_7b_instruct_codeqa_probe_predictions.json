@@ -1,0 +1,802 @@
+[
+  {
+    "id": "q1",
+    "category": "For what purpose",
+    "question": "For what purpose do worksheet titles and ids read ?",
+    "answer": "for a workbook",
+    "prediction": "The code reads worksheet titles and ids from an XML source in an ARC archive.",
+    "latency_s": 0.5597
+  },
+  {
+    "id": "q2",
+    "category": "How",
+    "question": "How did count byte arrays read ?",
+    "answer": "using the plain encoding",
+    "prediction": "The code reads count byte arrays from the file object.",
+    "latency_s": 0.3688
+  },
+  {
+    "id": "q3",
+    "category": "When",
+    "question": "When do a cohort exist ?",
+    "answer": "already",
+    "prediction": "When a cohort exists, the code returns Course User Group objects that are filtered by course ID, course key, group type, and COHORT name.",
+    "latency_s": 0.9254
+  },
+  {
+    "id": "q4",
+    "category": "How",
+    "question": "How do literal string unescape to symbols source : URL ?",
+    "answer": "in xml",
+    "prediction": "The code unescapes literal string characters in the source URL by converting each character code to its corresponding symbol. The code uses the `chr` function to convert an integer code to a character, and the `isdigit` function to check if the code is a digit. If the code is a digit, it is converted to an integer using the `int` function. If the code is not a digit, it is assumed to be a hexadecimal code and is converted to an integer using the `int` function with a base of 16. The resulting integer is then used to create a character using the",
+    "latency_s": 3.2783
+  },
+  {
+    "id": "q5",
+    "category": "For what purpose",
+    "question": "For what purpose do the full set of inherited kwargs return ?",
+    "answer": "for the given cls",
+    "prediction": "The code returns the full set of inherited kwargs for the purpose of updating the current class's `__init__` method with the inherited kwargs.",
+    "latency_s": 0.8737
+  },
+  {
+    "id": "q6",
+    "category": "How",
+    "question": "How does the code resolve the layer ?",
+    "answer": "by the provided typename",
+    "prediction": "The code resolves the layer by checking if a service object with the name specified in the \"service\" parameter exists. If it does, the code returns a resolve object with the \"typename\" property set to the value of the \"service\" parameter, and the \"permission\" property set to the value of the \"permission\" parameter. If the service object does not exist, the code returns a resolve object with the \"typename\" property set to the value of the \"typename\" parameter, and the \"permission\" property set to the value of the \"permission\" parameter.",
+    "latency_s": 3.063
+  },
+  {
+    "id": "q7",
+    "category": "When",
+    "question": "When do compatibility with netscapes cookie standard ensure ?",
+    "answer": "the time",
+    "prediction": "The code ensures compatibility with Netscape's cookie standard by formatting the date in the RFC 1123 format, which is a standard format for representing dates in HTTP headers.",
+    "latency_s": 1.099
+  },
+  {
+    "id": "q8",
+    "category": "Where",
+    "question": "Where does image window ?",
+    "answer": "offline",
+    "prediction": "The code returns the components of the \"Features\" window, which is an image.",
+    "latency_s": 0.541
+  },
+  {
+    "id": "q9",
+    "category": "How",
+    "question": "How do all vouches remove from username ?",
+    "answer": "automatically",
+    "prediction": "The code removes all vouches from the username by using the `delete` method on the `messages` object, which is a list of vouches received by the user. The `success` request is then returned, which redirects the user to the phonebook profile view of the user with the specified username.",
+    "latency_s": 1.7087
+  },
+  {
+    "id": "q10",
+    "category": "How",
+    "question": "How did the code modify the code ?",
+    "answer": "spherical bessel function",
+    "prediction": "The code modified the function by adding a new parameter \"derivative\" and returning a different value based on the value of \"derivative\".",
+    "latency_s": 0.8456
+  },
+  {
+    "id": "q11",
+    "category": "Where",
+    "question": "Where do for a volume group return ?",
+    "answer": "in bytes",
+    "prediction": "The code returns a dictionary containing the total, free, and used space for the specified volume group.",
+    "latency_s": 0.5999
+  },
+  {
+    "id": "q12",
+    "category": "How",
+    "question": "How do for zmq capability check ?",
+    "answer": "by name",
+    "prediction": "The code checks if the capability \"zmq has\" is present in the capability list, and if it is, it returns a boolean value indicating whether the capability is present or not.",
+    "latency_s": 1.1094
+  },
+  {
+    "id": "q13",
+    "category": "When",
+    "question": "When do tenant exist ?",
+    "answer": "already",
+    "prediction": "When the tenant name is in the list of tenants returned by the Keystone API.",
+    "latency_s": 0.5895
+  },
+  {
+    "id": "q14",
+    "category": "When",
+    "question": "When did args parse ?",
+    "answer": "already",
+    "prediction": "The code does not parse args. It simply joins the string representation of the arguments and the keyword arguments into a single string.",
+    "latency_s": 0.7214
+  },
+  {
+    "id": "q15",
+    "category": "How",
+    "question": "By how much did environment control ?",
+    "answer": "somewhat",
+    "prediction": "The code modifies the environment by setting the \"stop after\" argument to \"None\" in the \"setup\" function.",
+    "latency_s": 0.747
+  },
+  {
+    "id": "q16",
+    "category": "Where",
+    "question": "Where does the code run a setup script ?",
+    "answer": "in a somewhat controlled environment",
+    "prediction": "The code runs a setup script in the global scope, specifically in the \"setup\" variable.",
+    "latency_s": 0.5864
+  },
+  {
+    "id": "q17",
+    "category": "How",
+    "question": "How are they configured ?",
+    "answer": "how",
+    "prediction": "They are configured by mapping the feature to the appropriate mode and parameters based on the input provided.",
+    "latency_s": 0.602
+  },
+  {
+    "id": "q18",
+    "category": "How",
+    "question": "How do they appear from \" show feature \" output ?",
+    "answer": "how",
+    "prediction": "They appear as a list of features that can be mapped to a specific mode, with the feature name and its corresponding mode.",
+    "latency_s": 0.7637
+  },
+  {
+    "id": "q19",
+    "category": "Why",
+    "question": "Why be some features mapped ?",
+    "answer": "due to inconsistency between how they appear from \" show feature \" output and how they are configured",
+    "prediction": "The code maps some features to their corresponding modes based on a dictionary of predefined mappings.",
+    "latency_s": 0.6091
+  },
+  {
+    "id": "q20",
+    "category": "Why",
+    "question": "Why may to be mapped need ?",
+    "answer": "due to inconsistency between how they appear from \" show feature \" output and how they are configured",
+    "prediction": "to map the feature to the appropriate mode and parameters.",
+    "latency_s": 0.4028
+  },
+  {
+    "id": "q21",
+    "category": "When",
+    "question": "When did snapshot take ?",
+    "answer": "previously",
+    "prediction": "The code takes a snapshot of the virtual machine's disk.",
+    "latency_s": 0.4391
+  },
+  {
+    "id": "q22",
+    "category": "When",
+    "question": "When is no request active ?",
+    "answer": "currently",
+    "prediction": "When the current request is not active.",
+    "latency_s": 0.2821
+  },
+  {
+    "id": "q23",
+    "category": "How",
+    "question": "How do dictionary return ?",
+    "answer": "with signed request data",
+    "prediction": "The code returns a dictionary.",
+    "latency_s": 0.2572
+  },
+  {
+    "id": "q24",
+    "category": "Where",
+    "question": "Where does the code run a callback ?",
+    "answer": "in a transaction",
+    "prediction": "The code runs a callback asynchronously in the `transaction` function.",
+    "latency_s": 0.4759
+  },
+  {
+    "id": "q25",
+    "category": "How",
+    "question": "How does the code return all the data execution ?",
+    "answer": "with cmd",
+    "prediction": "The code returns all the data execution by executing the command \"cmd run all\" and returning the data.",
+    "latency_s": 0.6132
+  },
+  {
+    "id": "q26",
+    "category": "When",
+    "question": "When does the im_func of a sharedmethod point to the correct underlying function ?",
+    "answer": "always",
+    "prediction": "The im_func of a sharedmethod points to the correct underlying function when the sharedmethod is called on an instance of a class that has a metaclass that inherits from the metaclass of the class that defines the sharedmethod.",
+    "latency_s": 1.3483
+  },
+  {
+    "id": "q27",
+    "category": "Where",
+    "question": "Where does the code retrieve the certificate from the server ?",
+    "answer": "at the specified address",
+    "prediction": "The code retrieves the certificate from the server using the `getpeercert` method of the `ssl` module, which returns the DER-encoded certificate of the server.",
+    "latency_s": 1.0318
+  },
+  {
+    "id": "q28",
+    "category": "How",
+    "question": "How should this be tested here ?",
+    "answer": "minimally",
+    "prediction": "The code snippet defines a function called `test` that takes a system numerics complex as an argument and prints a message indicating that the functionality is not yet implemented. Therefore, the code should be tested by implementing the functionality of the `test` function and verifying that it produces the expected output for different inputs.",
+    "latency_s": 1.6756
+  },
+  {
+    "id": "q29",
+    "category": "When",
+    "question": "When did url encode ?",
+    "answer": "already",
+    "prediction": "The code uses the `urllib` library to encode the string `s` if it is not already encoded, and returns the encoded string otherwise.",
+    "latency_s": 0.8359
+  },
+  {
+    "id": "q30",
+    "category": "How",
+    "question": "How does deepcomposedautoencoder work ?",
+    "answer": "correctly",
+    "prediction": "DeepComposedAutoencoder is a deep learning model that combines the Autoencoder and Deep Composed Autoencoder architectures. It takes in a 5-dimensional input and outputs a 7-dimensional representation. The model uses the tanh activation function for the encoder and the cos activation function for the decoder. The model also uses tied weights and ensures that the extensions of the data are random and of type float. The model is trained on 10-dimensional data and uses the np.random.randn function to generate the random weights.",
+    "latency_s": 3.0677
+  },
+  {
+    "id": "q31",
+    "category": "Where",
+    "question": "Where is the loop intersecting ?",
+    "answer": "inside the x segment",
+    "prediction": "The loop is intersecting inside the X segment.",
+    "latency_s": 0.3413
+  },
+  {
+    "id": "q32",
+    "category": "How",
+    "question": "How do for imports check ?",
+    "answer": "in alphabetical order",
+    "prediction": "The code checks if the imports are in alphabetical order by comparing the current import line with the previous import line. If the current import line is not in alphabetical order, the code returns a warning message.",
+    "latency_s": 1.1552
+  },
+  {
+    "id": "q33",
+    "category": "How",
+    "question": "How did memory align ?",
+    "answer": "non",
+    "prediction": "The code aligns memory by using the `np.frombuffer` function to create a numpy array from the `a` buffer, with a data type of `np.uint8` and a shape of `(10, 10)`. The `offset` parameter is set to 4, indicating that the first 4 elements of the buffer should be skipped. The `count` parameter is set to 100, indicating that the next 100 elements of the buffer should be used to create the array. The `dtype` parameter is set to `float`, indicating that the array should have",
+    "latency_s": 3.2773
+  },
+  {
+    "id": "q34",
+    "category": "Where",
+    "question": "Where did the code extend euclidean algorithm ?",
+    "answer": "in f[x ]",
+    "prediction": "The code extended the Euclidean algorithm to handle multivariate polynomials.",
+    "latency_s": 0.4479
+  },
+  {
+    "id": "q35",
+    "category": "Where",
+    "question": "Where do the counts differ ?",
+    "answer": "where",
+    "prediction": "The code counts the number of differences between two lists, where a difference is defined as an element that is present in one list but not the other. The counts are stored in a list called \"result\", which is returned at the end of the function.",
+    "latency_s": 1.38
+  },
+  {
+    "id": "q36",
+    "category": "How",
+    "question": "How do hugs greater than type limis the values passed in ?",
+    "answer": "succefully",
+    "prediction": "The code uses the `assert` statement to check that the value passed in is greater than 10. If the value is not greater than 10, a `ValueError` is raised.",
+    "latency_s": 1.1334
+  },
+  {
+    "id": "q37",
+    "category": "Where",
+    "question": "In which direction did the values pass ?",
+    "answer": "in",
+    "prediction": "The values passed in the assertion in the direction of greater than.",
+    "latency_s": 0.4229
+  },
+  {
+    "id": "q38",
+    "category": "When",
+    "question": "When has it been downloaded ?",
+    "answer": "already",
+    "prediction": "The code has downloaded the NLTK corpus resource path when the resource path does not end with a forward slash and the downloaded flag is set to False.",
+    "latency_s": 0.9102
+  },
+  {
+    "id": "q39",
+    "category": "When",
+    "question": "When is an error raised ?",
+    "answer": "when the version is unknown",
+    "prediction": "The code raises a ValueError when the version number is not a valid integer.",
+    "latency_s": 0.5286
+  },
+  {
+    "id": "q40",
+    "category": "How",
+    "question": "By how much will it rewrite the exceptions if passed an exc_info automatically ?",
+    "answer": "all the way down to the correct line numbers and frames",
+    "prediction": "It will rewrite the exceptions by adding a new frame to the traceback chain, which is a proxy for the original frame.",
+    "latency_s": 0.7528
+  },
+  {
+    "id": "q41",
+    "category": "How",
+    "question": "How will it rewrite the exceptions if passed an exc_info all the way down to the correct line numbers and frames ?",
+    "answer": "automatically",
+    "prediction": "It will rewrite the exceptions by setting the correct line numbers and frames for the traceback, allowing for proper debugging and error handling.",
+    "latency_s": 0.7685
+  },
+  {
+    "id": "q42",
+    "category": "How",
+    "question": "How do json text evaluate ?",
+    "answer": "safely",
+    "prediction": "The code evaluates the JSON text by using the `eval` function to convert it to a Python object, and then stripping any leading or trailing whitespace and newline characters from the resulting string.",
+    "latency_s": 1.0781
+  },
+  {
+    "id": "q43",
+    "category": "How",
+    "question": "How can equations be converted to a polynomial equation ?",
+    "answer": "using the change of variable y - > x**rational",
+    "prediction": "The code defines a function called `test` that takes a polynomial equation as input and solves it using the `solve` function. The `solve` function is used to find the roots of the equation, and the results are asserted to be correct using the `assert` statement. The code also uses the `sqrt` function to find the square root of a number.",
+    "latency_s": 2.0465
+  },
+  {
+    "id": "q44",
+    "category": "When",
+    "question": "When does a view render a template ?",
+    "answer": "multiple times",
+    "prediction": "The view renders a template multiple times in the request and returns an HTTP response with the rendered template as a string.",
+    "latency_s": 0.7203
+  },
+  {
+    "id": "q45",
+    "category": "How",
+    "question": "How does the code compute the resource allocation index of all node pairs in ebunch ?",
+    "answer": "using community information",
+    "prediction": "The code computes the resource allocation index (RAI) for all node pairs in ebunch by iterating over the nodes in ebunch and computing the number of common neighbors between the two nodes in the same community. The RAI is then calculated as the sum of the reciprocals of the degrees of the common neighbors, with the result being returned as a dictionary with the node pairs as keys and the RAI values as values.",
+    "latency_s": 2.3868
+  },
+  {
+    "id": "q46",
+    "category": "How",
+    "question": "How should formsets use a list of data ?",
+    "answer": "by extending some fields to every object",
+    "prediction": "The code defines a function called `initial_value_extractor` that takes a list of request parameter names as input and returns a list of dictionaries, where each dictionary contains the initial values for a formset. The function iterates over the submitted data, extracts the initial values for each formset, and returns the initial values in a list of dictionaries.",
+    "latency_s": 1.9988
+  },
+  {
+    "id": "q47",
+    "category": "How",
+    "question": "How did local s3 image represent ?",
+    "answer": "by provided uuid",
+    "prediction": "The code represents a local S3 image with the UUID of the image.",
+    "latency_s": 0.5052
+  },
+  {
+    "id": "q48",
+    "category": "When",
+    "question": "When does an iterator schedule ?",
+    "answer": "after each iteration",
+    "prediction": "The iterator schedules after each chunk is yielded from the iterable.",
+    "latency_s": 0.4657
+  },
+  {
+    "id": "q49",
+    "category": "How",
+    "question": "How does dicts process ?",
+    "answer": "recursively",
+    "prediction": "The code defines a recursive walk function that processes dictionaries. It recursively walks through the dictionary's keys and values, and returns a list of the values.",
+    "latency_s": 0.9402
+  },
+  {
+    "id": "q50",
+    "category": "How",
+    "question": "How did minimum variance constrain ?",
+    "answer": "linearly",
+    "prediction": "The code uses the `lcmv` function to constrain the minimum variance of the data.",
+    "latency_s": 0.5954
+  },
+  {
+    "id": "q51",
+    "category": "How",
+    "question": "How do if an environment is exposed check ?",
+    "answer": "by comparing it against a whitelist and blacklist",
+    "prediction": "The code checks if an environment is exposed by comparing it against a whitelist and a blacklist of environments.",
+    "latency_s": 0.6619
+  },
+  {
+    "id": "q52",
+    "category": "When",
+    "question": "When did the code split a time from start to end ?",
+    "answer": "in periods of a number of seconds",
+    "prediction": "The code splits a time from start to end in the for loop, where the next start period is calculated by adding the increment to the current start period.",
+    "latency_s": 0.8924
+  },
+  {
+    "id": "q53",
+    "category": "How",
+    "question": "How do an instance of a show return ?",
+    "answer": "by querying its i d",
+    "prediction": "The code returns a single instance of a show based on its ID.",
+    "latency_s": 0.4422
+  },
+  {
+    "id": "q54",
+    "category": "When",
+    "question": "When are imports put at the top of the file ?",
+    "answer": "always",
+    "prediction": "Imports are put at the top of the file when they are not indented and are not part of a string literal or a docstring.",
+    "latency_s": 0.8468
+  },
+  {
+    "id": "q55",
+    "category": "How",
+    "question": "How do user authentication check ?",
+    "answer": "code",
+    "prediction": "The code checks for user authentication by parsing the Authorization header in the request headers and comparing the credentials (username and password) with the ones stored in a dictionary. If the credentials match, the code returns True, indicating successful authentication. If the credentials do not match or are not present in the request headers, the code returns False, indicating failed authentication.",
+    "latency_s": 1.8925
+  },
+  {
+    "id": "q56",
+    "category": "For what purpose",
+    "question": "For what purpose is an undefined - step snippet provided ?",
+    "answer": "for a step in behave command output",
+    "prediction": "The code provides an undefined step snippet for the purpose of preventing the execution of the step snippet for a given context.",
+    "latency_s": 0.6994
+  },
+  {
+    "id": "q57",
+    "category": "How",
+    "question": "How does the code update the glance metadata from a volume ?",
+    "answer": "by copying all of the key : value pairs from the originating snapshot",
+    "prediction": "The code updates the glance metadata from a volume by copying the metadata from the snapshot to the volume.",
+    "latency_s": 0.594
+  },
+  {
+    "id": "q58",
+    "category": "How",
+    "question": "How does the full path return to a yaml file ?",
+    "answer": "by giving the builtin modules name",
+    "prediction": "The code returns the full path to a yaml file by using the built-in `get yaml path` function, which is available in Python 3.6 and later versions. The function takes a runtime argument, which is set to the current runtime environment, and a builtin name argument, which is set to the name of the builtin to be used. If the handler directory is not specified, the function sets the builtins directory to the default directory available builtins. If the runtime is Python 2.7, the function checks if the builtin name is available in the available builtins and raises an",
+    "latency_s": 3.2889
+  },
+  {
+    "id": "q59",
+    "category": "When",
+    "question": "When did field override set ?",
+    "answer": "previously",
+    "prediction": "The field override is set in the try block.",
+    "latency_s": 0.3371
+  },
+  {
+    "id": "q60",
+    "category": "How",
+    "question": "How does the code execute an operation ?",
+    "answer": "against jboss instance",
+    "prediction": "The code executes an operation by calling the \"cli\" command and parsing the output. If the output is unparseable, it raises a Command Execution Error. If the operation fails, it raises a Command Execution Error with the failure description and error code. Otherwise, it returns the success status and outcome of the operation.",
+    "latency_s": 1.8188
+  },
+  {
+    "id": "q61",
+    "category": "How",
+    "question": "How do the current function details log ?",
+    "answer": "automatically",
+    "prediction": "The code logs the current function details by using the `inspect` module to get the current frame, the function name, the file name, and the first line number. It then uses the `codelogging` module to log the message with the function details.",
+    "latency_s": 1.4801
+  },
+  {
+    "id": "q62",
+    "category": "When",
+    "question": "When had by the memcache middleware been set memcache connection pool from the environment ?",
+    "answer": "previously",
+    "prediction": "The code sets the memcache connection pool from the environment variable \"swift cache\".",
+    "latency_s": 0.4907
+  },
+  {
+    "id": "q63",
+    "category": "How",
+    "question": "How do subcommands execute ?",
+    "answer": "in",
+    "prediction": "The code defines a function called `sub` that takes an environment dictionary as an argument and returns a new environment dictionary with the `LANG` variable set to `C`. The function uses the `os.environ` module to copy the current environment and then sets the `LANG` variable to `C` in the new environment. The function then returns the new environment dictionary.",
+    "latency_s": 2.0738
+  },
+  {
+    "id": "q64",
+    "category": "For what purpose",
+    "question": "For what purpose do additional data pass in a url ?",
+    "answer": "for internal use",
+    "prediction": "The additional data are passed in the URL to smuggle them through the YouTubeDL smuggle function, which is used to encode the data in a way that is not easily detectable by the YouTubeDL software.",
+    "latency_s": 1.2194
+  },
+  {
+    "id": "q65",
+    "category": "How",
+    "question": "How do additional data pass for internal use ?",
+    "answer": "in a url",
+    "prediction": "The additional data pass for internal use as a JSON-encoded string appended to the URL using the `urllib.parse.urlencode` function.",
+    "latency_s": 0.8754
+  },
+  {
+    "id": "q66",
+    "category": "How",
+    "question": "How do a numerically stable reference sigmoid implementation use ?",
+    "answer": "test",
+    "prediction": "The code uses the `np.vectorize` function to numerically stabilize the reference sigmoid implementation by applying the `sigmoid` function element-wise to the input vector `x`. The `sigmoid` function is defined as `1 / (1 + np.exp(-x))`. The `np.vectorize` function is used to apply the `sigmoid` function to each element of the input vector `x`, which is a 2D array. The resulting output is a 2D array with the same shape as the input `x`.",
+    "latency_s": 3.1599
+  },
+  {
+    "id": "q67",
+    "category": "When",
+    "question": "When did something modify ?",
+    "answer": "since the user last downloaded it",
+    "prediction": "The code checks if the file was modified since the last time it was accessed.",
+    "latency_s": 0.5001
+  },
+  {
+    "id": "q68",
+    "category": "When",
+    "question": "When did the user download it ?",
+    "answer": "last",
+    "prediction": "The code checks if the file was modified since the last time it was downloaded.",
+    "latency_s": 0.4927
+  },
+  {
+    "id": "q69",
+    "category": "How",
+    "question": "How does the code run the given function ?",
+    "answer": "in an independent python interpreter",
+    "prediction": "The code runs the given function in a separate thread, with the reloader thread restarting the main function every 1 second.",
+    "latency_s": 0.7479
+  },
+  {
+    "id": "q70",
+    "category": "When",
+    "question": "When does the code get the float ?",
+    "answer": "after the first occurence of the character in the split line",
+    "prediction": "When the code gets the float is when it splits the line from the character and then checks if the line is not none and if it is not none it returns the float.",
+    "latency_s": 1.0087
+  },
+  {
+    "id": "q71",
+    "category": "How",
+    "question": "How does the code get logger ?",
+    "answer": "by name",
+    "prediction": "The code gets a logger by first checking if the logger is an instance of a string. If it is, the code uses the `logging.getLogger` function to get a logger with the specified name. If the logger is not a string, the code simply returns the logger as is.",
+    "latency_s": 1.5958
+  },
+  {
+    "id": "q72",
+    "category": "When",
+    "question": "Till when does the code join the reactor thread ?",
+    "answer": "until it stops",
+    "prediction": "Till when the reactor thread is active and has active delayed calls.",
+    "latency_s": 0.4456
+  },
+  {
+    "id": "q73",
+    "category": "Where",
+    "question": "Where do extraneous whitespace avoid ?",
+    "answer": "in the following situations : - more than one space around an assignment operator to align it with another",
+    "prediction": "The code avoids extraneous whitespace after a comma and after a regular expression match.",
+    "latency_s": 0.5163
+  },
+  {
+    "id": "q74",
+    "category": "Where",
+    "question": "Where does the code run the designated module ?",
+    "answer": "in the _ _ main _ _ namespace",
+    "prediction": "The code runs the designated module in the global scope of the `sys` module.",
+    "latency_s": 0.5188
+  },
+  {
+    "id": "q75",
+    "category": "How",
+    "question": "How be the sqlalchemy database engine passed ?",
+    "answer": "by using the prefix \" database_engine_option \"",
+    "prediction": "The sqlalchemy database engine is passed as a dictionary of options, with keys and values converted as needed to match the expected types.",
+    "latency_s": 0.8143
+  },
+  {
+    "id": "q76",
+    "category": "Where",
+    "question": "In which direction does the code run the hive ?",
+    "answer": "from the command line",
+    "prediction": "The code runs the hive in the direction of the command line arguments.",
+    "latency_s": 0.4729
+  },
+  {
+    "id": "q77",
+    "category": "How",
+    "question": "How do host groups retrieve ?",
+    "answer": "according to the given parameters",
+    "prediction": "The code retrieves host groups by making an API call to the Zabbix server using the `hostgroup get` method, passing in the `name`, `groupids`, and `hostids` parameters, and storing the result in a dictionary. If the `name` parameter is provided, the code filters the results by name. If the `groupids` parameter is provided, the code filters the results by group ID. If the `hostids` parameter is provided, the code filters the results by host ID. The code then returns the result, which is a list of host groups, or `False` if the",
+    "latency_s": 3.2858
+  },
+  {
+    "id": "q78",
+    "category": "How",
+    "question": "How did mappings represent ?",
+    "answer": "by dicts or sequences",
+    "prediction": "The code defines a function called `items` that takes a mapping or sequence as an argument and returns an iterator over the items in the mapping or sequence. If the argument is a mapping, the function returns an iterator over the items in the mapping using the `iteritems` method. Otherwise, the function returns the argument as is.",
+    "latency_s": 1.7866
+  },
+  {
+    "id": "q79",
+    "category": "How",
+    "question": "How does the code send a message on a fanout exchange ?",
+    "answer": "without waiting for a response",
+    "prediction": "The code sends a message on a fanout exchange asynchronously by using the `fanout` cast method, which adds a unique ID to the message and packs it with the connection context, then sends it to the topic using the `rpc` common serialize method.",
+    "latency_s": 1.5186
+  },
+  {
+    "id": "q80",
+    "category": "Where",
+    "question": "Where does the code send a message without waiting for a response ?",
+    "answer": "on a fanout exchange",
+    "prediction": "Asynchronously to a topic in a message broker using a connection pool.",
+    "latency_s": 0.4871
+  },
+  {
+    "id": "q81",
+    "category": "When",
+    "question": "When do false cli example return ?",
+    "answer": "always",
+    "prediction": "When the function is called with the argument \"cli example\".",
+    "latency_s": 0.3799
+  },
+  {
+    "id": "q82",
+    "category": "How",
+    "question": "How does the code get a category from the database ?",
+    "answer": "via name",
+    "prediction": "The code uses the SQLAlchemy ORM to query the database for a category with the given name, and returns the result as a Category object. If no category is found, the code returns None.",
+    "latency_s": 1.1563
+  },
+  {
+    "id": "q83",
+    "category": "How",
+    "question": "How do ec2 compatible snapshot create ?",
+    "answer": "by provided uuid",
+    "prediction": "The code creates an EC2 compatible snapshot by using the `ec2` module to create a snapshot reference, which is then updated with the `uuid` and `id` of the snapshot, and finally saved to the session.",
+    "latency_s": 1.2554
+  },
+  {
+    "id": "q84",
+    "category": "How",
+    "question": "How does the code find the cross edges of an image ?",
+    "answer": "using roberts cross operator",
+    "prediction": "The code uses a Robert's Positive Diagonal (ROBERTS PD) filter to find the cross edges of an image. The filter weights are applied to the image, resulting in a mask that highlights the cross edges.",
+    "latency_s": 1.3435
+  },
+  {
+    "id": "q85",
+    "category": "How",
+    "question": "How do the tag field save ?",
+    "answer": "alphabetically",
+    "prediction": "The code defines a pre-save handler for a Django model instance. The handler takes a sender instance and keyword arguments as input, and it parses the tag input to a string and then saves the taglist to the instance's tags field.",
+    "latency_s": 1.382
+  },
+  {
+    "id": "q86",
+    "category": "How",
+    "question": "How do the tag field sort ?",
+    "answer": "alphabetically",
+    "prediction": "The code sorts the tag field in ascending order.",
+    "latency_s": 0.3695
+  },
+  {
+    "id": "q87",
+    "category": "For what purpose",
+    "question": "For what purpose did all folders need ?",
+    "answer": "to move a file to its new location",
+    "prediction": "The code needs to delete empty folders in the current path and create new folders in the new path.",
+    "latency_s": 0.6104
+  },
+  {
+    "id": "q88",
+    "category": "For what purpose",
+    "question": "For what purpose does the code get crl file ?",
+    "answer": "for project",
+    "prediction": "The code gets the CRL file to verify the certificate revocation status.",
+    "latency_s": 0.4661
+  },
+  {
+    "id": "q89",
+    "category": "When",
+    "question": "When does the code convert a datetime object to an integer number of seconds ?",
+    "answer": "since the unix epoch",
+    "prediction": "The code converts a datetime object to an integer number of seconds when it tries to return the total seconds from the delta between the date and the epoch time.",
+    "latency_s": 0.8981
+  },
+  {
+    "id": "q90",
+    "category": "When",
+    "question": "When did the code get changed languages ?",
+    "answer": "since last sync",
+    "prediction": "The code got changed languages between revisions [revision] exclusive and [revision] inclusive.",
+    "latency_s": 0.6252
+  },
+  {
+    "id": "q91",
+    "category": "When",
+    "question": "When did languages change ?",
+    "answer": "since last sync",
+    "prediction": "The code runs the command \"changed languages\" and checks the output for the string \"noknownchanges\" and \"Willshowlanguageschangedbetweenrevisions%d exclusive and%d inclusive\" to determine when languages changed.",
+    "latency_s": 1.3094
+  },
+  {
+    "id": "q92",
+    "category": "Where",
+    "question": "In which direction does a sequence pad ?",
+    "answer": "out",
+    "prediction": "The code pads a sequence in the forward direction, i.e., it adds elements to the end of the sequence if it is shorter than the specified length.",
+    "latency_s": 0.9223
+  },
+  {
+    "id": "q93",
+    "category": "How",
+    "question": "How do a string with random color print ?",
+    "answer": "with each character",
+    "prediction": "The code defines a function that takes a string as input and returns a string with random colors. The function uses the `colored` module to colorize the input string with a random color from a list of colors. The list of colors is generated by shuffling the `CYCLE COLOR` list from the `globals` dictionary. The function then joins the colored string with an empty string using the `join` method.",
+    "latency_s": 2.3876
+  },
+  {
+    "id": "q94",
+    "category": "How",
+    "question": "How does the code get vector3 vertexes from attribute dictionary ?",
+    "answer": "by arguments",
+    "prediction": "The code uses the `get Geometry Output` function to retrieve the vector3 vertexes from the attribute dictionary.",
+    "latency_s": 0.6779
+  },
+  {
+    "id": "q95",
+    "category": "When",
+    "question": "Till when did by ifrc use old default eden form style ?",
+    "answer": "still",
+    "prediction": "The code uses the \"inline\" form style for the fields in the form, which is an old default style used by IRC.",
+    "latency_s": 0.7742
+  },
+  {
+    "id": "q96",
+    "category": "For what purpose",
+    "question": "For what purpose does the current active catalog return ?",
+    "answer": "for further processing",
+    "prediction": "The current active catalog returns the default translation settings for the LANGUAGE CODE.",
+    "latency_s": 0.5473
+  },
+  {
+    "id": "q97",
+    "category": "How",
+    "question": "How did orm objects track ?",
+    "answer": "fully",
+    "prediction": "The code uses the `Profiler` decorator to profile the `test` function, which in turn calls the `orm` function to retrieve a list of full objects. The `orm` function then calls the `Session` engine to retrieve a list of objects from the database. The `Session` engine in turn calls the `query` method to retrieve a list of `Customer` objects from the database, with a limit of `n` objects.",
+    "latency_s": 2.4351
+  },
+  {
+    "id": "q98",
+    "category": "How",
+    "question": "How are the a controller and its handlers protected from csrf attacks ?",
+    "answer": "properly",
+    "prediction": "The code checks if the controller and its handlers are protected from CSRF attacks by checking if the `handles_csrf` attribute is set to `False` for the controller and any mutating methods (POST, PUT, PATCH, DELETE) defined in the controller. If the `handles_csrf` attribute is not set to `True` for the controller or any of its handlers, a CSRF Prevention Exception is raised.",
+    "latency_s": 2.5194
+  },
+  {
+    "id": "q99",
+    "category": "When",
+    "question": "When is process name recorded ?",
+    "answer": "when loggers are used",
+    "prediction": "The process name is recorded when the `record` method is called and the `process_name` attribute is not set.",
+    "latency_s": 0.723
+  },
+  {
+    "id": "q100",
+    "category": "How",
+    "question": "How does the code interpolate the string ?",
+    "answer": "using values from the dictionary",
+    "prediction": "The code interpolates the string by iterating over the chunks of the string, and if the chunk is a live variable, it evaluates the variable and appends the result to the `result` list, otherwise it appends the chunk as is.",
+    "latency_s": 1.412
+  }
+]

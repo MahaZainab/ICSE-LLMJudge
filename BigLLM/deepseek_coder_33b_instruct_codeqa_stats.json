@@ -1,0 +1,10 @@
+{
+  "model_id": "deepseek-ai/deepseek-coder-33b-instruct",
+  "dataset": "codeqa",
+  "n_examples": 15754,
+  "load_time_s": 687.78,
+  "peak_gpu_mem_after_load_mb": 63596.7,
+  "peak_gpu_mem_overall_mb": 65273.0,
+  "avg_latency_s": 2.0925,
+  "total_generation_time_s": 32965.32
+}
